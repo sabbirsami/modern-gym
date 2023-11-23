@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 body {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-family: "Bricolage Grotesque", sans-serif;
+}
+.font-highlight {
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+.font-primary {
+    font-family: "Open Sans", sans-serif;
 }
