@@ -1,6 +1,7 @@
 import plusIcon from "../../assets/icon/plus.png";
 import heroImage from "../../assets/heroImage.png";
 import { MdArrowForwardIos } from "react-icons/md";
+import { Link } from "react-router-dom";
 const Hero = () => {
     return (
         <section className="relative overflow-hidden">
@@ -28,11 +29,14 @@ const Hero = () => {
                                 your wellness goals. Your path to a healthier
                                 you starts here!
                             </p>
-                            <div className="">
-                                <button className=" py-4 px-8 rounded-full bg-slate-700">
-                                    Register Now{" "}
+                            <div className="lg:mt-6 mb-4">
+                                <Link
+                                    to={"/classes"}
+                                    className=" py-4 px-8 rounded-full bg-slate-700 "
+                                >
+                                    Show Classes{" "}
                                     <MdArrowForwardIos className="inline" />
-                                </button>
+                                </Link>
                             </div>
                         </div>
                         <div className="absolute -right-20 hidden lg:block">
