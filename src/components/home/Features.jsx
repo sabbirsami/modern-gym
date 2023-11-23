@@ -29,7 +29,7 @@ const Features = () => {
             des: "In terms of fitness and training, everyone is unique. Some people need one on one personal training programs, while others just want to show up for a fitness class. Group training options may be ideal for some and not others.",
         },
         {
-            title: "High-Quality Exercise Equipment ",
+            title: "High-Quality Equipment ",
             des: "All gym equipment should be clean, well-maintained, and in good working order. By creating a highly connected fitness experience and leveraging wearables and heart rate monitors you can simplify fitness.",
         },
         {
@@ -56,7 +56,7 @@ const Features = () => {
                                         </h4>
                                     </div>
                                     <div className="relative">
-                                        <p className="pt-6 text-white/80">
+                                        <p className="pt-6 text-white/80 md:text-base text-sm">
                                             {feature.des.slice(0, seeMore)}{" "}
                                             {feature.des.length === seeMore ? (
                                                 ""

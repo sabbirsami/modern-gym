@@ -21,7 +21,7 @@ const Hero = () => {
 
                                 <h2 className=""> and Mindset</h2>
                             </div>
-                            <p className="py-6 md:w-5/6 text-white/80">
+                            <p className="py-6 md:w-5/6 text-white/80 md:text-base text-sm">
                                 Unleash your best self at our modern gym. From
                                 top-notch equipment to expert guidance,
                                 we&#39;ve got your fitness journey covered. Join
