@@ -41,12 +41,12 @@ const Hero = () => {
                         </div>
                         <div className="absolute -right-20 hidden lg:block">
                             <img
-                                className="2xl:h-[32rem] xl:h-[30rem] lg:h-[24rem]"
+                                className="2xl:h-[36rem] xl:h-[30rem] lg:h-[24rem]"
                                 src={heroImage}
                                 alt=""
                             />
                         </div>
-                        <div className="text-center mx-auto lg:hidden">
+                        <div className="text-center ms-auto lg:hidden mt-6">
                             <img
                                 className="2xl:h-[32rem] xl:h-[30rem] lg:h-[24rem] md:h-[18rem]"
                                 src={heroImage}

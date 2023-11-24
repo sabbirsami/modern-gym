@@ -1,5 +1,6 @@
 import { useState } from "react";
 import dumble from "../../assets/dumble.png";
+import arrow from "../../assets/icon/arrow.png";
 
 const Features = () => {
     const features = [
@@ -41,7 +42,14 @@ const Features = () => {
     return (
         <section className="container mx-auto px-6">
             <div className="pb-16 pt-10">
-                <h2 className="text-6xl">Features</h2>
+                <div className="md:text-7xl text-5xl flex justify-between">
+                    <h2 className="">Features</h2>{" "}
+                    <img
+                        className=" md:w-20 md:h-auto h-10 -rotate-90"
+                        src={arrow}
+                        alt=""
+                    />
+                </div>
                 <div className="py-10">
                     <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-6">
                         {features.map((feature, idx) => (
@@ -49,7 +57,7 @@ const Features = () => {
                                 key={idx}
                                 className="p-7 bg-[#303644] rounded-md"
                             >
-                                <div className="border-s border-orange-400/70 border-dashed  ms-0.5  ps-6 h-full">
+                                <div className="border-s-2 border-[#94f3b0]/80 border-dashed  ms-0.5  ps-6 h-full">
                                     <div className="md:h-16">
                                         <h4 className="text-3xl">
                                             {feature.title}
@@ -67,14 +75,14 @@ const Features = () => {
                                                             feature.des.length
                                                         )
                                                     }
-                                                    className="text-sm text-orange-500/80 cursor-pointer"
+                                                    className="text-sm text-[#94f3b0]/80 cursor-pointer"
                                                 >
                                                     see more..
                                                 </span>
                                             )}
                                         </p>
                                         <img
-                                            className="absolute top-0 -left-10 w-6 rotate-45 drop-shadow-2xl bg-gradient-to-r  from-[#da8846] to-[#cd513e] rounded-full p-0.5"
+                                            className="absolute top-0 -left-10 w-6 rotate-45 drop-shadow-2xl bg-gradient-to-r  from-[#94f3b0] to-[#7abf88] rounded-full p-0.5"
                                             src={dumble}
                                             alt=""
                                         />

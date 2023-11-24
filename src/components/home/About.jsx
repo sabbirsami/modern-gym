@@ -29,7 +29,7 @@ const About = () => {
                     </div>
                     <img
                         src={man}
-                        className="absolute bottom-0  2xl:left-2/4 xl:right-4 lg:-right-[70px] md:-right-[14px] left-40 transform -translate-x-1/2  2xl:h-[40rem] xl:h-[30rem] lg:h-auto md:h-[18rem] w-auto"
+                        className="absolute bottom-0  2xl:left-2/4 xl:right-4 lg:-right-[70px] md:-right-[14px] -right-[160px] transform -translate-x-1/2  2xl:h-[40rem] xl:h-[30rem] lg:h-auto md:h-[18rem] w-auto"
                         alt=""
                     />
                     <div className="xl:py-10 md:py-6 w-[40rem] border-2 md:ps-6 rounded-[3rem] bg-[#303644] -me-10 md:block hidden">
