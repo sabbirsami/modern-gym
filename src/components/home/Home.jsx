@@ -1,4 +1,5 @@
 import About from "./About";
+import Article from "./Article";
 import Features from "./Features";
 import Hero from "./Hero";
 import Newsletter from "./Newsletter";
@@ -14,6 +15,7 @@ const Home = () => {
             <Testimonial />
             <Team />
             <Newsletter />
+            <Article />
         </div>
     );
 };

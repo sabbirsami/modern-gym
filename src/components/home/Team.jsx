@@ -15,7 +15,7 @@ const Team = () => {
     }
     console.log(trainers);
     return (
-        <section className="container mx-auto px-6 lg:mt-32 md:mt-24 mt-16">
+        <section className="container mx-auto px-6 lg:mt-32 md:mt-24 mt-16 lg:mb-32 md:mb-24 mb-16 ">
             <div className="">
                 <h2 className="2xl:text-8xl xl:text-8xl md:text-7xl text-4xl text-center font-bold mb-6">
                     All Time Best Trainer

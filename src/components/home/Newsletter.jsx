@@ -2,7 +2,7 @@ import newsLetterImage from "../../assets/person/man0.png";
 
 const Newsletter = () => {
     return (
-        <section className="container mx-auto px-6 md:mt-32 mt-16 mb-32">
+        <section className="container mx-auto px-6 md:mt-32  pt-16 pb-10">
             <div className=" bg-gradient-to-r  from-[#0C1117] to-[#303644] rounded-2xl p-1">
                 <div className="py-6 md:px-28 px-6 rounded-2xl grid lg:grid-cols-7 lg:gap-10 items-center justify-between bg-[#0C1117]">
                     <form className="lg:col-span-4">
