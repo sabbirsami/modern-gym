@@ -2,17 +2,17 @@ import newsLetterImage from "../../assets/person/man0.png";
 
 const Newsletter = () => {
     return (
-        <section className="container mx-auto px-6 mt-32 mb-32">
+        <section className="container mx-auto px-6 md:mt-32 mt-16 mb-32">
             <div className=" bg-gradient-to-r  from-[#0C1117] to-[#303644] rounded-2xl p-1">
-                <div className="py-6 px-28 rounded-2xl grid grid-cols-7 items-center justify-between bg-[#0C1117]">
-                    <form className="col-span-4">
-                        <h2 className="text-5xl pb-10">
+                <div className="py-6 md:px-28 px-6 rounded-2xl grid lg:grid-cols-7 lg:gap-10 items-center justify-between bg-[#0C1117]">
+                    <form className="lg:col-span-4">
+                        <h2 className="md:text-5xl text-3xl pb-10">
                             Subscribe Our Newsletter
                         </h2>
                         {/* <label htmlFor="price" className=" mt-6 font-bold text-sm ">
                         Email
                     </label> */}
-                        <div className="flex gap-6">
+                        <div className="md:flex md:gap-6 gap-2">
                             <input
                                 type="email"
                                 className="py-4 px-3 w-full mb-6  mt-2 rounded-md"
@@ -26,7 +26,7 @@ const Newsletter = () => {
                             </button>
                         </div>
                     </form>
-                    <div className="col-span-3 ms-auto">
+                    <div className="lg:col-span-3 ms-auto">
                         <img
                             src={newsLetterImage}
                             alt=""
