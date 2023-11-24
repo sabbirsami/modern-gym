@@ -31,8 +31,8 @@ const Navbar = () => {
             </NavLink>
         </li>,
         <li key={6}>
-            <NavLink className="px-2 py-2" to={"/"}>
-                Register
+            <NavLink className="px-2 py-2" to={"/sign-in"}>
+                Sign In
             </NavLink>
         </li>,
     ];
