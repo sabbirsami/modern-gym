@@ -13,7 +13,7 @@ const Team = () => {
     if (isLoading) {
         return <p>Loading...</p>;
     }
-    console.log(trainers);
+
     return (
         <section className="container mx-auto px-6 lg:mt-32 md:mt-24 mt-16 lg:mb-32 md:mb-24 mb-16 ">
             <div className="">

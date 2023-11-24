@@ -4,6 +4,7 @@ import Home from "../components/home/Home";
 import SignIn from "../components/auth/SignIn";
 import Register from "../components/auth/Register";
 import ErrorPage from "../components/shared/ErrorPage";
+import Classes from "../components/classes/Classes";
 
 const router = createBrowserRouter([
     {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home />,
+            },
+            {
+                path: "/classes",
+                element: <Classes />,
             },
             {
                 path: "/sign-in",
