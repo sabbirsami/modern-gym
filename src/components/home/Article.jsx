@@ -8,7 +8,7 @@ const Article = () => {
         {
             auth_img: t1,
             img: a1,
-            title: "The Power of Mindfulness in Daily Life",
+            title: "The Power of Mindfulness in Life",
             auth_name: "John Doe",
             date: "2023-01-15",
             tags: ["Mindfulness", "Wellness", "Self-Care"],
@@ -16,7 +16,7 @@ const Article = () => {
         {
             auth_img: t1,
             img: a2,
-            title: "Exploring the Wonders of Deep Learning",
+            title: "Exploring the Wonders of Deep",
             auth_name: "Jane Smith",
             date: "2023-02-10",
             tags: ["AI", "Machine Learning", "Technology"],
@@ -24,7 +24,7 @@ const Article = () => {
         {
             auth_img: t1,
             img: a3,
-            title: "Healthy Eating Habits for a Balanced Lifestyle",
+            title: "Healthy Eating for a Balanced Lifestyle",
             auth_name: "Alex Johnson",
             date: "2023-03-22",
             tags: ["Nutrition", "Health", "Lifestyle"],
@@ -32,13 +32,13 @@ const Article = () => {
         // Add more articles as needed
     ];
     return (
-        <section className="container mx-auto px-6 my-32">
+        <section className="container mx-auto px-6 xl:my-32 my-20">
             <div className="">
                 <h2 className="2xl:text-8xl xl:text-8xl md:text-7xl text-4xl text-center font-bold mb-6">
                     Latest News
                 </h2>
 
-                <div className="grid grid-cols-3 gap-16 mt-16">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2  md:gap-16  mt-16">
                     {articles.map((article, idx) => (
                         <div key={idx} className="">
                             <div className="bg-gradient-to-b  from-[#0C1117] to-[#303644] p-3  rounded-3xl md:mb-10 mb-20">
