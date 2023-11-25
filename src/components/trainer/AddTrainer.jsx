@@ -123,9 +123,9 @@ const AddTrainer = () => {
                                         email: data.email,
                                         available_time_in_week:
                                             selectedDayValues,
-                                        available_time_in_day:
-                                            selectedTimeValues,
+                                        available_time_slot: selectedTimeValues,
                                         skills: selectedSkillValues,
+                                        available_time_in_day: "Flexible",
                                     };
                                     console.log(newTrainerData);
                                     setButtonLoading(false);

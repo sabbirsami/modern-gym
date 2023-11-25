@@ -4,7 +4,9 @@ import auth from "../../../firebase.config";
 import {
     GoogleAuthProvider,
     createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
     signInWithPopup,
+    signOut,
 } from "firebase/auth";
 
 export const AuthContext = createContext(null);
@@ -17,6 +19,14 @@ const AuthProvider = ({ children }) => {
         setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password);
     };
+    const signInUser = (email, password) => {
+        setLoading(true);
+        return signInWithEmailAndPassword(auth, email, password);
+    };
+    const signOutUser = () => {
+        setLoading(true);
+        return signOut(auth);
+    };
 
     // social login
     const signInWithGoogle = () => {
@@ -24,7 +34,15 @@ const AuthProvider = ({ children }) => {
         return signInWithPopup(auth, provider);
     };
 
-    const data = { createUser, loading, user, signInWithGoogle };
+    const data = {
+        createUser,
+        loading,
+        user,
+        signInWithGoogle,
+        setLoading,
+        signOutUser,
+        signInUser,
+    };
 
     return <AuthContext.Provider value={data}>{children}</AuthContext.Provider>;
 };
