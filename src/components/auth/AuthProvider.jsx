@@ -4,13 +4,18 @@ import auth from "../../../firebase.config";
 import {
     GoogleAuthProvider,
     createUserWithEmailAndPassword,
+    onAuthStateChanged,
     signInWithEmailAndPassword,
     signInWithPopup,
     signOut,
 } from "firebase/auth";
-
+import { useEffect } from "react";
+import useAxiosPublic from "../hooks/useAxiosPublic";
 export const AuthContext = createContext(null);
+
 const AuthProvider = ({ children }) => {
+    const axiosPublic = useAxiosPublic();
+
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
     const provider = new GoogleAuthProvider();
@@ -33,6 +38,29 @@ const AuthProvider = ({ children }) => {
         setLoading(true);
         return signInWithPopup(auth, provider);
     };
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setUser(currentUser);
+            setLoading(false);
+            if (currentUser) {
+                // get token and store client
+                // const userInfo = { email: currentUser.email };
+                // axiosPublic.post('/', userInfo)
+                //     .then(res => {
+                //         if (res.data.token) {
+                //             localStorage.setItem('access-token', res.data.token);
+                //         }
+                //     })
+            } else {
+                // TODO: remove token (if token stored in the client side: Local storage, caching, in memory)
+                localStorage.removeItem("access-token");
+                setLoading(false);
+            }
+        });
+        return () => {
+            return unsubscribe();
+        };
+    }, [axiosPublic]);
 
     const data = {
         createUser,

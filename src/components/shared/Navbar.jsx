@@ -2,8 +2,14 @@ import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo2.png";
 import { useState } from "react";
 import { VscChromeClose, VscMenu } from "react-icons/vsc";
+import useAuth from "../hooks/useAuth";
+import { IoIosLogOut } from "react-icons/io";
 
 const Navbar = () => {
+    const { user, signOutUser } = useAuth();
+    const handleSignOut = () => {
+        signOutUser();
+    };
     const navLinks = [
         <li key={1}>
             <NavLink className="px-2 py-2" to={"/"}>
@@ -31,9 +37,27 @@ const Navbar = () => {
             </NavLink>
         </li>,
         <li key={6}>
-            <NavLink className="px-2 py-2" to={"/sign-in"}>
-                Sign In
-            </NavLink>
+            {user ? (
+                <span className="flex gap-2 items-center">
+                    <NavLink
+                        className="px-4 py-2 border rounded-full bg-gradient-to-r hover:from-[#94f3b0] hover:to-[#7abf88] hover:text-black"
+                        to={"/"}
+                    >
+                        {user.displayName}
+                    </NavLink>
+                    <button
+                        onClick={handleSignOut}
+                        className="px-2 py-2 border rounded-full text-2xl bg-gradient-to-r hover:from-[#94f3b0] hover:to-[#7abf88] hover:text-black"
+                        to={"/sign-in"}
+                    >
+                        <IoIosLogOut />
+                    </button>
+                </span>
+            ) : (
+                <NavLink className="px-2 py-2" to={"/sign-in"}>
+                    Sign In
+                </NavLink>
+            )}
         </li>,
     ];
 
