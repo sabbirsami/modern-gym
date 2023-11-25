@@ -5,6 +5,7 @@ import SignIn from "../components/auth/SignIn";
 import Register from "../components/auth/Register";
 import ErrorPage from "../components/shared/ErrorPage";
 import Classes from "../components/classes/Classes";
+import Trainers from "../components/trainer/Trainers";
 
 const router = createBrowserRouter([
     {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
             {
                 path: "/classes",
                 element: <Classes />,
+            },
+            {
+                path: "/trainers",
+                element: <Trainers />,
             },
             {
                 path: "/sign-in",

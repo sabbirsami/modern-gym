@@ -16,7 +16,7 @@ const Navbar = () => {
             </NavLink>
         </li>,
         <li key={3}>
-            <NavLink className="px-2 py-2" to={"/"}>
+            <NavLink className="px-2 py-2" to={"/trainers"}>
                 Trainer
             </NavLink>
         </li>,

@@ -2,8 +2,13 @@
     {
         "name": "David Anderson",
         "image": "https://i.ibb.co/306Jc8L/trainer.png",
-        "experience": "Certified Personal Trainer with 8 years of experience",
-        "available_time_slot": ["6am - 7am", "8am - 9am"],
+        "experience": 3,
+        "available_time_slot": [
+            "6am - 7am",
+            "8am - 9am",
+            "8pm - 9pm",
+            "9pm - 10pm"
+        ],
         "email": "david.anderson@example.com",
         "age": 35,
         "skills": [
@@ -17,8 +22,14 @@
     {
         "name": "Michael Davis",
         "image": "https://i.ibb.co/QJKqsfg/trainer01.jpg",
-        "experience": "Fitness Instructor specializing in Pilates and Yoga",
-        "available_time_slot": ["3pm - 4pm", "6pm - 7pm"],
+        "experience": 4,
+        "available_time_slot": [
+            "6am - 7am",
+            "8am - 9am",
+            "6pm - 7pm",
+            "7pm - 8pm",
+            "9pm - 10pm"
+        ],
         "email": "michael.davis@example.com",
         "age": 28,
         "skills": ["Pilates", "Yoga", "Flexibility Training"],
@@ -28,8 +39,15 @@
     {
         "name": "James Turner",
         "image": "https://i.ibb.co/Zxjt7SC/trainer02.png",
-        "experience": "CrossFit Coach with a passion for functional fitness",
-        "available_time_slot": ["6am - 7am", "8pm - 9pm"],
+        "experience": 3,
+        "available_time_slot": [
+            "6am - 7am",
+            "8am - 9am",
+            "6pm - 7pm",
+            "7pm - 8pm",
+            "8pm - 9pm",
+            "9pm - 10pm"
+        ],
         "email": "james.turner@example.com",
         "age": 40,
         "skills": [
@@ -43,8 +61,15 @@
     {
         "name": "Daniel Miller",
         "image": "https://i.ibb.co/bRbnb93/trainer4.png",
-        "experience": "Certified Nutritionist and Weight Management Specialist",
-        "available_time_slot": ["9am - 10am", "2pm - 3pm"],
+        "experience": 2,
+        "available_time_slot": [
+            "6am - 7am",
+            "8am - 9am",
+            "6pm - 7pm",
+            "7pm - 8pm",
+            "8pm - 9pm",
+            "9pm - 10pm"
+        ],
         "email": "daniel.miller@example.com",
         "age": 32,
         "skills": [
@@ -58,8 +83,14 @@
     {
         "name": "Christopher Carter",
         "image": "https://i.ibb.co/JCC8Fvv/trainer05.jpg",
-        "experience": "Martial Arts Expert and Self-Defense Instructor",
-        "available_time_slot": ["7pm - 8pm", "9pm - 10pm"],
+        "experience": 1,
+        "available_time_slot": [
+            "8am - 9am",
+            "6pm - 7pm",
+            "7pm - 8pm",
+            "8pm - 9pm",
+            "9pm - 10pm"
+        ],
         "email": "christopher.carter@example.com",
         "age": 45,
         "skills": ["Martial Arts", "Self-Defense", "Discipline Training"],
@@ -69,8 +100,15 @@
     {
         "name": "Brian Johnson",
         "image": "https://i.ibb.co/WWKs3VV/trainer6.png",
-        "experience": "Specialist in Men's Fitness and Strength Training",
-        "available_time_slot": ["10am - 11am", "1pm - 2pm"],
+        "experience": 2,
+        "available_time_slot": [
+            "6am - 7am",
+            "8am - 9am",
+            "6pm - 7pm",
+            "7pm - 8pm",
+            "8pm - 9pm",
+            "9pm - 10pm"
+        ],
         "email": "brian.johnson@example.com",
         "age": 30,
         "skills": ["Men's Fitness", "Strength Training", "Muscle Building"],
