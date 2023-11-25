@@ -1,10 +1,16 @@
 import plusIcon from "../../assets/icon/plus.png";
 import heroImage from "../../assets/heroImage.png";
+import shapeImage from "../../assets/icon/shape01.png";
 import { MdArrowForwardIos } from "react-icons/md";
 import { Link } from "react-router-dom";
 const Hero = () => {
     return (
         <section className="relative overflow-hidden">
+            <img
+                src={shapeImage}
+                alt=""
+                className="absolute bottom-0 -left-32 -z-10"
+            />
             <div className="container mx-auto px-6">
                 <div className="h-[88vh] flex items-center">
                     <div className="grid lg:grid-cols-2 justify-between items-center">
@@ -48,7 +54,7 @@ const Hero = () => {
                         </div>
                         <div className="text-center ms-auto lg:hidden mt-6">
                             <img
-                                className="2xl:h-[32rem] xl:h-[30rem] lg:h-[24rem] md:h-[18rem]"
+                                className="2xl:h-[32rem] xl:h-[30rem] lg:h-[24rem] md:h-[18rem] h-[12rem]"
                                 src={heroImage}
                                 alt=""
                             />

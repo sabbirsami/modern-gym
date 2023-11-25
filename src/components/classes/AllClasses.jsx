@@ -13,7 +13,7 @@ const AllClasses = () => {
     if (isLoading) {
         return <p>Loading...</p>;
     }
-    console.log(allClasses);
+
     return (
         <div className="pt-16">
             <h2 className="text-8xl pb-16">All Classes.</h2>

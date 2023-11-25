@@ -13,7 +13,7 @@ const WeeklyClasses = () => {
     if (isLoading) {
         return <p>Loading...</p>;
     }
-    console.log(weeklyClasses);
+
     return (
         <div>
             <h2 className="text-8xl pb-16">Weekly Schedule</h2>

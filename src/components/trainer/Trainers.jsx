@@ -1,23 +1,28 @@
 import { useQuery } from "react-query";
 import Trainer from "./Trainer";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import useAxiosPublic from "../hooks/useAxiosPublic";
+import Loading from "../shared/Loading";
 
 const Trainers = () => {
+    const axiosPublic = useAxiosPublic();
     const { data: trainers = [], isLoading } = useQuery({
         queryKey: "trainer",
-        queryFn: () =>
-            fetch("trainer.json")
-                .then((res) => res.json())
-                .catch((err) => {
-                    console.log(err);
-                }),
+        queryFn: async () => {
+            const res = await axiosPublic.get("/trainers");
+            return res.data;
+        },
     });
     if (isLoading) {
-        return <p>Loading...</p>;
+        return <Loading />;
     }
-    console.log(trainers);
+
     return (
         <section className="container mx-auto px-6 py-32">
+            <Helmet>
+                <title>Modern Gym | Classes</title>
+            </Helmet>
             <h2 className="md:text-8xl text-6xl md:pb-16 pb-6">Our Trainers</h2>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
                 {trainers.map((trainer, idx) => (

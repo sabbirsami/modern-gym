@@ -11,6 +11,7 @@
         ],
         "email": "david.anderson@example.com",
         "age": 35,
+        "joiningDate": "11-30-2021",
         "skills": [
             "Strength Training",
             "Cardiovascular Conditioning",
@@ -32,6 +33,7 @@
         ],
         "email": "michael.davis@example.com",
         "age": 28,
+        "joiningDate": "10-13-2022",
         "skills": ["Pilates", "Yoga", "Flexibility Training"],
         "available_time_in_week": ["Tuesday", "Thursday", "Saturday"],
         "available_time_in_day": "Flexible"
@@ -50,6 +52,7 @@
         ],
         "email": "james.turner@example.com",
         "age": 40,
+        "joiningDate": "12-10-2023",
         "skills": [
             "CrossFit",
             "Functional Fitness",
@@ -72,6 +75,7 @@
         ],
         "email": "daniel.miller@example.com",
         "age": 32,
+        "joiningDate": "11-30-2023",
         "skills": [
             "Nutrition Planning",
             "Weight Management",
@@ -93,6 +97,7 @@
         ],
         "email": "christopher.carter@example.com",
         "age": 45,
+        "joiningDate": "11-20-2023",
         "skills": ["Martial Arts", "Self-Defense", "Discipline Training"],
         "available_time_in_week": ["Monday", "Wednesday", "Friday"],
         "available_time_in_day": "Flexible"
@@ -111,6 +116,7 @@
         ],
         "email": "brian.johnson@example.com",
         "age": 30,
+        "joiningDate": "11-30-2023",
         "skills": ["Men's Fitness", "Strength Training", "Muscle Building"],
         "available_time_in_week": ["Tuesday", "Thursday", "Saturday"],
         "available_time_in_day": "Flexible"

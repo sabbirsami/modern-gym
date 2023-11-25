@@ -7,6 +7,7 @@ import ErrorPage from "../components/shared/ErrorPage";
 import Classes from "../components/classes/Classes";
 import Trainers from "../components/trainer/Trainers";
 import AddTrainer from "../components/trainer/AddTrainer";
+import TrainerDetails from "../components/trainer/TrainerDetails";
 
 const router = createBrowserRouter([
     {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
             {
                 path: "/trainers",
                 element: <Trainers />,
+            },
+            {
+                path: "/trainer/:id",
+                element: <TrainerDetails />,
             },
             {
                 path: "/add-trainer",

@@ -3,8 +3,19 @@ import { useForm } from "react-hook-form";
 import { HiOutlineArrowUpTray } from "react-icons/hi2";
 import Select from "react-select";
 import { BsFillImageFill } from "react-icons/bs";
+import { Helmet } from "react-helmet-async";
+import useAxiosPublic from "../hooks/useAxiosPublic";
+import Swal from "sweetalert2";
 
 const AddTrainer = () => {
+    const [err, setErr] = useState("");
+    // get today date
+    let today = new Date();
+    let dd = today.getDate();
+    let mm = today.getMonth() + 1;
+    let yyyy = today.getFullYear();
+    const joiningDate = `${mm}-${dd}-${yyyy}`;
+    console.log(joiningDate);
     const imageUploadKey = "bbb19450ec34611b6204ad31a2909518";
     const [uploadFile, setFile] = useState();
     const [buttonLoading, setButtonLoading] = useState(false);
@@ -26,6 +37,7 @@ const AddTrainer = () => {
     const [selectedDayError, setSelectedDayError] = useState("");
 
     console.log(selectedSkill);
+    const axiosPublic = useAxiosPublic();
 
     function handleChange(e) {
         setFile(URL.createObjectURL(e.target.files[0]));
@@ -88,6 +100,7 @@ const AddTrainer = () => {
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm();
     const onSubmit = (data) => {
@@ -125,10 +138,27 @@ const AddTrainer = () => {
                                             selectedDayValues,
                                         available_time_slot: selectedTimeValues,
                                         skills: selectedSkillValues,
+                                        joiningDate: joiningDate,
                                         available_time_in_day: "Flexible",
                                     };
                                     console.log(newTrainerData);
-                                    setButtonLoading(false);
+                                    axiosPublic
+                                        .post("/trainers", newTrainerData)
+                                        .then((res) => {
+                                            setButtonLoading(false);
+                                            console.log(res.data);
+                                            Swal.fire({
+                                                title: "Deleted!",
+                                                text: "Your file has been deleted.",
+                                                icon: "success",
+                                            });
+                                            setErr("");
+                                            reset();
+                                        })
+                                        .catch((err) => {
+                                            console.log(err);
+                                            setErr(err.message);
+                                        });
                                 }
                                 console.log(result);
                             });
@@ -145,6 +175,9 @@ const AddTrainer = () => {
     };
     return (
         <section className="container mx-auto px-6 py-16">
+            <Helmet>
+                <title>Modern Gym | Be a Trainer</title>
+            </Helmet>
             <h2 className="text-4xl ">Be a Trainer</h2>
             <form
                 onSubmit={handleSubmit(onSubmit)}
@@ -372,6 +405,10 @@ const AddTrainer = () => {
                         <span>Be a trainer</span>
                     )}
                 </button>
+                {/* error message */}
+                <label className="block md:w-64 w-full  text-sm text-[#d63031] pt-1">
+                    {err}
+                </label>
             </form>
         </section>
     );

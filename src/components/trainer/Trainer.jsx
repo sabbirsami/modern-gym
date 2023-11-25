@@ -25,8 +25,8 @@ const Trainer = ({ trainer }) => {
             </div>
             <div className="flex md:flex-row flex-col justify-between items-center">
                 <p className="">Years of Experience: 0{trainer.experience}</p>
-                <Link className="" to={`/trainer/${trainer}`}>
-                    <span className="underline "> Show details </span>
+                <Link className="" to={`/trainer/${trainer._id}`}>
+                    <span className="underline "> Know More </span>
                     <BsBoxArrowUpRight className="inline mb-1 ms-2" />
                 </Link>
             </div>

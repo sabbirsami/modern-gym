@@ -31,6 +31,11 @@ const Navbar = () => {
                 Classes
             </NavLink>
         </li>,
+        <li key={4}>
+            <NavLink className="px-2 py-2" to={"/community"}>
+                Community
+            </NavLink>
+        </li>,
         <li key={5}>
             <NavLink className="px-2 py-2" to={"/"}>
                 Dashboard
@@ -47,7 +52,7 @@ const Navbar = () => {
                     </NavLink>
                     <button
                         onClick={handleSignOut}
-                        className="px-2 py-2 border rounded-full text-2xl bg-gradient-to-r hover:from-[#94f3b0] hover:to-[#7abf88] hover:text-black"
+                        className="px-2 py-2 rounded-full text-2xl bg-gradient-to-r from-[#94f3b0] to-[#7abf88] text-black"
                         to={"/sign-in"}
                     >
                         <IoIosLogOut />
