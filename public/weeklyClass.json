@@ -2,71 +2,159 @@
     {
         "day": "Saturday",
         "classes": [
-            { "class": "Functional Fitness", "time": "10:00 AM" },
-            { "class": "Kickboxing", "time": "12:00 PM" },
-            { "class": "Stretch and Relax", "time": "2:30 PM" },
-            { "class": "Climbing Club", "time": "5:00 PM" },
-            { "class": "Group Run", "time": "7:00 PM" }
+            {
+                "class": "Functional Fitness",
+                "time": "10:00 AM",
+                "totalJoinPeople": 5
+            },
+            { "class": "Kickboxing", "time": "12:00 PM", "totalJoinPeople": 8 },
+            {
+                "class": "Stretch and Relax",
+                "time": "2:30 PM",
+                "totalJoinPeople": 3
+            },
+            {
+                "class": "Climbing Club",
+                "time": "5:00 PM",
+                "totalJoinPeople": 6
+            },
+            { "class": "Group Run", "time": "7:00 PM", "totalJoinPeople": 2 }
         ]
     },
     {
         "day": "Sunday",
         "classes": [
-            { "class": "Morning Flow Yoga", "time": "9:30 AM" },
-            { "class": "Full Body Sculpt", "time": "11:30 AM" },
-            { "class": "Tai Chi", "time": "2:00 PM" },
-            { "class": "CrossFit Challenge", "time": "4:30 PM" },
-            { "class": "Relaxation and Meditation", "time": "7:00 PM" }
+            {
+                "class": "Morning Flow Yoga",
+                "time": "9:30 AM",
+                "totalJoinPeople": 9
+            },
+            {
+                "class": "Full Body Sculpt",
+                "time": "11:30 AM",
+                "totalJoinPeople": 4
+            },
+            { "class": "Tai Chi", "time": "2:00 PM", "totalJoinPeople": 7 },
+            {
+                "class": "CrossFit Challenge",
+                "time": "4:30 PM",
+                "totalJoinPeople": 1
+            },
+            {
+                "class": "Relaxation and Meditation",
+                "time": "7:00 PM",
+                "totalJoinPeople": 10
+            }
         ]
     },
     {
         "day": "Monday",
         "classes": [
-            { "class": "Cardio Blast", "time": "8:00 AM" },
-            { "class": "Strength Training", "time": "10:00 AM" },
-            { "class": "Yoga Flow", "time": "12:00 PM" },
-            { "class": "-", "time": "4:00 PM" },
-            { "class": "Spinning", "time": "6:00 PM" }
+            {
+                "class": "Cardio Blast",
+                "time": "8:00 AM",
+                "totalJoinPeople": 2
+            },
+            {
+                "class": "Strength Training",
+                "time": "10:00 AM",
+                "totalJoinPeople": 8
+            },
+            { "class": "Yoga Flow", "time": "12:00 PM", "totalJoinPeople": 5 },
+            { "class": "-", "time": "4:00 PM", "totalJoinPeople": 1 },
+            { "class": "Spinning", "time": "6:00 PM", "totalJoinPeople": 7 }
         ]
     },
     {
         "day": "Tuesday",
         "classes": [
-            { "class": "Pilates", "time": "7:30 AM" },
-            { "class": "-", "time": "9:30 AM" },
-            { "class": "-", "time": "11:30 AM" },
-            { "class": "Functional Training", "time": "3:30 PM" },
-            { "class": "Boxing", "time": "5:30 PM" }
+            { "class": "Pilates", "time": "7:30 AM", "totalJoinPeople": 3 },
+            { "class": "-", "time": "9:30 AM", "totalJoinPeople": 6 },
+            { "class": "-", "time": "11:30 AM", "totalJoinPeople": 4 },
+            {
+                "class": "Functional Training",
+                "time": "3:30 PM",
+                "totalJoinPeople": 9
+            },
+            { "class": "Boxing", "time": "5:30 PM", "totalJoinPeople": 2 }
         ]
     },
     {
         "day": "Wednesday",
         "classes": [
-            { "class": "Barre Workout", "time": "8:30 AM" },
-            { "class": "Circuit Training", "time": "10:30 AM" },
-            { "class": "Power Yoga", "time": "1:00 PM" },
-            { "class": "Tabata", "time": "4:30 PM" },
-            { "class": "Dance Fitness", "time": "7:00 PM" }
+            {
+                "class": "Barre Workout",
+                "time": "8:30 AM",
+                "totalJoinPeople": 1
+            },
+            {
+                "class": "Circuit Training",
+                "time": "10:30 AM",
+                "totalJoinPeople": 5
+            },
+            { "class": "Power Yoga", "time": "1:00 PM", "totalJoinPeople": 8 },
+            { "class": "Tabata", "time": "4:30 PM", "totalJoinPeople": 3 },
+            {
+                "class": "Dance Fitness",
+                "time": "7:00 PM",
+                "totalJoinPeople": 7
+            }
         ]
     },
     {
         "day": "Thursday",
         "classes": [
-            { "class": "Aqua Aerobics", "time": "9:00 AM" },
-            { "class": "Kettlebell Class", "time": "11:00 AM" },
-            { "class": "Core Strengthening", "time": "2:00 PM" },
-            { "class": "Cycling Challenge", "time": "5:00 PM" },
-            { "class": "Mindful Stretching", "time": "8:00 PM" }
+            {
+                "class": "Aqua Aerobics",
+                "time": "9:00 AM",
+                "totalJoinPeople": 6
+            },
+            {
+                "class": "Kettlebell Class",
+                "time": "11:00 AM",
+                "totalJoinPeople": 9
+            },
+            {
+                "class": "Core Strengthening",
+                "time": "2:00 PM",
+                "totalJoinPeople": 2
+            },
+            {
+                "class": "Cycling Challenge",
+                "time": "5:00 PM",
+                "totalJoinPeople": 4
+            },
+            {
+                "class": "Mindful Stretching",
+                "time": "8:00 PM",
+                "totalJoinPeople": 10
+            }
         ]
     },
     {
         "day": "Friday",
         "classes": [
-            { "class": "TRX Suspension", "time": "7:00 AM" },
-            { "class": "Plyometric Training", "time": "9:00 AM" },
-            { "class": "Meditation Session", "time": "12:30 PM" },
-            { "class": "Body Combat", "time": "3:00 PM" },
-            { "class": "Prenatal Yoga", "time": "6:30 PM" }
+            {
+                "class": "TRX Suspension",
+                "time": "7:00 AM",
+                "totalJoinPeople": 7
+            },
+            {
+                "class": "Plyometric Training",
+                "time": "9:00 AM",
+                "totalJoinPeople": 3
+            },
+            {
+                "class": "Meditation Session",
+                "time": "12:30 PM",
+                "totalJoinPeople": 6
+            },
+            { "class": "Body Combat", "time": "3:00 PM", "totalJoinPeople": 8 },
+            {
+                "class": "Prenatal Yoga",
+                "time": "6:30 PM",
+                "totalJoinPeople": 1
+            }
         ]
     }
 ]

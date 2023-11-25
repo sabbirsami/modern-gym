@@ -1,18 +1,20 @@
 import { useQuery } from "react-query";
+import useAxiosPublic from "../hooks/useAxiosPublic";
+import Loading from "../shared/Loading";
 
 const WeeklyClasses = () => {
+    const axiosPublic = useAxiosPublic();
     const { data: weeklyClasses = [], isLoading } = useQuery({
         queryKey: "weeklyClasses",
-        queryFn: () =>
-            fetch("weeklyClass.json")
-                .then((res) => res.json())
-                .catch((err) => {
-                    console.log(err);
-                }),
+        queryFn: async () => {
+            const res = await axiosPublic.get("/weekly-classes");
+            return res.data;
+        },
     });
     if (isLoading) {
-        return <p>Loading...</p>;
+        return <Loading></Loading>;
     }
+    console.log(weeklyClasses);
 
     return (
         <div>
@@ -75,7 +77,7 @@ const WeeklyClasses = () => {
                                                     className="flex items-center justify-center w-10 h-10 text-xs font-medium text-white bg-gray-700 border-2 border-white rounded-full hover:bg-gray-600 dark:border-gray-800"
                                                     href="#"
                                                 >
-                                                    +9
+                                                    {c.totalJoinPeople - 1}+
                                                 </a>
                                             </div>
                                         )}

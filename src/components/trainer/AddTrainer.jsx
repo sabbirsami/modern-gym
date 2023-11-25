@@ -6,9 +6,11 @@ import { BsFillImageFill } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import Swal from "sweetalert2";
+import useAuth from "../hooks/useAuth";
 
 const AddTrainer = () => {
     const [err, setErr] = useState("");
+    const { user } = useAuth();
     // get today date
     let today = new Date();
     let dd = today.getDate();
@@ -148,7 +150,7 @@ const AddTrainer = () => {
                                             setButtonLoading(false);
                                             console.log(res.data);
                                             Swal.fire({
-                                                title: "Deleted!",
+                                                title: "Add successfully",
                                                 text: "Your file has been deleted.",
                                                 icon: "success",
                                             });
@@ -301,6 +303,8 @@ const AddTrainer = () => {
                         <input
                             type="email"
                             name="email"
+                            readOnly
+                            defaultValue={user?.email}
                             {...register("email", { required: true })}
                             className=" rounded-md w-full py-3 px-4 bg-[#0C1117]/50"
                             placeholder="Enter email here.."
