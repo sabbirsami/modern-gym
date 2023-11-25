@@ -8,6 +8,7 @@ import Classes from "../components/classes/Classes";
 import Trainers from "../components/trainer/Trainers";
 import AddTrainer from "../components/trainer/AddTrainer";
 import TrainerDetails from "../components/trainer/TrainerDetails";
+import ClassDetails from "../components/classes/ClassDetails";
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path: "/classes",
                 element: <Classes />,
+            },
+            {
+                path: "/classes-details/:id",
+                element: <ClassDetails />,
             },
             {
                 path: "/trainers",

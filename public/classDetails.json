@@ -1,6 +1,16 @@
 [
     {
         "name": "Functional Fitness",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Engage in dynamic exercises targeting multiple muscle groups for overall strength and endurance.",
         "benefits": [
             "Improved functional strength",
@@ -10,6 +20,16 @@
     },
     {
         "name": "Kickboxing",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Combine cardiovascular workouts with martial arts techniques for a high-energy, full-body workout.",
         "benefits": [
             "Calorie burning",
@@ -19,6 +39,16 @@
     },
     {
         "name": "Stretch and Relax",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Focus on gentle stretches and relaxation techniques to promote flexibility and reduce tension.",
         "benefits": [
             "Improved flexibility",
@@ -28,6 +58,16 @@
     },
     {
         "name": "Climbing Club",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Experience the thrill of indoor climbing for a challenging and engaging full-body workout.",
         "benefits": [
             "Upper and lower body strength",
@@ -37,6 +77,16 @@
     },
     {
         "name": "Group Run",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Join a community of runners for a motivating and social outdoor running session.",
         "benefits": [
             "Cardiovascular health",
@@ -46,6 +96,16 @@
     },
     {
         "name": "Morning Flow Yoga",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Start your day with a gentle and invigorating yoga practice to promote flexibility and mindfulness.",
         "benefits": [
             "Increased flexibility",
@@ -55,6 +115,16 @@
     },
     {
         "name": "Full Body Sculpt",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Target all major muscle groups in this sculpting class, designed for toning and strengthening.",
         "benefits": [
             "Muscle toning",
@@ -64,6 +134,16 @@
     },
     {
         "name": "Tai Chi",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Experience the slow, flowing movements of Tai Chi for improved balance, flexibility, and relaxation.",
         "benefits": [
             "Balance and coordination",
@@ -73,6 +153,16 @@
     },
     {
         "name": "CrossFit Challenge",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Participate in a high-intensity workout combining elements of weightlifting, cardio, and gymnastics.",
         "benefits": [
             "Full-body conditioning",
@@ -82,11 +172,31 @@
     },
     {
         "name": "Relaxation and Meditation",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Unwind with guided meditation and relaxation techniques to promote mental well-being.",
         "benefits": ["Stress reduction", "Improved focus", "Mindfulness"]
     },
     {
         "name": "Cardio Blast",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Elevate your heart rate with a dynamic cardio workout for improved cardiovascular health.",
         "benefits": [
             "Cardiovascular fitness",
@@ -96,6 +206,16 @@
     },
     {
         "name": "Strength Training",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Build muscle strength and endurance through resistance exercises targeting specific muscle groups.",
         "benefits": [
             "Increased muscle mass",
@@ -105,11 +225,31 @@
     },
     {
         "name": "Yoga Flow",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Experience a fluid and mindful yoga practice to enhance flexibility, balance, and relaxation.",
         "benefits": ["Flexibility", "Stress relief", "Mind-body connection"]
     },
     {
         "name": "Spinning",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Engage in a high-intensity cycling workout for cardiovascular health and lower body strength.",
         "benefits": [
             "Cardiovascular fitness",
@@ -119,11 +259,31 @@
     },
     {
         "name": "Pilates",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Focus on core strength, stability, and flexibility through controlled movements and breath.",
         "benefits": ["Core strength", "Improved posture", "Muscle toning"]
     },
     {
         "name": "Functional Training",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Participate in functional movements that mimic everyday activities for improved overall fitness.",
         "benefits": [
             "Functional strength",
@@ -133,6 +293,16 @@
     },
     {
         "name": "Boxing",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Combine boxing techniques with cardiovascular exercises for a high-energy, empowering workout.",
         "benefits": [
             "Cardiovascular fitness",
@@ -142,11 +312,31 @@
     },
     {
         "name": "Barre Workout",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Utilize a ballet-inspired workout to sculpt and tone muscles, with a focus on core strength.",
         "benefits": ["Muscle toning", "Improved posture", "Core strength"]
     },
     {
         "name": "Circuit Training",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Engage in a series of exercises targeting different muscle groups for a comprehensive workout.",
         "benefits": [
             "Cardiovascular fitness",
@@ -156,6 +346,16 @@
     },
     {
         "name": "Power Yoga",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Experience an energetic and challenging form of yoga that focuses on strength and flexibility.",
         "benefits": [
             "Strength and flexibility",
@@ -165,11 +365,31 @@
     },
     {
         "name": "Tabata",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Participate in high-intensity interval training with short bursts of exercise and rest periods.",
         "benefits": ["Calorie burning", "Improved metabolism", "Time-efficient"]
     },
     {
         "name": "Dance Fitness",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Enjoy a dance-based workout that combines fitness and fun for a full-body exercise experience.",
         "benefits": [
             "Cardiovascular fitness",
@@ -179,6 +399,16 @@
     },
     {
         "name": "Aqua Aerobics",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Engage in low-impact aerobics in a pool environment for joint-friendly exercise.",
         "benefits": [
             "Joint-friendly exercise",
@@ -188,6 +418,16 @@
     },
     {
         "name": "Kettlebell Class",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Incorporate kettlebells for dynamic, total-body workouts focusing on strength and endurance.",
         "benefits": [
             "Total-body workout",
@@ -197,11 +437,31 @@
     },
     {
         "name": "Core Strengthening",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Focus on exercises targeting the core muscles to improve stability and posture.",
         "benefits": ["Core strength", "Improved posture", "Injury prevention"]
     },
     {
         "name": "Cycling Challenge",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Participate in challenging cycling workouts for cardiovascular fitness and lower body strength.",
         "benefits": [
             "Cardiovascular fitness",
@@ -211,11 +471,31 @@
     },
     {
         "name": "Mindful Stretching",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Engage in gentle stretches with a focus on mindfulness and relaxation for overall well-being.",
         "benefits": ["Improved flexibility", "Stress reduction", "Mindfulness"]
     },
     {
         "name": "TRX Suspension",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Utilize suspension training for a full-body workout, focusing on strength and stability.",
         "benefits": [
             "Full-body workout",
@@ -225,6 +505,16 @@
     },
     {
         "name": "Plyometric Training",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Incorporate explosive movements for power and strength in this dynamic workout.",
         "benefits": [
             "Power and strength",
@@ -234,11 +524,31 @@
     },
     {
         "name": "Meditation Session",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Participate in guided meditation for relaxation, stress reduction, and mental clarity.",
         "benefits": ["Stress reduction", "Improved focus", "Mental clarity"]
     },
     {
         "name": "Body Combat",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Engage in a high-energy workout inspired by martial arts for cardiovascular fitness and strength.",
         "benefits": [
             "Cardiovascular fitness",
@@ -248,6 +558,16 @@
     },
     {
         "name": "Prenatal Yoga",
+        "duration": 1,
+        "equipmentNeeded": [
+            "Comfortable workout clothes",
+            "Cross-training shoes"
+        ],
+        "intensityLevel": "Intermediate",
+        "capacity": 20,
+        "prerequisites": "Basic fitness level",
+        "cost": 15,
+        "targetAudience": "All fitness levels",
         "short_description": "Enjoy a gentle and safe yoga practice designed for expectant mothers to promote well-being.",
         "benefits": ["Prenatal fitness", "Stress reduction", "Improved posture"]
     }
