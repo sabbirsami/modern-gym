@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import { useState } from "react";
 import useAuth from "../hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
 const Booking = ({ packageItem, trainerId, slotId }) => {
     const { user } = useAuth();
@@ -11,6 +12,7 @@ const Booking = ({ packageItem, trainerId, slotId }) => {
     const axiosPublic = useAxiosPublic();
     const [err, setErr] = useState("");
     const [buttonLoading, setButtonLoading] = useState(false);
+    const navigate = useNavigate();
 
     const handleJoin = () => {
         const userJoinedPackage = {
@@ -34,6 +36,7 @@ const Booking = ({ packageItem, trainerId, slotId }) => {
                     icon: "success",
                 });
                 setErr("");
+                navigate(`/trainer/${trainerId}/${slotId}/${_id}/payment`);
             })
             .catch((err) => {
                 console.log(err);

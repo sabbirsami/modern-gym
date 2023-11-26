@@ -10,6 +10,7 @@ import AddTrainer from "../components/trainer/AddTrainer";
 import TrainerDetails from "../components/trainer/TrainerDetails";
 import ClassDetails from "../components/classes/ClassDetails";
 import TrainerBooking from "../components/trainer/TrainerBooking";
+import Payment from "../components/payment/Payment";
 
 const router = createBrowserRouter([
     {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
             {
                 path: "/trainer/:trainerId/:id",
                 element: <TrainerBooking />,
+            },
+            {
+                path: "/trainer/:trainerId/:slotId/:packageId/payment",
+                element: <Payment />,
             },
             {
                 path: "/add-trainer",
