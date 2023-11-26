@@ -1,0 +1,93 @@
+import PropTypes from "prop-types";
+import { useState } from "react";
+import { GoHeart } from "react-icons/go";
+import { GoHeartFill } from "react-icons/go";
+
+const Post = ({ post }) => {
+    const [liked, setLiked] = useState(false);
+    const {
+        postImage,
+        title,
+        author,
+        authImage,
+        content,
+        timestamp,
+        views,
+        likeCount,
+        postTag,
+        commentsCount,
+    } = post;
+    return (
+        <div className="p-6 bg-[#303644] rounded-xl">
+            <div className="flex gap-10">
+                <div className="">
+                    <img
+                        className="w-60 h-48 rounded-lg object-cover"
+                        src={postImage}
+                        alt=""
+                    />
+                </div>
+                <div className="px-6  grow ">
+                    <div className="flex justify-between gap-10">
+                        <div className="">
+                            <h3 className="text-3xl">{title}</h3>
+                            <p className="pt-1 text-sm">{content}</p>
+                        </div>
+                        <div className="">
+                            {liked ? (
+                                <button
+                                    onClick={() => setLiked(false)}
+                                    className="text-2xl"
+                                >
+                                    <GoHeartFill />
+                                </button>
+                            ) : (
+                                <button
+                                    onClick={() => setLiked(true)}
+                                    className="text-2xl"
+                                >
+                                    <GoHeart />
+                                </button>
+                            )}
+                        </div>
+                    </div>
+                    <div className="">
+                        <p className="py-2 px-3 me-1.5 mb-1.5 inline-block rounded-lg text-xs cursor-pointer bg-[#94f3b0]/10 text-[#a3ffb5] mt-3">
+                            {postTag}
+                        </p>
+                        <p className="py-2 px-3 me-1.5 mb-1.5 inline-block rounded-lg text-xs cursor-pointer bg-[#94f3b0]/10 text-[#a3ffb5] mt-3">
+                            Gym
+                        </p>
+                        <p className="py-2 px-3 me-1.5 mb-1.5 inline-block rounded-lg text-xs cursor-pointer bg-[#94f3b0]/10 text-[#a3ffb5] mt-3">
+                            Health
+                        </p>
+                    </div>
+                    <div className="flex justify-between items-center mt-3">
+                        <div className="flex gap-6 items-center grow">
+                            <img
+                                className="w-16 h-16 rounded-3xl p-0.5 bg-slate-600 object-cover"
+                                src={authImage}
+                                alt=""
+                            />
+                            <div className="">
+                                <h4 className="text-xl">{author}</h4>
+                                <p className="text-xs text-white/80">
+                                    {timestamp}
+                                </p>
+                            </div>
+                        </div>
+                        <p className="ps-10">{views + 1560} Views</p>
+                        <p className="ps-10">{commentsCount + 15} Comments</p>
+                        <p className="ps-10">{likeCount + 160} Likes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Post;
+
+Post.propTypes = {
+    post: PropTypes.object,
+};

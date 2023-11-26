@@ -13,6 +13,7 @@ import TrainerBooking from "../components/trainer/TrainerBooking";
 import Payment from "../components/payment/Payment";
 import PrivateRoute from "../components/shared/PrivateRoute";
 import Gallery from "../components/gallery/Gallery";
+import Posts from "../components/posts/Posts";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path: "/gallery",
                 element: <Gallery />,
+            },
+            {
+                path: "/posts",
+                element: <Posts />,
             },
             {
                 path: "/trainers",

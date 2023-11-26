@@ -21,6 +21,11 @@ const Navbar = () => {
                 Gallery
             </NavLink>
         </li>,
+        <li key={7}>
+            <NavLink className="px-2 py-2" to={"/posts"}>
+                Posts
+            </NavLink>
+        </li>,
         <li key={3}>
             <NavLink className="px-2 py-2" to={"/trainers"}>
                 Trainer
@@ -31,7 +36,7 @@ const Navbar = () => {
                 Classes
             </NavLink>
         </li>,
-        <li key={4}>
+        <li key={8}>
             <NavLink className="px-2 py-2" to={"/community"}>
                 Community
             </NavLink>
@@ -48,7 +53,7 @@ const Navbar = () => {
                         className="px-4 py-2 border rounded-full bg-gradient-to-r hover:from-[#94f3b0] hover:to-[#7abf88] hover:text-black"
                         to={"/"}
                     >
-                        {user.displayName}
+                        {user.displayName.split(" ")[0]}
                     </NavLink>
                     <button
                         onClick={handleSignOut}

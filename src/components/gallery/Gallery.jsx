@@ -6,8 +6,8 @@ import { useEffect, useState } from "react";
 const Gallery = () => {
     const [images, setImages] = useState([]);
     const [hasMore, setHasMore] = useState(true);
-    const [page, setPage] = useState(1);
-    const imagesPerPage = 8;
+    const [page, setPage] = useState(0);
+    const imagesPerPage = 12;
     const totalImages = 71;
 
     const fetchImages = async () => {
@@ -38,7 +38,9 @@ const Gallery = () => {
             <Helmet>
                 <title>Modern Gym | Gallery</title>
             </Helmet>
-            <h2 className="md:text-8xl text-6xl md:pb-16 pb-6">Gallery</h2>
+            <h2 className="md:text-8xl text-6xl md:pb-16 pb-6 text-center">
+                Gallery
+            </h2>
 
             <InfiniteScroll
                 dataLength={images.length}
@@ -49,7 +51,7 @@ const Gallery = () => {
                 <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
                     {images.map((classDetail, idx) => (
                         <img
-                            className="h-full"
+                            className="h-full object-cover"
                             key={idx}
                             src={classDetail.image}
                             alt=""
