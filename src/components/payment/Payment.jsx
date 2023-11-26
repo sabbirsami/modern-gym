@@ -3,11 +3,19 @@ import { useParams } from "react-router-dom";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import Loading from "../shared/Loading";
 import { BsCheckCircleFill } from "react-icons/bs";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import CheckoutForm from "./CheckoutForm";
 
 const Payment = () => {
     const { packageId, trainerId, slotId } = useParams();
     const selectedSlot = parseFloat(slotId);
     console.log(packageId);
+
+    // payment stripe
+    const stripePromise = loadStripe(
+        "pk_test_51L2vNMJH0mXagrhOdzLEhBYwbNjUZQy6o9TQRQP00TOEqz5YJutO7I2OjEflJDptHPmz9U3iLzgX9sBRtIlYTIB900kUiVeM24"
+    );
     const axiosPublic = useAxiosPublic();
     const { data: packageDetails = [], isLoading } = useQuery({
         queryKey: "packageDetails",
@@ -30,13 +38,13 @@ const Payment = () => {
     return (
         <section className="container mx-auto px-6 py-16">
             <h2 className="text-7xl font-semibold">Payment</h2>
-            <div className="grid xl:grid-cols-2 lg:grid-cols-2  justify-center items-start gap-16 py-16 ">
+            <div className="grid xl:grid-cols-2 lg:grid-cols-2  justify-center items-start gap-16 pb-16  pt-6">
                 <div className="">
                     <h2 className="pb-6 text-2xl">Package you join:</h2>
                     {packageDetails.map((packageItem) => (
                         <div
                             key={packageItem._id}
-                            className="border p-10 rounded-xl"
+                            className="p-10 rounded-xl bg-[#303644]"
                         >
                             <h2 className="text-3xl font-semibold">
                                 {packageItem.name}
@@ -66,7 +74,9 @@ const Payment = () => {
                             </div>
                         </div>
                     ))}
-                    <div className="mt-6">
+                </div>
+                <div className="">
+                    <div className=" mb-6">
                         <h2 className="pb-6 text-2xl">Your trainer:</h2>
                         {trainer.map((t) => (
                             <div key={t._id} className="border p-10 rounded-xl">
@@ -102,6 +112,9 @@ const Payment = () => {
                             </div>
                         ))}
                     </div>
+                    <Elements stripe={stripePromise}>
+                        <CheckoutForm />
+                    </Elements>
                 </div>
             </div>
         </section>
