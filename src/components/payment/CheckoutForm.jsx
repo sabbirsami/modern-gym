@@ -2,10 +2,12 @@ import PropTypes from "prop-types";
 import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
+import useAxiosPublic from "../hooks/useAxiosPublic";
 
 const CheckoutForm = ({ paymentInfo }) => {
     const stripe = useStripe();
     const elements = useElements();
+    const axiosPublic = useAxiosPublic();
     const [loadingButton, setLoadingButton] = useState(false);
 
     const [err, setErr] = useState("");
@@ -13,7 +15,22 @@ const CheckoutForm = ({ paymentInfo }) => {
 
     const { user } = useAuth();
     console.log(user);
-    const { packageCost } = paymentInfo;
+    let today = new Date();
+    let dd = today.getDate();
+    let mm = today.getMonth() + 1;
+    let yyyy = today.getFullYear();
+    const paymentDate = `${mm}-${dd}-${yyyy}`;
+
+    const { packageCost, packageId, trainerId, slotId } = paymentInfo;
+    const userPaymentInfo = {
+        packageId,
+        trainerId,
+        slotId,
+        packageCost,
+        paymentDate,
+        transitionId,
+        userEmail: user?.email,
+    };
     console.log(typeof packageCost);
 
     const [clientSecret, setClientSecret] = useState("");
@@ -78,9 +95,17 @@ const CheckoutForm = ({ paymentInfo }) => {
             setErr("");
             console.log("[PaymentMethod]", paymentMethod);
             if (paymentIntent.status === "succeeded") {
-                console.log("object");
                 setTransitionId(paymentIntent.id);
+
                 setLoadingButton(false);
+                axiosPublic
+                    .post("/create-payment-intent", userPaymentInfo)
+                    .then((res) => {
+                        console.log(res.data);
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    });
             }
         }
 

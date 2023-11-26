@@ -6,6 +6,7 @@ import { BsCheckCircleFill } from "react-icons/bs";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "./CheckoutForm";
+import { Helmet } from "react-helmet-async";
 
 const Payment = () => {
     const { packageId, trainerId, slotId } = useParams();
@@ -44,6 +45,9 @@ const Payment = () => {
     };
     return (
         <section className="container mx-auto px-6 py-16">
+            <Helmet>
+                <title>Modern Gym | Payment</title>
+            </Helmet>
             <h2 className="text-7xl font-semibold">Payment</h2>
             <div className="grid xl:grid-cols-2 lg:grid-cols-2  justify-center items-start gap-16 pb-16  pt-6">
                 <div className="">

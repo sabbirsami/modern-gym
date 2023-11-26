@@ -17,7 +17,7 @@ const Navbar = () => {
             </NavLink>
         </li>,
         <li key={2}>
-            <NavLink className="px-2 py-2" to={"/"}>
+            <NavLink className="px-2 py-2" to={"/gallery"}>
                 Gallery
             </NavLink>
         </li>,
@@ -37,7 +37,7 @@ const Navbar = () => {
             </NavLink>
         </li>,
         <li key={5}>
-            <NavLink className="px-2 py-2" to={"/"}>
+            <NavLink className="px-2 py-2" to={"/dashboard"}>
                 Dashboard
             </NavLink>
         </li>,

@@ -4,6 +4,7 @@ import Loading from "../shared/Loading";
 import { useParams } from "react-router-dom";
 import shapeImage from "../../assets/icon/shape03.png";
 import Booking from "./Booking";
+import { Helmet } from "react-helmet-async";
 const TrainerBooking = () => {
     const { id, trainerId } = useParams();
     const axiosPublic = useAxiosPublic();
@@ -21,6 +22,9 @@ const TrainerBooking = () => {
     console.log(id, gymPackages);
     return (
         <section className="relative">
+            <Helmet>
+                <title>Modern Gym | Booking</title>
+            </Helmet>
             <img
                 src={shapeImage}
                 alt=""

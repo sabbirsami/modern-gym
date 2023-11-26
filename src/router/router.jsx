@@ -11,6 +11,8 @@ import TrainerDetails from "../components/trainer/TrainerDetails";
 import ClassDetails from "../components/classes/ClassDetails";
 import TrainerBooking from "../components/trainer/TrainerBooking";
 import Payment from "../components/payment/Payment";
+import PrivateRoute from "../components/shared/PrivateRoute";
+import Gallery from "../components/gallery/Gallery";
 
 const router = createBrowserRouter([
     {
@@ -31,6 +33,10 @@ const router = createBrowserRouter([
                 element: <ClassDetails />,
             },
             {
+                path: "/gallery",
+                element: <Gallery />,
+            },
+            {
                 path: "/trainers",
                 element: <Trainers />,
             },
@@ -40,15 +46,27 @@ const router = createBrowserRouter([
             },
             {
                 path: "/trainer/:trainerId/:id",
-                element: <TrainerBooking />,
+                element: (
+                    <PrivateRoute>
+                        <TrainerBooking />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "/trainer/:trainerId/:slotId/:packageId/payment",
-                element: <Payment />,
+                element: (
+                    <PrivateRoute>
+                        <Payment />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "/add-trainer",
-                element: <AddTrainer />,
+                element: (
+                    <PrivateRoute>
+                        <AddTrainer />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "/sign-in",
