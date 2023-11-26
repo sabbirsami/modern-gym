@@ -35,6 +35,13 @@ const Payment = () => {
     if (isLoading || trainerLoading) {
         return <Loading />;
     }
+    console.log(packageDetails[0].cost);
+    const paymentInfo = {
+        packageId,
+        trainerId,
+        slotId,
+        packageCost: packageDetails[0].cost,
+    };
     return (
         <section className="container mx-auto px-6 py-16">
             <h2 className="text-7xl font-semibold">Payment</h2>
@@ -79,7 +86,10 @@ const Payment = () => {
                     <div className=" mb-6">
                         <h2 className="pb-6 text-2xl">Your trainer:</h2>
                         {trainer.map((t) => (
-                            <div key={t._id} className="border p-10 rounded-xl">
+                            <div
+                                key={t._id}
+                                className="border-2 p-10 rounded-xl"
+                            >
                                 <h2 className="text-3xl font-semibold">
                                     {t.name}
                                 </h2>
@@ -87,9 +97,11 @@ const Payment = () => {
                                 <h2 className="text-7xl pb-10">{t.name}</h2>
                                 <p className="">
                                     <span className="text-white/80">
-                                        Email:
+                                        Your selected time slot:
                                     </span>{" "}
-                                    {t.email}
+                                    <span className="py-2 px-3 me-1.5 mb-1.5  rounded-lg text-xs bg-[#94f3b0]/10 text-[#a3ffb5]">
+                                        {t.available_time_slot[selectedSlot]}
+                                    </span>
                                 </p>
                                 <p className="">
                                     <span className="text-white/80">Age:</span>{" "}
@@ -103,17 +115,15 @@ const Payment = () => {
                                 </p>
                                 <p className="">
                                     <span className="text-white/80">
-                                        Your selected time slot:
+                                        Email:
                                     </span>{" "}
-                                    <span className="py-2 px-3 me-1.5 mb-1.5  rounded-lg text-xs bg-[#94f3b0]/10 text-[#a3ffb5]">
-                                        {t.available_time_slot[selectedSlot]}
-                                    </span>
+                                    {t.email}
                                 </p>
                             </div>
                         ))}
                     </div>
                     <Elements stripe={stripePromise}>
-                        <CheckoutForm />
+                        <CheckoutForm paymentInfo={paymentInfo} />
                     </Elements>
                 </div>
             </div>
