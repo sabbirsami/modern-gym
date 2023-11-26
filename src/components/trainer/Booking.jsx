@@ -3,15 +3,26 @@ import { BsCheckCircleFill } from "react-icons/bs";
 import Swal from "sweetalert2";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import { useState } from "react";
+import useAuth from "../hooks/useAuth";
 
 const Booking = ({ packageItem, trainerId, slotId }) => {
+    const { user } = useAuth();
     const { name, cost, features, _id } = packageItem;
     const axiosPublic = useAxiosPublic();
     const [err, setErr] = useState("");
     const [buttonLoading, setButtonLoading] = useState(false);
 
     const handleJoin = () => {
-        const userJoinedPackage = { name, cost, _id, trainerId, slotId };
+        const userJoinedPackage = {
+            userEmail: user.email,
+            packageName: name,
+            packageCost: cost,
+            packageId: _id,
+            trainerId,
+            slotId,
+            features,
+        };
+        console.log(userJoinedPackage);
         axiosPublic
             .post("/user-booking-packages", userJoinedPackage)
             .then((res) => {

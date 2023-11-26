@@ -29,9 +29,9 @@ const TrainerBooking = () => {
             <div className="py-16 container mx-auto px-6">
                 <h2 className="text-6xl text-center">Trainer Booking</h2>
                 <div className="grid xl:grid-cols-3 lg:grid-cols-2  justify-center items-start gap-16 mx-24 py-16 ">
-                    {gymPackages.map((packageItem, idx) => (
+                    {gymPackages.map((packageItem) => (
                         <Booking
-                            key={idx}
+                            key={packageItem._id}
                             packageItem={packageItem}
                             trainerId={trainerId}
                             slotId={id}
