@@ -9,6 +9,7 @@ import Trainers from "../components/trainer/Trainers";
 import AddTrainer from "../components/trainer/AddTrainer";
 import TrainerDetails from "../components/trainer/TrainerDetails";
 import ClassDetails from "../components/classes/ClassDetails";
+import TrainerBooking from "../components/trainer/TrainerBooking";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
             {
                 path: "/trainer/:id",
                 element: <TrainerDetails />,
+            },
+            {
+                path: "/trainer/:trainerId/:id",
+                element: <TrainerBooking />,
             },
             {
                 path: "/add-trainer",

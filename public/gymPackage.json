@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Silver Package",
+        "cost": 50,
+        "features": [
+            "Access to all standard gym facilities",
+            "Group fitness classes (limited selection)",
+            "Basic fitness assessment",
+            "Standard locker room access",
+            "Discounted rates on personal training sessions"
+        ]
+    },
+    {
+        "name": "Gold Package",
+        "cost": 80,
+        "features": [
+            "Full access to all gym facilities, including premium areas",
+            "Unlimited access to group fitness classes",
+            "In-depth fitness assessment and personalized workout plan",
+            "Premium locker room amenities",
+            "Priority booking for fitness classes",
+            "Discounts on merchandise and additional services"
+        ]
+    },
+    {
+        "name": "Diamond Package",
+        "cost": 120,
+        "features": [
+            "VIP access to all gym facilities, including exclusive areas",
+            "Unlimited access to all fitness classes, including specialized sessions",
+            "Comprehensive fitness assessment, monthly progress tracking, and personalized training plans",
+            "Exclusive locker room with additional amenities",
+            "Priority booking for all gym services",
+            "Complimentary personal training sessions",
+            "Special discounts on partner services and events"
+        ]
+    }
+]

@@ -5,6 +5,17 @@ import Loading from "../shared/Loading";
 
 const TrainerDetails = () => {
     const { id } = useParams();
+    const day = new Date().getDay();
+    const days = [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+    ];
+    const today = days[day];
     const axiosPublic = useAxiosPublic();
     const { data: trainer = [], isLoading } = useQuery({
         queryKey: "trainerDetails",
@@ -19,6 +30,7 @@ const TrainerDetails = () => {
 
     console.log(id, trainer);
     const {
+        _id,
         age,
         available_time_in_week,
         available_time_slot,
@@ -65,7 +77,7 @@ const TrainerDetails = () => {
                                 </p>{" "}
                                 {available_time_slot.map((time, idx) => (
                                     <Link
-                                        to={"/"}
+                                        to={`/trainer/${_id}/${idx}`}
                                         key={idx}
                                         className="py-2 px-3 me-1.5 mb-1.5 block rounded-lg text-xs cursor-pointer bg-[#94f3b0]/10 text-[#a3ffb5]"
                                     >
@@ -74,19 +86,7 @@ const TrainerDetails = () => {
                                 ))}
                             </p>
                         </div>
-                        <p className="pt-3">
-                            <span className="text-white/80">
-                                Available Time in Week:
-                            </span>{" "}
-                            {available_time_in_week.map((time, idx) => (
-                                <p
-                                    key={idx}
-                                    className="py-1.5 px-1.5  inline-block rounded-lg mb-0"
-                                >
-                                    {time} ,
-                                </p>
-                            ))}
-                        </p>
+
                         <p className="">
                             <span className="text-white/80">Skills:</span>{" "}
                             {skills.map((time, idx) => (
@@ -99,7 +99,29 @@ const TrainerDetails = () => {
                             ))}
                         </p>
                     </div>
-                    <div className=""></div>
+                    <div className="col-span-2">
+                        <h2 className="text-4xl text-white/70 pt-3">
+                            Today: <span className="text-white">{today}</span>
+                        </h2>
+                        <p className="pt-3">
+                            <span className="text-white/80">
+                                Available Day in a Week:
+                            </span>{" "}
+                            {available_time_in_week.map((time, idx) => (
+                                <p
+                                    key={idx}
+                                    className="py-1.5 px-1.5  inline-block rounded-lg mb-0"
+                                >
+                                    {time} ,
+                                </p>
+                            ))}
+                        </p>
+                        {!available_time_in_week.includes(today) && (
+                            <p className="text-rose-500">
+                                Sorry! {name} don&#39;t have any session today
+                            </p>
+                        )}
+                    </div>
                 </div>
             </div>
         </section>
