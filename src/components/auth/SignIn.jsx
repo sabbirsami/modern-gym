@@ -17,6 +17,7 @@ const SignIn = () => {
     const [signInWithGoogleError, setSignInWithGoogleError] = useState("");
 
     const location = useLocation();
+    console.log(location);
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
@@ -32,7 +33,9 @@ const SignIn = () => {
                 setSignInWithGoogleError("");
                 setLoading(false);
                 setButtonLoading(false);
-                navigate(location.state ? location.state : "/");
+                navigate(
+                    location.state?.comeFrom ? location.state?.comeFrom : "/"
+                );
                 toast.success(" Sign In successfully", {
                     duration: 2000,
                     className: "mt-32",
@@ -62,6 +65,7 @@ const SignIn = () => {
                     uid: result?.user.uid,
                     photoUrl: result?.user.photoURL,
                     role: "user",
+                    trainerId: "",
                 };
                 axiosPublic
                     .post("/users", newUser)
@@ -71,7 +75,11 @@ const SignIn = () => {
                         setSignInWithGoogleError("");
                         setLoading(false);
                         setGoogleButtonLoading(false);
-                        navigate(location.state ? location.state : "/");
+                        navigate(
+                            location.state?.comeFrom
+                                ? location.state?.comeFrom
+                                : "/"
+                        );
                         toast.success(" Sign In successfully", {
                             duration: 2000,
                             className: "mt-32",
@@ -165,7 +173,7 @@ const SignIn = () => {
                                     className="r rounded-md w-full py-3  px-4 bg-[#303644]"
                                     placeholder="Enter password here.."
                                 />
-                                <label className="block w-full text-sm text-errorColor">
+                                <label className="block w-full text-sm text-red-600">
                                     {signInWithGoogleError}
                                 </label>
                                 <label className="block md:w-64 w-full  text-sm text-red-600">

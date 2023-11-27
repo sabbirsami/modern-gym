@@ -5,6 +5,8 @@ import useAxiosPublic from "../hooks/useAxiosPublic";
 import { useState } from "react";
 import useAuth from "../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
+import { useQuery } from "react-query";
+import Loading from "../shared/Loading";
 
 const Booking = ({ packageItem, trainerId, slotId }) => {
     const { user } = useAuth();
@@ -13,6 +15,17 @@ const Booking = ({ packageItem, trainerId, slotId }) => {
     const [err, setErr] = useState("");
     const [buttonLoading, setButtonLoading] = useState(false);
     const navigate = useNavigate();
+    const { data: trainer = [], isLoading } = useQuery({
+        queryKey: ["trainerDetails", trainerId],
+        queryFn: async () => {
+            const res = await axiosPublic.get(`/trainers/${trainerId}`);
+            return res.data;
+        },
+    });
+    if (isLoading) {
+        return <Loading />;
+    }
+    const trainerEmail = trainer[0]?.email;
 
     const handleJoin = () => {
         const userJoinedPackage = {
@@ -21,6 +34,7 @@ const Booking = ({ packageItem, trainerId, slotId }) => {
             packageCost: cost,
             packageId: _id,
             trainerId,
+            trainerEmail,
             slotId,
             features,
         };

@@ -41,16 +41,16 @@ const AllAppliances = () => {
             .put(`/trainers/application-accept/${id}`)
             .then((res) => {
                 console.log(res.data);
+                toast.success("Application accepted", {
+                    duration: 2000,
+                    className: "mt-32",
+                });
+                refetch();
+                setOpenModal(false);
                 emailjs
                     .send(serviceId, templateId, templateParams, publicKey)
                     .then((response) => {
                         console.log("Email sent successfully:", response);
-                        toast.success("Application accepted", {
-                            duration: 2000,
-                            className: "mt-32",
-                        });
-                        setOpenModal(false);
-                        refetch();
                     })
                     .catch((error) => {
                         console.error("Error sending email:", error);

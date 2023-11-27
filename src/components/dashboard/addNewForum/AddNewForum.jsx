@@ -14,7 +14,7 @@ const AddNewForum = () => {
     const userEmail = user.email;
     const axiosPublic = useAxiosPublic();
 
-    const imageUploadKey = "bbb19450ec34611b6204ad31a2909518";
+    const imageUploadKey = "0cf9b51119794046d065dbff898a7aae";
     const [uploadedImageError, setUploadedImageError] = useState("");
     const [buttonLoading, setButtonLoading] = useState(false);
     const [uploadedImage, setUploadedImage] = useState();

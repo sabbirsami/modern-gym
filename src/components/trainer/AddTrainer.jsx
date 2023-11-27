@@ -11,7 +11,7 @@ import { VscChromeClose } from "react-icons/vsc";
 
 const AddTrainer = () => {
     const [err, setErr] = useState("");
-    const [showNotification, setShowNotification] = useState(true);
+    const [showNotification, setShowNotification] = useState(false);
     const { user } = useAuth();
     // get today date
     let today = new Date();
@@ -23,7 +23,7 @@ const AddTrainer = () => {
     const paymentStatus = "pending";
     const role = "user";
 
-    const imageUploadKey = "bbb19450ec34611b6204ad31a2909518";
+    const imageUploadKey = "134b5d761d78b674566f75c1224e34d9";
     const [uploadFile, setFile] = useState();
     const [buttonLoading, setButtonLoading] = useState(false);
     const [uploadedImage, setUploadedImage] = useState();
@@ -154,7 +154,6 @@ const AddTrainer = () => {
                                     axiosPublic
                                         .post("/trainers", newTrainerData)
                                         .then((res) => {
-                                            setButtonLoading(false);
                                             console.log(res.data);
                                             Swal.fire({
                                                 title: "Add successfully",
@@ -163,10 +162,12 @@ const AddTrainer = () => {
                                             });
                                             setErr("");
                                             reset();
+                                            setButtonLoading(false);
                                             setShowNotification(true);
                                         })
                                         .catch((err) => {
                                             console.log(err);
+                                            setShowNotification(false);
                                             setErr(err.message);
                                         });
                                 }
@@ -188,7 +189,7 @@ const AddTrainer = () => {
             <Helmet>
                 <title>Modern Gym | Be a Trainer</title>
             </Helmet>
-            {showNotification && (
+            {showNotification ? (
                 <div className="bg-gradient-to-r  rounded-md text-lg from-[#94f3b0] to-[#7abf88] text-black flex justify-between items-center p-6">
                     <p className="">
                         Your application successfully send. Please wait for
@@ -201,7 +202,7 @@ const AddTrainer = () => {
                         <VscChromeClose />
                     </button>
                 </div>
-            )}
+            ) : undefined}
             <h2 className="text-4xl ">Be a Trainer</h2>
             <form
                 onSubmit={handleSubmit(onSubmit)}

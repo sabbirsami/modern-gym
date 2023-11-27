@@ -1,0 +1,138 @@
+[
+  
+   
+    {
+        "_id": "6564dbf276d28396d582f0d9",
+        "packageName": "Gold Package",
+        "packageId": "6562d2394d7f8f119fb900fc",
+        "trainerId": "656448844d7f8f119f1a5448",
+        "trainerEmail": "daniel.miller@example.com",
+        "slotId": "3",
+        "userEmail": "smsasia2@gmail.com",
+        "packageCost": 80,
+        "features": [
+            "Full access to all gym facilities, including premium areas",
+            "Unlimited access to group fitness classes",
+            "In-depth fitness assessment and personalized workout plan",
+            "Premium locker room amenities",
+            "Priority booking for fitness classes",
+            "Discounts on merchandise and additional services"
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "6564e67d76d28396d582f120",
+        "packageName": "Gold Package",
+        "packageId": "6562d2394d7f8f119fb900fc",
+        "trainerId": "656448844d7f8f119f1a5446",
+        "trainerEmail": "michael.davis@example.com",
+        "slotId": "4",
+        "userEmail": "smsasia2@gmail.com",
+        "packageCost": 80,
+        "features": [
+            "Full access to all gym facilities, including premium areas",
+            "Unlimited access to group fitness classes",
+            "In-depth fitness assessment and personalized workout plan",
+            "Premium locker room amenities",
+            "Priority booking for fitness classes",
+            "Discounts on merchandise and additional services"
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "6564e67d76d28396d582f122",
+        "packageName": "Gold Package",
+        "packageId": "6562d2394d7f8f119fb900fc",
+        "trainerId": "656448844d7f8f119f1a5446",
+        "trainerEmail": "michael.davis@example.com",
+        "slotId": "4",
+        "userEmail": "smsasia2@gmail.com",
+        "packageCost": 80,
+        "features": [
+            "Full access to all gym facilities, including premium areas",
+            "Unlimited access to group fitness classes",
+            "In-depth fitness assessment and personalized workout plan",
+            "Premium locker room amenities",
+            "Priority booking for fitness classes",
+            "Discounts on merchandise and additional services"
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "6564ebbb76d28396d582f143",
+        "packageName": "Diamond Package",
+        "packageId": "6562d2394d7f8f119fb900fd",
+        "trainerId": "6564ea3d76d28396d582f133",
+        "trainerEmail": "smd47039@gmail.com",
+        "slotId": "0",
+        "userEmail": "md71430@gmail.com",
+        "packageCost": 120,
+        "features": [
+            "VIP access to all gym facilities, including exclusive areas",
+            "Unlimited access to all fitness classes, including specialized sessions",
+            "Comprehensive fitness assessment, monthly progress tracking, and personalized training plans",
+            "Exclusive locker room with additional amenities",
+            "Priority booking for all gym services",
+            "Complimentary personal training sessions",
+            "Special discounts on partner services and events"
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "6564ebf476d28396d582f14e",
+        "packageName": "Diamond Package",
+        "packageId": "6562d2394d7f8f119fb900fd",
+        "trainerId": "656448844d7f8f119f1a5446",
+        "trainerEmail": "michael.davis@example.com",
+        "slotId": "4",
+        "userEmail": "a@gmail.com",
+        "packageCost": 120,
+        "features": [
+            "VIP access to all gym facilities, including exclusive areas",
+            "Unlimited access to all fitness classes, including specialized sessions",
+            "Comprehensive fitness assessment, monthly progress tracking, and personalized training plans",
+            "Exclusive locker room with additional amenities",
+            "Priority booking for all gym services",
+            "Complimentary personal training sessions",
+            "Special discounts on partner services and events"
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "6564ebfb76d28396d582f155",
+        "packageName": "Gold Package",
+        "packageId": "6562d2394d7f8f119fb900fc",
+        "trainerId": "656448844d7f8f119f1a5446",
+        "trainerEmail": "michael.davis@example.com",
+        "slotId": "0",
+        "userEmail": "a@gmail.com",
+        "packageCost": 80,
+        "features": [
+            "Full access to all gym facilities, including premium areas",
+            "Unlimited access to group fitness classes",
+            "In-depth fitness assessment and personalized workout plan",
+            "Premium locker room amenities",
+            "Priority booking for fitness classes",
+            "Discounts on merchandise and additional services"
+        ],
+        "__v": 0
+    },
+    {
+        "_id": "6564ec0376d28396d582f15c",
+        "packageName": "Silver Package",
+        "packageId": "6562d2394d7f8f119fb900fb",
+        "trainerId": "656448844d7f8f119f1a5446",
+        "trainerEmail": "michael.davis@example.com",
+        "slotId": "1",
+        "userEmail": "a@gmail.com",
+        "packageCost": 50,
+        "features": [
+            "Access to all standard gym facilities",
+            "Group fitness classes (limited selection)",
+            "Basic fitness assessment",
+            "Standard locker room access",
+            "Discounted rates on personal training sessions"
+        ],
+        "__v": 0
+    }
+]

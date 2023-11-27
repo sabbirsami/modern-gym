@@ -11,7 +11,7 @@ const Trainer = ({ trainer }) => {
                 <img
                     src={trainer.image}
                     alt=""
-                    className="object-cover h-full w-full rounded-2xl"
+                    className="object-cover h-[32rem] w-full rounded-2xl"
                 />
             </div>
             <div className="flex gap-2 justify-center items-center py-1 px-1.5 rounded-full absolute right-10 top-10 bg-[#0C1117] ">

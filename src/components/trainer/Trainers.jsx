@@ -1,12 +1,14 @@
 import { useQuery } from "react-query";
 import Trainer from "./Trainer";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import Loading from "../shared/Loading";
 
 const Trainers = () => {
     const axiosPublic = useAxiosPublic();
+    const location = useLocation();
+    console.log(location);
     const { data: trainers = [], isLoading } = useQuery({
         queryKey: "trainer",
         queryFn: async () => {

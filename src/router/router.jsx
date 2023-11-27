@@ -20,6 +20,7 @@ import TrainerPayment from "../components/dashboard/allTrainers/TrainerPayment";
 import AllAppliances from "../components/dashboard/AllAppliances";
 import Community from "../components/posts/Community";
 import AddNewForum from "../components/dashboard/addNewForum/AddNewForum";
+import ManageSlot from "../components/dashboard/manageSlot/ManageSlot";
 
 const router = createBrowserRouter([
     {
@@ -113,6 +114,10 @@ const router = createBrowserRouter([
             {
                 path: "/dashboard/add-new-forum",
                 element: <AddNewForum />,
+            },
+            {
+                path: "/dashboard/manage-slot",
+                element: <ManageSlot />,
             },
             {
                 path: "/dashboard/all-trainer/:trainerId/payment",

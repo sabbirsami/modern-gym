@@ -1,10 +1,12 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import { useQuery } from "react-query";
 import Loading from "../shared/Loading";
 
 const ClassDetails = () => {
     const { id } = useParams();
+    const location = useLocation();
+    console.log(location);
     const axiosPublic = useAxiosPublic();
     const { data: classDetails = [], isLoading } = useQuery({
         queryKey: "classDetails",
@@ -16,9 +18,11 @@ const ClassDetails = () => {
     if (isLoading) {
         return <Loading />;
     }
+
     console.log(classDetails);
     const {
         name,
+
         short_description,
         benefits,
         duration,
@@ -84,6 +88,7 @@ const ClassDetails = () => {
                 </p>
                 <div className="mx-auto text-start mt-16">
                     <Link
+                        state={{ clickedClass: id }}
                         to={"/trainers"}
                         className="px-6 py-4 bg-gradient-to-r from-[#94f3b0]  to-[#7abf88] text-black rounded-full font-semibold cursor-pointer"
                     >

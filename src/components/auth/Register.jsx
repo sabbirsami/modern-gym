@@ -55,6 +55,7 @@ const Register = () => {
                             uid: result?.user.uid,
                             photoUrl: result?.user.photoURL,
                             role: "user",
+                            trainerId: "656448844d7f8f119f1a5446",
                         };
                         axiosPublic
                             .post("/users", newUser)
@@ -113,6 +114,7 @@ const Register = () => {
                     uid: result?.user.uid,
                     photoUrl: result?.user.photoURL,
                     role: "user",
+                    trainerId: "",
                 };
                 axiosPublic
                     .post("/users", newUser)
