@@ -18,6 +18,8 @@ const AddTrainer = () => {
     let yyyy = today.getFullYear();
     const joiningDate = `${mm}-${dd}-${yyyy}`;
     console.log(joiningDate);
+    const paymentStatus = "pending";
+
     const imageUploadKey = "bbb19450ec34611b6204ad31a2909518";
     const [uploadFile, setFile] = useState();
     const [buttonLoading, setButtonLoading] = useState(false);
@@ -142,6 +144,7 @@ const AddTrainer = () => {
                                         skills: selectedSkillValues,
                                         joiningDate: joiningDate,
                                         available_time_in_day: "Flexible",
+                                        paymentStatus,
                                     };
                                     console.log(newTrainerData);
                                     axiosPublic

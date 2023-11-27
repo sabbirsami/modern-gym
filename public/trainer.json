@@ -3,6 +3,7 @@
         "name": "David Anderson",
         "image": "https://i.ibb.co/306Jc8L/trainer.png",
         "experience": 3,
+        "paymentStatus": "pending",
         "available_time_slot": [
             "6am - 7am",
             "8am - 9am",
@@ -24,6 +25,7 @@
         "name": "Michael Davis",
         "image": "https://i.ibb.co/QJKqsfg/trainer01.jpg",
         "experience": 4,
+        "paymentStatus": "pending",
         "available_time_slot": [
             "6am - 7am",
             "8am - 9am",
@@ -42,6 +44,7 @@
         "name": "James Turner",
         "image": "https://i.ibb.co/Zxjt7SC/trainer02.png",
         "experience": 3,
+        "paymentStatus": "pending",
         "available_time_slot": [
             "6am - 7am",
             "8am - 9am",
@@ -65,6 +68,7 @@
         "name": "Daniel Miller",
         "image": "https://i.ibb.co/bRbnb93/trainer4.png",
         "experience": 2,
+        "paymentStatus": "pending",
         "available_time_slot": [
             "6am - 7am",
             "8am - 9am",
@@ -88,6 +92,7 @@
         "name": "Christopher Carter",
         "image": "https://i.ibb.co/JCC8Fvv/trainer05.jpg",
         "experience": 1,
+        "paymentStatus": "pending",
         "available_time_slot": [
             "8am - 9am",
             "6pm - 7pm",
@@ -106,6 +111,7 @@
         "name": "Brian Johnson",
         "image": "https://i.ibb.co/WWKs3VV/trainer6.png",
         "experience": 2,
+        "paymentStatus": "pending",
         "available_time_slot": [
             "6am - 7am",
             "8am - 9am",

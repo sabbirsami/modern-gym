@@ -29,10 +29,10 @@ const DashboardNav = () => {
                     </li>
                     <li className="w-full ">
                         <NavLink
-                            to={"/dashboard/manage-bids"}
+                            to={"/dashboard/all-trainer"}
                             className="w-full   block rounded-sm ps-5 "
                         >
-                            Manage Bids
+                            All Trainer
                         </NavLink>
                     </li>
                     <li className="w-full ">

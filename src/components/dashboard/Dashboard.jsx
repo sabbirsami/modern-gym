@@ -4,14 +4,14 @@ import DashboardNav from "./DashboardNav";
 
 const Dashboard = () => {
     return (
-        <div className="text-white">
+        <div className="text-white overflow-y-hidden">
             <DashboardHeader />
-            <div className="h-[91vh] flex">
-                <div className="w-64">
+            <div className="h-[91vh] flex ">
+                <div className="w-64 ">
                     <DashboardNav />
                 </div>
 
-                <div className="px-6 py-3 relative grow">
+                <div className="px-6 py-3 relative grow overflow-y-scroll">
                     <Outlet />
                     <div className="absolute r top-0 left-0 bg-secondaryColor">
                         <div className="rounded-b-full rounded-r-full "></div>

@@ -19,7 +19,7 @@ const TrainerDetails = () => {
     const today = days[day];
     const axiosPublic = useAxiosPublic();
     const { data: trainer = [], isLoading } = useQuery({
-        queryKey: "trainerDetails",
+        queryKey: ["trainerDetails", id],
         queryFn: async () => {
             const res = await axiosPublic.get(`/trainers/${id}`);
             return res.data;
