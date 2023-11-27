@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import DashboardHeader from "./DashboardHeader";
 import DashboardNav from "./DashboardNav";
+import { Toaster } from "react-hot-toast";
 
 const Dashboard = () => {
     return (
@@ -18,6 +19,7 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
+            <Toaster />
         </div>
     );
 };

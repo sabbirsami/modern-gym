@@ -158,7 +158,7 @@ const AddTrainer = () => {
                                             console.log(res.data);
                                             Swal.fire({
                                                 title: "Add successfully",
-                                                text: "Your file has been deleted.",
+
                                                 icon: "success",
                                             });
                                             setErr("");

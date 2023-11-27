@@ -3,6 +3,7 @@ import { CardElement, useElements, useStripe } from "@stripe/react-stripe-js";
 import { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
 import useAxiosPublic from "../hooks/useAxiosPublic";
+import toast from "react-hot-toast";
 
 const CheckoutForm = ({ paymentInfo }) => {
     const stripe = useStripe();
@@ -102,6 +103,11 @@ const CheckoutForm = ({ paymentInfo }) => {
                     .post("/create-payment-intent", userPaymentInfo)
                     .then((res) => {
                         console.log(res.data);
+
+                        toast.success("Payment Successful", {
+                            duration: 2000,
+                            className: "mt-32",
+                        });
                     })
                     .catch((err) => {
                         console.log(err);

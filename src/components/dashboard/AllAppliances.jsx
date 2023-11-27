@@ -6,6 +6,7 @@ import { GoEye } from "react-icons/go";
 import { useState } from "react";
 import { VscChromeClose } from "react-icons/vsc";
 import emailjs from "@emailjs/browser";
+import toast from "react-hot-toast";
 
 const AllAppliances = () => {
     const [openModal, setOpenModal] = useState(false);
@@ -44,6 +45,10 @@ const AllAppliances = () => {
                     .send(serviceId, templateId, templateParams, publicKey)
                     .then((response) => {
                         console.log("Email sent successfully:", response);
+                        toast.success("Application accepted", {
+                            duration: 2000,
+                            className: "mt-32",
+                        });
                         setOpenModal(false);
                         refetch();
                     })
@@ -67,22 +72,23 @@ const AllAppliances = () => {
             .delete(`/trainers/${id}`)
             .then((res) => {
                 console.log(res.data);
+                emailjs
+                    .send(serviceId, templateId, templateParams, publicKey)
+                    .then((response) => {
+                        console.log("Email sent successfully:", response);
+                        setOpenModal(false);
+                        toast.success("Application Rejected", {
+                            duration: 2000,
+                            className: "mt-32",
+                        });
+                    })
+                    .catch((error) => {
+                        console.error("Error sending email:", error);
+                    });
             })
             .catch((err) => {
                 console.log(err);
             });
-
-        emailjs
-            .send(serviceId, templateId, templateParams, publicKey)
-            .then((response) => {
-                console.log("Email sent successfully:", response);
-                setOpenModal(false);
-            })
-            .catch((error) => {
-                console.error("Error sending email:", error);
-            });
-        console.log("object");
-        setOpenModal(false);
     };
 
     return (

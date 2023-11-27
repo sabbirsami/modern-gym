@@ -1,5 +1,6 @@
 import About from "./About";
 import Article from "./Article";
+import Classes from "./Classes";
 import Features from "./Features";
 import Hero from "./Hero";
 import Newsletter from "./Newsletter";
@@ -11,6 +12,7 @@ const Home = () => {
         <div>
             <Hero />
             <Features />
+            <Classes />
             <About />
             <Testimonial />
             <Team />
