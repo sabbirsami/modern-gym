@@ -2,6 +2,7 @@ import { useQuery } from "react-query";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import Loading from "../../shared/Loading";
 import { Link } from "react-router-dom";
+import MonthCounter from "./MonthCounter";
 
 const AllTrainers = () => {
     const axiosPublic = useAxiosPublic();
@@ -16,6 +17,7 @@ const AllTrainers = () => {
         return <Loading />;
     }
     console.log(trainers);
+    // month count
 
     return (
         <div>
@@ -70,10 +72,13 @@ const AllTrainers = () => {
                         </div>
                         <div className=" pt-2">
                             <p className="text-sm text-white/80 pb-1">
-                                Payment Status:
+                                Months since joining:
                             </p>
-                            <p className="text-xs font-bold text-[#94f3b0]">
-                                {trainer.paymentStatus}
+                            <p className="text-xs font-bold">
+                                <MonthCounter
+                                    joiningDate={trainer.joiningDate}
+                                />{" "}
+                                months
                             </p>
                         </div>
                     </div>

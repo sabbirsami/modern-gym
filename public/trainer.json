@@ -3,6 +3,7 @@
         "name": "David Anderson",
         "image": "https://i.ibb.co/306Jc8L/trainer.png",
         "experience": 3,
+        "role": "trainer",
         "paymentStatus": "pending",
         "available_time_slot": [
             "6am - 7am",
@@ -25,6 +26,7 @@
         "name": "Michael Davis",
         "image": "https://i.ibb.co/QJKqsfg/trainer01.jpg",
         "experience": 4,
+        "role": "trainer",
         "paymentStatus": "pending",
         "available_time_slot": [
             "6am - 7am",
@@ -44,6 +46,7 @@
         "name": "James Turner",
         "image": "https://i.ibb.co/Zxjt7SC/trainer02.png",
         "experience": 3,
+        "role": "trainer",
         "paymentStatus": "pending",
         "available_time_slot": [
             "6am - 7am",
@@ -55,7 +58,7 @@
         ],
         "email": "james.turner@example.com",
         "age": 40,
-        "joiningDate": "12-10-2023",
+        "joiningDate": "10-10-2023",
         "skills": [
             "CrossFit",
             "Functional Fitness",
@@ -68,6 +71,7 @@
         "name": "Daniel Miller",
         "image": "https://i.ibb.co/bRbnb93/trainer4.png",
         "experience": 2,
+        "role": "trainer",
         "paymentStatus": "pending",
         "available_time_slot": [
             "6am - 7am",
@@ -92,6 +96,7 @@
         "name": "Christopher Carter",
         "image": "https://i.ibb.co/JCC8Fvv/trainer05.jpg",
         "experience": 1,
+        "role": "trainer",
         "paymentStatus": "pending",
         "available_time_slot": [
             "8am - 9am",
@@ -111,6 +116,7 @@
         "name": "Brian Johnson",
         "image": "https://i.ibb.co/WWKs3VV/trainer6.png",
         "experience": 2,
+        "role": "trainer",
         "paymentStatus": "pending",
         "available_time_slot": [
             "6am - 7am",

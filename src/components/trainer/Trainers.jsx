@@ -26,7 +26,11 @@ const Trainers = () => {
             <h2 className="md:text-8xl text-6xl md:pb-16 pb-6">Our Trainers</h2>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
                 {trainers.map((trainer, idx) => (
-                    <Trainer key={idx} trainer={trainer} id={idx}></Trainer>
+                    <span key={idx}>
+                        {trainer.role === "trainer" && (
+                            <Trainer trainer={trainer} id={idx}></Trainer>
+                        )}
+                    </span>
                 ))}
             </div>
             <div className="mx-auto text-center mt-16">

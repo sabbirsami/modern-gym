@@ -7,9 +7,11 @@ import { Helmet } from "react-helmet-async";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import Swal from "sweetalert2";
 import useAuth from "../hooks/useAuth";
+import { VscChromeClose } from "react-icons/vsc";
 
 const AddTrainer = () => {
     const [err, setErr] = useState("");
+    const [showNotification, setShowNotification] = useState(true);
     const { user } = useAuth();
     // get today date
     let today = new Date();
@@ -19,6 +21,7 @@ const AddTrainer = () => {
     const joiningDate = `${mm}-${dd}-${yyyy}`;
     console.log(joiningDate);
     const paymentStatus = "pending";
+    const role = "user";
 
     const imageUploadKey = "bbb19450ec34611b6204ad31a2909518";
     const [uploadFile, setFile] = useState();
@@ -145,6 +148,7 @@ const AddTrainer = () => {
                                         joiningDate: joiningDate,
                                         available_time_in_day: "Flexible",
                                         paymentStatus,
+                                        role,
                                     };
                                     console.log(newTrainerData);
                                     axiosPublic
@@ -159,6 +163,7 @@ const AddTrainer = () => {
                                             });
                                             setErr("");
                                             reset();
+                                            setShowNotification(true);
                                         })
                                         .catch((err) => {
                                             console.log(err);
@@ -183,6 +188,20 @@ const AddTrainer = () => {
             <Helmet>
                 <title>Modern Gym | Be a Trainer</title>
             </Helmet>
+            {showNotification && (
+                <div className="bg-gradient-to-r  rounded-md text-lg from-[#94f3b0] to-[#7abf88] text-black flex justify-between items-center p-6">
+                    <p className="">
+                        Your application successfully send. Please wait for
+                        conformation mail or check your dashboard.
+                    </p>
+                    <button
+                        onClick={() => setShowNotification(false)}
+                        className=""
+                    >
+                        <VscChromeClose />
+                    </button>
+                </div>
+            )}
             <h2 className="text-4xl ">Be a Trainer</h2>
             <form
                 onSubmit={handleSubmit(onSubmit)}
@@ -260,6 +279,8 @@ const AddTrainer = () => {
                                 <input
                                     type="text"
                                     name="name"
+                                    defaultValue={user.displayName}
+                                    readOnly={user}
                                     {...register("name", {
                                         required: true,
                                     })}

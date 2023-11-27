@@ -18,6 +18,7 @@ import Dashboard from "../components/dashboard/Dashboard";
 import ManageNewsletter from "../components/dashboard/manageNewsletter/ManageNewsletter";
 import AllTrainers from "../components/dashboard/allTrainers/AllTrainers";
 import TrainerPayment from "../components/dashboard/allTrainers/TrainerPayment";
+import AllAppliances from "../components/dashboard/AllAppliances";
 
 const router = createBrowserRouter([
     {
@@ -99,6 +100,10 @@ const router = createBrowserRouter([
             {
                 path: "/dashboard/all-trainer",
                 element: <AllTrainers />,
+            },
+            {
+                path: "/dashboard/all-appliances",
+                element: <AllAppliances />,
             },
             {
                 path: "/dashboard/all-trainer/:trainerId/payment",
