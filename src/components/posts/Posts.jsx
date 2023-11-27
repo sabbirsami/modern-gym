@@ -8,7 +8,11 @@ import Post from "./Post";
 const Posts = () => {
     const [page, setPage] = useState(0);
     const axiosPublic = useAxiosPublic();
-    const { data: posts = [], isLoading } = useQuery({
+    const {
+        data: posts = [],
+        isLoading,
+        refetch,
+    } = useQuery({
         queryKey: ["posts", page],
         queryFn: async () => {
             const res = await axiosPublic.get(`/posts?page=${page}&limit=${6}`);
@@ -36,14 +40,14 @@ const Posts = () => {
             <h2 className="md:text-8xl text-6xl md:pb-16 pb-6">Posts</h2>
             <div className="grid gap-6">
                 {posts.map((post, idx) => (
-                    <Post key={idx} post={post}></Post>
+                    <Post key={idx} post={post} refetch={refetch}></Post>
                 ))}
             </div>
             <div className=" pt-16">
                 <div className="text-center space-x-2">
                     <button
                         disabled={page == 0}
-                        className=" h-10 px-4  rounded-full bg-gradient-to-r from-[#94f3b0] to-[#7abf88] text-black disabled:opacity-40"
+                        className=" h-10 px-4  rounded-full bg-gradient-to-r from-[#94f3b0] to-[#7abf88] text-black disabled:opacity-40 font-semibold"
                         onClick={handlePre}
                     >
                         Previous
@@ -51,7 +55,7 @@ const Posts = () => {
 
                     <button
                         disabled={page == 3}
-                        className="h-10 px-4 rounded-full  bg-gradient-to-r from-[#94f3b0] to-[#7abf88] text-black disabled:opacity-40"
+                        className="h-10 px-4 rounded-full  bg-gradient-to-r from-[#94f3b0] to-[#7abf88] text-black disabled:opacity-40 font-semibold"
                         onClick={handleNext}
                     >
                         Next

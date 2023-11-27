@@ -2,10 +2,17 @@ import PropTypes from "prop-types";
 import { useState } from "react";
 import { GoHeart } from "react-icons/go";
 import { GoHeartFill } from "react-icons/go";
+import useAxiosPublic from "../hooks/useAxiosPublic";
+import useAuth from "../hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
-const Post = ({ post }) => {
+const Post = ({ post, refetch }) => {
+    const { user } = useAuth();
+    const navigate = useNavigate();
     const [liked, setLiked] = useState(false);
+    const axiosPublic = useAxiosPublic();
     const {
+        _id,
         postImage,
         title,
         author,
@@ -17,6 +24,28 @@ const Post = ({ post }) => {
         postTag,
         commentsCount,
     } = post;
+    const handleLike = (id) => {
+        if (!user) {
+            navigate("/sign-in");
+        } else {
+            axiosPublic
+                .put(`posts/${id}`, { likeCount: likeCount + 1 })
+                .then((res) => {
+                    console.log(res.data);
+                    refetch();
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
+            console.log(id);
+            setLiked(true);
+        }
+    };
+    const handleDislike = (id) => {
+        console.log(id);
+        setLiked(false);
+    };
+
     return (
         <div className="p-6 bg-[#303644] rounded-xl">
             <div className="flex gap-10">
@@ -36,14 +65,14 @@ const Post = ({ post }) => {
                         <div className="">
                             {liked ? (
                                 <button
-                                    onClick={() => setLiked(false)}
+                                    onClick={() => handleDislike(_id)}
                                     className="text-2xl"
                                 >
                                     <GoHeartFill />
                                 </button>
                             ) : (
                                 <button
-                                    onClick={() => setLiked(true)}
+                                    onClick={() => handleLike(_id)}
                                     className="text-2xl"
                                 >
                                     <GoHeart />
@@ -90,4 +119,5 @@ export default Post;
 
 Post.propTypes = {
     post: PropTypes.object,
+    refetch: PropTypes.func,
 };
