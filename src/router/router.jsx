@@ -14,6 +14,7 @@ import Payment from "../components/payment/Payment";
 import PrivateRoute from "../components/shared/PrivateRoute";
 import Gallery from "../components/gallery/Gallery";
 import Posts from "../components/posts/Posts";
+import Dashboard from "../components/dashboard/Dashboard";
 
 const router = createBrowserRouter([
     {
@@ -82,6 +83,12 @@ const router = createBrowserRouter([
                 element: <Register />,
             },
         ],
+    },
+    {
+        path: "/dashboard",
+        element: <Dashboard />,
+        errorElement: <ErrorPage />,
+        children: [{}],
     },
 ]);
 export default router;
