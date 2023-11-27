@@ -13,12 +13,13 @@ import TrainerBooking from "../components/trainer/TrainerBooking";
 import Payment from "../components/payment/Payment";
 import PrivateRoute from "../components/shared/PrivateRoute";
 import Gallery from "../components/gallery/Gallery";
-import Posts from "../components/posts/Posts";
 import Dashboard from "../components/dashboard/Dashboard";
 import ManageNewsletter from "../components/dashboard/manageNewsletter/ManageNewsletter";
 import AllTrainers from "../components/dashboard/allTrainers/AllTrainers";
 import TrainerPayment from "../components/dashboard/allTrainers/TrainerPayment";
 import AllAppliances from "../components/dashboard/AllAppliances";
+import Community from "../components/posts/Community";
+import AddNewForum from "../components/dashboard/addNewForum/AddNewForum";
 
 const router = createBrowserRouter([
     {
@@ -43,8 +44,8 @@ const router = createBrowserRouter([
                 element: <Gallery />,
             },
             {
-                path: "/posts",
-                element: <Posts />,
+                path: "/community",
+                element: <Community />,
             },
             {
                 path: "/trainers",
@@ -104,6 +105,10 @@ const router = createBrowserRouter([
             {
                 path: "/dashboard/all-appliances",
                 element: <AllAppliances />,
+            },
+            {
+                path: "/dashboard/add-new-forum",
+                element: <AddNewForum />,
             },
             {
                 path: "/dashboard/all-trainer/:trainerId/payment",

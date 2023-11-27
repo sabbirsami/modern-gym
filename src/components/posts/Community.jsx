@@ -5,7 +5,7 @@ import Loading from "../shared/Loading";
 import { useState } from "react";
 import Post from "./Post";
 
-const Posts = () => {
+const Community = () => {
     const [page, setPage] = useState(0);
     const axiosPublic = useAxiosPublic();
     const {
@@ -66,4 +66,4 @@ const Posts = () => {
     );
 };
 
-export default Posts;
+export default Community;

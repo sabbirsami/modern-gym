@@ -21,11 +21,7 @@ const Navbar = () => {
                 Gallery
             </NavLink>
         </li>,
-        <li key={7}>
-            <NavLink className="px-2 py-2" to={"/posts"}>
-                Posts
-            </NavLink>
-        </li>,
+
         <li key={3}>
             <NavLink className="px-2 py-2" to={"/trainers"}>
                 Trainer
