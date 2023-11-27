@@ -15,6 +15,7 @@ import PrivateRoute from "../components/shared/PrivateRoute";
 import Gallery from "../components/gallery/Gallery";
 import Posts from "../components/posts/Posts";
 import Dashboard from "../components/dashboard/Dashboard";
+import ManageNewsletter from "../components/dashboard/manageNewsletter/ManageNewsletter";
 
 const router = createBrowserRouter([
     {
@@ -88,7 +89,12 @@ const router = createBrowserRouter([
         path: "/dashboard",
         element: <Dashboard />,
         errorElement: <ErrorPage />,
-        children: [{}],
+        children: [
+            {
+                path: "/dashboard/manage-newsletter",
+                element: <ManageNewsletter />,
+            },
+        ],
     },
 ]);
 export default router;

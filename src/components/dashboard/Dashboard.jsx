@@ -11,7 +11,7 @@ const Dashboard = () => {
                     <DashboardNav />
                 </div>
 
-                <div className="px-6 py-3 relative">
+                <div className="px-6 py-3 relative grow">
                     <Outlet />
                     <div className="absolute r top-0 left-0 bg-secondaryColor">
                         <div className="rounded-b-full rounded-r-full "></div>

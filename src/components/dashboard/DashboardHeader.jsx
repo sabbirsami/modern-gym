@@ -1,7 +1,5 @@
 import logo from "../../assets/logo2.png";
-
 import { Link, NavLink } from "react-router-dom";
-import useAuth from "../hooks/useAuth";
 import { useContext } from "react";
 import { AuthContext } from "../auth/AuthProvider";
 const DashboardHeader = () => {

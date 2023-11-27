@@ -21,10 +21,10 @@ const DashboardNav = () => {
                     </li>
                     <li className="w-full ">
                         <NavLink
-                            to={"/dashboard/manage-jobs"}
+                            to={"/dashboard/manage-newsletter"}
                             className="w-full block rounded-sm ps-5 "
                         >
-                            Manage Jobs
+                            Manage Newsletter
                         </NavLink>
                     </li>
                     <li className="w-full ">
