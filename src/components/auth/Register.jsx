@@ -9,9 +9,11 @@ import { Controller, useForm } from "react-hook-form";
 import { AuthContext } from "./AuthProvider";
 import { updateProfile } from "firebase/auth";
 import auth from "../../../firebase.config";
+import useAxiosPublic from "../hooks/useAxiosPublic";
 
 const Register = () => {
     const { createUser, signInWithGoogle } = useContext(AuthContext);
+    const axiosPublic = useAxiosPublic();
     const [buttonLoading, setButtonLoading] = useState(false);
     const [googleButtonLoading, setGoogleButtonLoading] = useState(false);
     const [signInWithGoogleError, setSignInWithGoogleError] = useState("");
@@ -48,21 +50,29 @@ const Register = () => {
                             className: "mt-32",
                         });
                         const newUser = {
-                            userName: name,
+                            name: name,
                             email: email,
                             uid: result?.user.uid,
-                            img: result?.user.photoUrl,
+                            photoUrl: result?.user.photoURL,
+                            role: "user",
                         };
-
-                        navigate(location.state ? location.state : "/");
-                        setSignInWithGoogleError("");
-                        setButtonLoading(false);
+                        axiosPublic
+                            .post("/users", newUser)
+                            .then((res) => {
+                                console.log(res.data);
+                                navigate(location.state ? location.state : "/");
+                                setSignInWithGoogleError("");
+                                setButtonLoading(false);
+                            })
+                            .catch((err) => {
+                                console.log(err);
+                            });
                     })
                     .catch((err) => {
                         // An error occurred
 
                         setSignInWithGoogleError(
-                            err.message.split("(")[1].split("-").join(" ")
+                            err.message?.split("(")[1]?.split("-").join(" ")
                         );
                         setButtonLoading(false);
                         toast.error(" Register fail", {
@@ -75,7 +85,7 @@ const Register = () => {
                 console.log(err.message);
 
                 setSignInWithGoogleError(
-                    err.message.split("(")[1].split("-").join(" ")
+                    err.message?.split("(")[1]?.split("-").join(" ")
                 );
                 setButtonLoading(false);
                 console.log(signInWithGoogleError);
@@ -97,18 +107,33 @@ const Register = () => {
         signInWithGoogle()
             .then((result) => {
                 console.log(result);
-                setSignInWithGoogleError("");
-                setGoogleButtonLoading(false);
-                navigate(location.state ? location.state : "/");
-                toast.success("Successfully Register", {
-                    duration: 2000,
-                    className: "mt-32",
-                });
+                const newUser = {
+                    name: result?.user.displayName,
+                    email: result?.user.email,
+                    uid: result?.user.uid,
+                    photoUrl: result?.user.photoURL,
+                    role: "user",
+                };
+                axiosPublic
+                    .post("/users", newUser)
+                    .then((res) => {
+                        console.log(res.data);
+                        navigate(location.state ? location.state : "/");
+                        setSignInWithGoogleError("");
+                        setButtonLoading(false);
+                        toast.success("Successfully Register", {
+                            duration: 2000,
+                            className: "mt-32",
+                        });
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    });
             })
             .catch((err) => {
                 console.log(err);
                 setSignInWithGoogleError(
-                    err.message.split("(")[1].split("-").join(" ")
+                    err.message?.split("(")[1]?.split("-").join(" ")
                 );
                 setGoogleButtonLoading(false);
                 toast.error(" Register fail", {

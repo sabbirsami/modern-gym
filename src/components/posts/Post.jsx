@@ -20,6 +20,7 @@ const Post = ({ post, refetch }) => {
         content,
         timestamp,
         views,
+        role,
         likeCount,
         postTag,
         commentsCount,
@@ -100,9 +101,15 @@ const Post = ({ post, refetch }) => {
                             />
                             <div className="">
                                 <h4 className="text-xl">{author}</h4>
-                                <p className="text-xs text-white/80">
-                                    {timestamp}
-                                </p>
+                                <div className="flex items-center">
+                                    {" "}
+                                    <p className="text-xs text-white/80  px-1.5 py-0.5 border me-3 rounded-full">
+                                        {role}
+                                    </p>
+                                    <p className="text-xs text-white/80">
+                                        {timestamp}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                         <p className="ps-10">{views + 1560} Views</p>

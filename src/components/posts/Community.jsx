@@ -35,9 +35,9 @@ const Community = () => {
     return (
         <section className="container mx-auto px-6 pb-32 pt-16">
             <Helmet>
-                <title>Modern Gym | Posts</title>
+                <title>Modern Gym | Community</title>
             </Helmet>
-            <h2 className="md:text-8xl text-6xl md:pb-16 pb-6">Posts</h2>
+            <h2 className="md:text-8xl text-6xl md:pb-16 pb-6">Forum</h2>
             <div className="grid gap-6">
                 {posts.map((post, idx) => (
                     <Post key={idx} post={post} refetch={refetch}></Post>

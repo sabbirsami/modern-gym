@@ -7,8 +7,10 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { BsArrowLeft } from "react-icons/bs";
 import useAuth from "../hooks/useAuth";
+import useAxiosPublic from "../hooks/useAxiosPublic";
 
 const SignIn = () => {
+    const axiosPublic = useAxiosPublic();
     const { signInWithGoogle, setLoading, signInUser } = useAuth();
     const [buttonLoading, setButtonLoading] = useState(false);
     const [googleButtonLoading, setGoogleButtonLoading] = useState(false);
@@ -38,7 +40,7 @@ const SignIn = () => {
             })
             .catch((err) => {
                 setSignInWithGoogleError(
-                    err.message.split("(")[1].split("-").join(" ")
+                    err.message?.split("(")[1]?.split("-").join(" ")
                 );
                 console.log(signInWithGoogleError);
                 setButtonLoading(false);
@@ -54,18 +56,34 @@ const SignIn = () => {
         signInWithGoogle()
             .then((result) => {
                 console.log(result);
-                setSignInWithGoogleError("");
-                setLoading(false);
-                setGoogleButtonLoading(false);
-                navigate(location.state ? location.state : "/");
-                toast.success(" Sign In successfully", {
-                    duration: 2000,
-                    className: "mt-32",
-                });
+                const newUser = {
+                    name: result?.user.displayName,
+                    email: result?.user.email,
+                    uid: result?.user.uid,
+                    photoUrl: result?.user.photoURL,
+                    role: "user",
+                };
+                axiosPublic
+                    .post("/users", newUser)
+                    .then((res) => {
+                        console.log(res.data);
+
+                        setSignInWithGoogleError("");
+                        setLoading(false);
+                        setGoogleButtonLoading(false);
+                        navigate(location.state ? location.state : "/");
+                        toast.success(" Sign In successfully", {
+                            duration: 2000,
+                            className: "mt-32",
+                        });
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    });
             })
             .catch((err) => {
                 setSignInWithGoogleError(
-                    err.message.split("(")[1].split("-").join(" ")
+                    err.message?.split("(")[1]?.split("-").join(" ")
                 );
                 console.log(signInWithGoogleError);
                 setGoogleButtonLoading(false);

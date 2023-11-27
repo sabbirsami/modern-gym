@@ -24,7 +24,7 @@ const DashboardHeader = () => {
                                     className="px-4 py-2 border rounded-full bg-gradient-to-r hover:from-[#94f3b0] hover:to-[#7abf88] hover:text-black"
                                     to={"/"}
                                 >
-                                    {user.displayName.split(" ")[0]}
+                                    {user.displayName?.split(" ")[0]}
                                 </NavLink>
                             ) : (
                                 <NavLink className={"p-4"} to={"/sign-in"}>

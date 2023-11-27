@@ -7,6 +7,7 @@
         "content": "Here's a beginner-friendly full-body workout routine that you can do at home or at the gym. Get started on your fitness journey!",
         "timestamp": "2023-01-05T09:15:00Z",
         "views": 1200,
+        "role": "admin",
         "likeCount": 25,
         "postTag": "Workout",
         "commentsCount": 5
@@ -19,6 +20,7 @@
         "content": "Learn why incorporating cardio exercises into your fitness routine is crucial for overall health and fitness. Let's get that heart pumping!",
         "timestamp": "2023-02-10T14:30:00Z",
         "views": 850,
+        "role": "trainer",
         "likeCount": 20,
         "postTag": "Cardio",
         "commentsCount": 3
@@ -31,6 +33,7 @@
         "content": "Discover the best nutrition strategies to support muscle growth and achieve that lean physique you've been working towards.",
         "timestamp": "2023-03-02T11:45:00Z",
         "views": 1100,
+        "role": "admin",
         "likeCount": 30,
         "postTag": "Nutrition",
         "commentsCount": 7
@@ -43,6 +46,7 @@
         "content": "Are you making these common mistakes in the gym? Learn how to avoid them to maximize your workout effectiveness and prevent injuries.",
         "timestamp": "2023-04-15T17:20:00Z",
         "views": 980,
+        "role": "admin",
         "likeCount": 22,
         "postTag": "GymTips",
         "commentsCount": 4
@@ -55,6 +59,7 @@
         "content": "Thinking about trying powerlifting? Here's a guide for beginners to get started with the basics and build a strong foundation.",
         "timestamp": "2023-05-20T13:10:00Z",
         "views": 750,
+        "role": "trainer",
         "likeCount": 18,
         "postTag": "Powerlifting",
         "commentsCount": 6
@@ -67,6 +72,7 @@
         "content": "Explore the benefits of incorporating mindfulness practices into your fitness routine. Achieve a harmonious balance between body and mind.",
         "timestamp": "2023-06-08T10:45:00Z",
         "views": 890,
+        "role": "trainer",
         "likeCount": 28,
         "postTag": "Mindfulness",
         "commentsCount": 5
@@ -79,6 +85,7 @@
         "content": "Short on time? Try these high-intensity interval training (HIIT) workouts that deliver results in a fraction of the time.",
         "timestamp": "2023-07-12T15:30:00Z",
         "views": 1120,
+        "role": "admin",
         "likeCount": 32,
         "postTag": "HIIT",
         "commentsCount": 8
@@ -91,6 +98,7 @@
         "content": "Curious about CrossFit? Discover the unique benefits of CrossFit training and how it can enhance your overall fitness level.",
         "timestamp": "2023-08-05T12:15:00Z",
         "views": 820,
+        "role": "trainer",
         "likeCount": 26,
         "postTag": "CrossFit",
         "commentsCount": 6
@@ -103,6 +111,7 @@
         "content": "Explore the world of yoga and discover how it can improve flexibility, reduce stress, and enhance overall well-being.",
         "timestamp": "2023-09-18T09:40:00Z",
         "views": 950,
+        "role": "trainer",
         "likeCount": 23,
         "postTag": "Yoga",
         "commentsCount": 4
@@ -115,6 +124,7 @@
         "content": "Struggling to stay motivated? Learn practical tips to maintain enthusiasm and consistency on your fitness journey.",
         "timestamp": "2023-10-10T18:00:00Z",
         "views": 870,
+        "role": "trainer",
         "likeCount": 21,
         "postTag": "Motivation",
         "commentsCount": 7
@@ -127,6 +137,7 @@
         "content": "Optimize your workout performance with the right pre-workout nutrition. Discover what to eat for energy and endurance.",
         "timestamp": "2023-11-22T14:20:00Z",
         "views": 920,
+        "role": "admin",
         "likeCount": 27,
         "postTag": "Nutrition",
         "commentsCount": 5
@@ -139,6 +150,7 @@
         "content": "Enhance your recovery with effective techniques. Learn about post-workout strategies for faster muscle repair and growth.",
         "timestamp": "2023-12-15T11:30:00Z",
         "views": 800,
+        "role": "trainer",
         "likeCount": 24,
         "postTag": "Recovery",
         "commentsCount": 6
@@ -151,6 +163,7 @@
         "content": "Discover nutritious and delicious snacks that can power your workouts and keep you energized throughout the day.",
         "timestamp": "2024-01-05T09:45:00Z",
         "views": 880,
+        "role": "admin",
         "likeCount": 22,
         "postTag": "Nutrition",
         "commentsCount": 4
@@ -163,6 +176,7 @@
         "content": "Unlock the secrets to building stronger and well-defined legs. Explore essential exercises for a killer leg day workout.",
         "timestamp": "2024-02-10T13:15:00Z",
         "views": 1020,
+        "role": "trainer",
         "likeCount": 30,
         "postTag": "Workout",
         "commentsCount": 8
@@ -175,6 +189,7 @@
         "content": "Connect with like-minded individuals on your fitness journey. Learn the importance of finding the right fitness community for support and motivation.",
         "timestamp": "2024-03-02T15:50:00Z",
         "views": 940,
+        "role": "trainer",
         "likeCount": 26,
         "postTag": "Community",
         "commentsCount": 5
@@ -187,6 +202,7 @@
         "content": "Explore the benefits of functional training and how it translates to real-world fitness. Achieve practical strength and agility.",
         "timestamp": "2024-04-18T12:30:00Z",
         "views": 890,
+        "role": "trainer",
         "likeCount": 25,
         "postTag": "FunctionalTraining",
         "commentsCount": 6
@@ -199,6 +215,7 @@
         "content": "Practice mindful eating to foster a healthier relationship with food. Learn how to enjoy your meals and make better nutritional choices.",
         "timestamp": "2024-05-10T11:40:00Z",
         "views": 970,
+        "role": "admin",
         "likeCount": 28,
         "postTag": "MindfulEating",
         "commentsCount": 7
@@ -211,6 +228,7 @@
         "content": "Learn how to set realistic fitness goals and create a plan to achieve them. Start your fitness journey with purpose and direction.",
         "timestamp": "2024-06-22T10:20:00Z",
         "views": 900,
+        "role": "trainer",
         "likeCount": 23,
         "postTag": "Goals",
         "commentsCount": 5
@@ -223,6 +241,7 @@
         "content": "Experience total body conditioning with circuit training. Discover effective circuit workouts for improved strength and endurance.",
         "timestamp": "2024-07-15T14:50:00Z",
         "views": 1050,
+        "role": "trainer",
         "likeCount": 32,
         "postTag": "CircuitTraining",
         "commentsCount": 8
@@ -235,6 +254,7 @@
         "content": "Navigate the world of fitness gear with confidence. This comprehensive guide will help you choose the right equipment for your workouts.",
         "timestamp": "2024-08-08T16:00:00Z",
         "views": 920,
+        "role": "admin",
         "likeCount": 29,
         "postTag": "FitnessGear",
         "commentsCount": 6
