@@ -9,7 +9,7 @@ const Community = () => {
     const [page, setPage] = useState(0);
     const axiosPublic = useAxiosPublic();
     const {
-        data: posts = [],
+        data: { result, totalNumberOfDocument } = [],
         isLoading,
         refetch,
     } = useQuery({
@@ -24,8 +24,10 @@ const Community = () => {
     }
     const pages = [...new Array(4).fill(0)];
     console.log(pages);
-    console.log(posts);
+    console.log(result);
 
+    const totalPage = Math.ceil(totalNumberOfDocument / 6);
+    console.log(totalPage);
     const handleNext = () => {
         setPage(page + 1);
     };
@@ -39,7 +41,7 @@ const Community = () => {
             </Helmet>
             <h2 className="md:text-8xl text-6xl md:pb-16 pb-6">Forum</h2>
             <div className="grid gap-6">
-                {posts.map((post, idx) => (
+                {result.map((post, idx) => (
                     <Post key={idx} post={post} refetch={refetch}></Post>
                 ))}
             </div>
@@ -54,7 +56,7 @@ const Community = () => {
                     </button>
 
                     <button
-                        disabled={page == 3}
+                        disabled={page == totalPage - 1}
                         className="h-10 px-4 rounded-full  bg-gradient-to-r from-[#94f3b0] to-[#7abf88] text-black disabled:opacity-40 font-semibold"
                         onClick={handleNext}
                     >

@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import { BsFillImageFill } from "react-icons/bs";
 import { HiOutlineArrowUpTray } from "react-icons/hi2";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
-import Swal from "sweetalert2";
 import { AuthContext } from "../../auth/AuthProvider";
 import { useQuery } from "react-query";
 import Loading from "../../shared/Loading";
@@ -104,7 +103,7 @@ const AddNewForum = () => {
                                 className: "mt-32",
                             });
                             setButtonLoading(false);
-                            
+
                             setUploadedImageError("");
                             reset();
                         })

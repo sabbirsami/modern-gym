@@ -23,6 +23,7 @@ import AddNewForum from "../components/dashboard/addNewForum/AddNewForum";
 import ManageSlot from "../components/dashboard/manageSlot/ManageSlot";
 import ManageMembers from "../components/dashboard/manageMembers/ManageMembers";
 import AddClass from "../components/dashboard/addClass/AddClass";
+import ActivityLog from "../components/dashboard/activityLog/ActivityLog";
 
 const router = createBrowserRouter([
     {
@@ -124,6 +125,10 @@ const router = createBrowserRouter([
             {
                 path: "/dashboard/manage-members",
                 element: <ManageMembers />,
+            },
+            {
+                path: "/dashboard/activity-log",
+                element: <ActivityLog />,
             },
             {
                 path: "/dashboard/add-class",

@@ -69,6 +69,14 @@ const DashboardNav = () => {
                     </li>
                     <li className="w-full ">
                         <NavLink
+                            to={"/dashboard/activity-log"}
+                            className="w-full   block rounded-sm ps-5 "
+                        >
+                            Activity Log
+                        </NavLink>
+                    </li>
+                    <li className="w-full ">
+                        <NavLink
                             to={"/dashboard/add-class"}
                             className="w-full   block rounded-sm ps-5 "
                         >
