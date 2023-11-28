@@ -67,7 +67,6 @@ const AddNewForum = () => {
         setRequiredTitle("");
         setButtonLoading(true);
         const image = uploadedImage;
-        console.log(uploadedImage);
         const formData = new FormData();
         formData.append("image", image);
         const url = `https://api.imgbb.com/1/upload??expiration=6000&key=${imageUploadKey}`;

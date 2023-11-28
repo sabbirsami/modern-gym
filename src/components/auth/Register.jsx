@@ -417,7 +417,7 @@ const Register = () => {
                                     Don&#39;t have any account?{" "}
                                     <Link
                                         className="underline text-[#94f3b0] ps-2"
-                                        to={"/register"}
+                                        to={"/sign-in"}
                                     >
                                         Sign In
                                     </Link>

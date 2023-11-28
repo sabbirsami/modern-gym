@@ -1,7 +1,9 @@
 ## Page Title
 
 -   # Modern Gym
-    `js https://sami-modern-gym.web.app/ `
+    ```js
+        https://sami-modern-gym.web.app/
+    ```
 
 ## Gallery Section
 
