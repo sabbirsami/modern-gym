@@ -7,7 +7,7 @@ const Dashboard = () => {
     return (
         <div className="text-white overflow-y-hidden">
             <DashboardHeader />
-            <div className="h-[90vh] flex ">
+            <div className="h-[92vh] flex ">
                 <div className="w-64 ">
                     <DashboardNav />
                 </div>

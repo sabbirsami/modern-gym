@@ -3,6 +3,7 @@ import useAxiosPublic from "../../hooks/useAxiosPublic";
 import Loading from "../../shared/Loading";
 import { useContext } from "react";
 import { AuthContext } from "../../auth/AuthProvider";
+import BookedSlot from "./BookedSlot";
 
 const ManageSlot = () => {
     const axiosPublic = useAxiosPublic();
@@ -17,11 +18,105 @@ const ManageSlot = () => {
             return res.data;
         },
     });
-    if (isLoading) {
+
+    const { data: trainerData = [], isLoading: isTrainerLoading } = useQuery({
+        queryKey: ["trainerData", user.email],
+        queryFn: async () => {
+            const res = await axiosPublic.get(
+                `/trainers/find-by-email/${user.email}`
+            );
+            return res.data;
+        },
+    });
+
+    if (isLoading || isTrainerLoading) {
         return <Loading />;
     }
     console.log(trainerBookingSlots);
-    return <div></div>;
+    const { available_time_slot } = trainerData[0];
+    // console.log(userData);
+    return (
+        <section>
+            <h2 className="text-2xl">Booked Slot</h2>
+            <div className="grid grid-cols-5 pt-6 gap-2">
+                {available_time_slot.map((time, idx) => (
+                    <p
+                        key={idx}
+                        className="py-2 px-4 me-1.5 mb-1.5 block rounded-lg text-xs cursor-pointer bg-[#94f3b0]/10 text-[#a3ffb5]"
+                    >
+                        {time}
+                    </p>
+                ))}
+            </div>
+            <div className="grid grid-cols-5 pt-6 gap-2">
+                <div className="">
+                    {trainerBookingSlots.map((trainerBookingSlot, idx) => (
+                        <span key={idx}>
+                            {trainerBookingSlot.slotId == "0" ? (
+                                <BookedSlot
+                                    trainerBookingSlot={trainerBookingSlot}
+                                ></BookedSlot>
+                            ) : (
+                                ""
+                            )}
+                        </span>
+                    ))}
+                </div>
+                <div className="">
+                    {trainerBookingSlots.map((trainerBookingSlot, idx) => (
+                        <span key={idx}>
+                            {trainerBookingSlot.slotId == "1" ? (
+                                <BookedSlot
+                                    trainerBookingSlot={trainerBookingSlot}
+                                ></BookedSlot>
+                            ) : (
+                                ""
+                            )}
+                        </span>
+                    ))}
+                </div>
+                <div className="">
+                    {trainerBookingSlots.map((trainerBookingSlot, idx) => (
+                        <span key={idx}>
+                            {trainerBookingSlot.slotId == "2" ? (
+                                <BookedSlot
+                                    trainerBookingSlot={trainerBookingSlot}
+                                ></BookedSlot>
+                            ) : (
+                                ""
+                            )}
+                        </span>
+                    ))}
+                </div>
+                <div className="">
+                    {trainerBookingSlots.map((trainerBookingSlot, idx) => (
+                        <span key={idx}>
+                            {trainerBookingSlot.slotId == "3" ? (
+                                <BookedSlot
+                                    trainerBookingSlot={trainerBookingSlot}
+                                ></BookedSlot>
+                            ) : (
+                                ""
+                            )}
+                        </span>
+                    ))}
+                </div>
+                <div className="">
+                    {trainerBookingSlots.map((trainerBookingSlot, idx) => (
+                        <span key={idx}>
+                            {trainerBookingSlot.slotId == "4" ? (
+                                <BookedSlot
+                                    trainerBookingSlot={trainerBookingSlot}
+                                ></BookedSlot>
+                            ) : (
+                                ""
+                            )}
+                        </span>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
 };
 
 export default ManageSlot;

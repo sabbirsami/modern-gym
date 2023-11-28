@@ -12,7 +12,7 @@ const DashboardHeader = () => {
                 {/* logo */}
                 <div className="">
                     <Link to={"/"}>
-                        <img className="w-48" src={logo} alt="" />
+                        <img className="w-36" src={logo} alt="" />
                     </Link>
                 </div>
                 {/* menu section */}
