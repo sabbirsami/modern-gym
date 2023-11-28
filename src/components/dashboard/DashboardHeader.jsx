@@ -4,7 +4,6 @@ import { useContext } from "react";
 import { AuthContext } from "../auth/AuthProvider";
 const DashboardHeader = () => {
     const { user } = useContext(AuthContext);
-    console.log(user);
 
     return (
         <div className=" bg-[#303644]">

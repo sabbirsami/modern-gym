@@ -22,6 +22,7 @@ import Community from "../components/posts/Community";
 import AddNewForum from "../components/dashboard/addNewForum/AddNewForum";
 import ManageSlot from "../components/dashboard/manageSlot/ManageSlot";
 import ManageMembers from "../components/dashboard/manageMembers/ManageMembers";
+import AddClass from "../components/dashboard/addClass/AddClass";
 
 const router = createBrowserRouter([
     {
@@ -123,6 +124,10 @@ const router = createBrowserRouter([
             {
                 path: "/dashboard/manage-members",
                 element: <ManageMembers />,
+            },
+            {
+                path: "/dashboard/add-class",
+                element: <AddClass />,
             },
             {
                 path: "/dashboard/all-trainer/:trainerId/payment",

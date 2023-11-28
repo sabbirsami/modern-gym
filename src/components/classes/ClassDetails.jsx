@@ -1,12 +1,10 @@
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link,  useParams } from "react-router-dom";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import { useQuery } from "react-query";
 import Loading from "../shared/Loading";
 
 const ClassDetails = () => {
     const { id } = useParams();
-    const location = useLocation();
-    console.log(location);
     const axiosPublic = useAxiosPublic();
     const { data: classDetails = [], isLoading } = useQuery({
         queryKey: "classDetails",
@@ -22,7 +20,6 @@ const ClassDetails = () => {
     console.log(classDetails);
     const {
         name,
-
         short_description,
         benefits,
         duration,

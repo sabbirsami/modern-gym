@@ -5,16 +5,23 @@ import { Link } from "react-router-dom";
 
 const AllClasses = () => {
     const axiosPublic = useAxiosPublic();
-    const { data: allClasses = [], isLoading } = useQuery({
-        queryKey: "AllClasses",
-        queryFn: async () => {
-            const res = await axiosPublic.get("/classes-details");
-            return res.data;
-        },
-    });
+    const { data: { result, totalNumberOfDocument } = [], isLoading } =
+        useQuery({
+            queryKey: "AllClasses",
+            queryFn: async () => {
+                const res = await axiosPublic.get("/classes-details");
+                return res.data;
+            },
+        });
     if (isLoading) {
         return <Loading />;
     }
+
+    const totalCardInRow = Math.ceil(totalNumberOfDocument / 4);
+    const row1 = 0 + totalCardInRow;
+    const row2 = row1 + row1;
+    const row3 = row2 + row1;
+    const row4 = row3 + row1;
 
     return (
         <div className="pt-16">
@@ -22,7 +29,7 @@ const AllClasses = () => {
 
             <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
                 <div className="grid gap-6">
-                    {allClasses.slice(0, 8).map((classDetail, idx) => (
+                    {result.slice(0, row1).map((classDetail, idx) => (
                         <Link
                             to={`/classes-details/${classDetail._id}`}
                             key={idx}
@@ -42,14 +49,14 @@ const AllClasses = () => {
                     ))}
                 </div>
                 <div className="grid gap-6">
-                    {allClasses.slice(8, 16).map((classDetail, idx) => (
+                    {result.slice(row1, row2).map((classDetail, idx) => (
                         <Link
                             to={`/classes-details/${classDetail._id}`}
                             key={idx}
                             className="h-full"
                         >
                             <div
-                                className="bg-[#303644] bg-gradient-to-r hover:from-[#94f3b0] hover:to-[#7abf88] hover:text-black p-10 rounded-lg
+                                className="bg-[#303644] h-full bg-gradient-to-r hover:from-[#94f3b0] hover:to-[#7abf88] hover:text-black p-10 rounded-lg
                             "
                             >
                                 <h2 className="text-4xl pb-3">
@@ -63,7 +70,7 @@ const AllClasses = () => {
                     ))}
                 </div>
                 <div className="grid gap-6">
-                    {allClasses.slice(16, 24).map((classDetail, idx) => (
+                    {result.slice(row2, row3).map((classDetail, idx) => (
                         <Link
                             to={`/classes-details/${classDetail._id}`}
                             className="h-full"
@@ -84,13 +91,13 @@ const AllClasses = () => {
                     ))}
                 </div>
                 <div className="grid md:hidden xl:grid gap-6">
-                    {allClasses.slice(24, 32).map((classDetail, idx) => (
+                    {result.slice(row3, row4).map((classDetail, idx) => (
                         <Link
                             to={`/classes-details/${classDetail._id}`}
                             key={idx}
                         >
                             <div
-                                className="bg-[#303644] bg-gradient-to-r hover:from-[#94f3b0] hover:to-[#7abf88] hover:text-black p-10 rounded-lg
+                                className="bg-[#303644] h-full bg-gradient-to-r hover:from-[#94f3b0] hover:to-[#7abf88] hover:text-black p-10 rounded-lg
                             "
                             >
                                 <h2 className="text-4xl pb-3">
