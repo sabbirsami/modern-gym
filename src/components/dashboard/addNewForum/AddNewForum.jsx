@@ -97,7 +97,7 @@ const AddNewForum = () => {
                         .post("/posts", newPost)
                         .then((res) => {
                             console.log(res.data);
-                            toast.success("Message Sended", {
+                            toast.success("forum added successfully", {
                                 duration: 2000,
                                 className: "mt-32",
                             });

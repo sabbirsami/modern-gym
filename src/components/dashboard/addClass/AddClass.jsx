@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+import toast from "react-hot-toast";
 
 const AddClass = () => {
     const [requiredError, setRequiredError] = useState("");
@@ -46,6 +47,10 @@ const AddClass = () => {
             .then((res) => {
                 console.log(res.data);
                 setButtonLoading(false);
+                toast.success("Message Sended", {
+                    duration: 2000,
+                    className: "mt-32",
+                });
                 reset();
             })
             .catch((err) => {

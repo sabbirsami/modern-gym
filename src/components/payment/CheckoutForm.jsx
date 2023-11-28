@@ -42,7 +42,7 @@ const CheckoutForm = ({ paymentInfo }) => {
 
         if (packageCost > 0) {
             fetch(
-                "http://localhost:5000/api/create-payment-intent",
+                "https://fitness-tracker-server.vercel.app/api/create-payment-intent",
 
                 {
                     method: "POST",

@@ -2,7 +2,6 @@ import { useContext, useState } from "react";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { AuthContext } from "../../auth/AuthProvider";
 import { useQuery } from "react-query";
-import MemberLoading from "../manageMembers/MemberLoading";
 import { FaEdit } from "react-icons/fa";
 import { TbEditOff } from "react-icons/tb";
 import { HiOutlineArrowUpTray } from "react-icons/hi2";
@@ -10,6 +9,7 @@ import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import auth from "../../../../firebase.config";
 import { updateProfile } from "firebase/auth";
+import UserProfileLoading from "./UserProfileLoading";
 
 const UserProfileSetting = () => {
     const axiosPublic = useAxiosPublic();
@@ -33,7 +33,7 @@ const UserProfileSetting = () => {
         },
     });
     if (isUserLoading) {
-        return <MemberLoading />;
+        return <UserProfileLoading />;
     }
 
     function handleChange(e) {

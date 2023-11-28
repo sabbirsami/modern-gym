@@ -13,7 +13,7 @@ const Gallery = () => {
     const fetchImages = async () => {
         try {
             const response = await fetch(
-                `http://localhost:5000/api/gallery?page=${page}&limit=${imagesPerPage}`
+                `https://fitness-tracker-server.vercel.app/api/gallery?page=${page}&limit=${imagesPerPage}`
             );
             const data = await response.json();
 
