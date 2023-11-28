@@ -1,5 +1,6 @@
 [
     {
+        "authEmail": "smd71430@gmail.com",
         "postImage": "https://images.unsplash.com/photo-1599577456698-e1e9ae4f4e5b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "Effective Full-Body Workouts for Beginners",
         "author": "FitExplorer",
@@ -13,6 +14,7 @@
         "commentsCount": 5
     },
     {
+        "authEmail": "david.anderson@example.com",
         "postImage": "https://images.unsplash.com/photo-1592632789004-57d4354f2499?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "The Importance of Cardio in Your Fitness Routine",
         "author": "CardioChamp",
@@ -26,6 +28,7 @@
         "commentsCount": 3
     },
     {
+        "authEmail": "smd71430@gmail.com",
         "postImage": "https://images.unsplash.com/photo-1506197061617-7f5c0b093236?q=80&w=2018&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "Nutrition Tips for Building Lean Muscle Mass",
         "author": "MuscleFuel",
@@ -39,6 +42,7 @@
         "commentsCount": 7
     },
     {
+        "authEmail": "smd71430@gmail.com",
         "postImage": "https://images.unsplash.com/photo-1526401485004-46910ecc8e51?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "Common Mistakes to Avoid in the Gym",
         "author": "GymWisdom",
@@ -52,6 +56,7 @@
         "commentsCount": 4
     },
     {
+        "authEmail": "david.anderson@example.com",
         "postImage": "https://images.unsplash.com/photo-1666121363683-1f03bf2e0cc1?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "Powerlifting for Beginners: Getting Started",
         "author": "PowerLiftPro",
@@ -65,6 +70,7 @@
         "commentsCount": 6
     },
     {
+        "authEmail": "michael.davis@example.com",
         "postImage": "https://images.unsplash.com/photo-1519311965067-36d3e5f33d39?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "Mindfulness in Fitness: Balancing Body and Mind",
         "author": "MindfulLifter",
@@ -78,6 +84,7 @@
         "commentsCount": 5
     },
     {
+        "authEmail": "smd71430@gmail.com",
         "postImage": "https://images.unsplash.com/photo-1599577456698-e1e9ae4f4e5b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "Quick and Effective HIIT Workouts for Busy Schedules",
         "author": "HIITMaster",
@@ -91,6 +98,7 @@
         "commentsCount": 8
     },
     {
+        "authEmail": "michael.davis@example.com",
         "postImage": "https://images.unsplash.com/photo-1506197061617-7f5c0b093236?q=80&w=2018&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "The Benefits of CrossFit Training",
         "author": "CrossFitFanatic",
@@ -104,6 +112,7 @@
         "commentsCount": 6
     },
     {
+        "authEmail": "david.anderson@example.com",
         "postImage": "https://images.everydayhealth.com/images/healthy-living/fitness/all-about-yoga-mega-722x406.jpg",
         "title": "Yoga for Flexibility and Relaxation",
         "author": "YogaEnthusiast",
@@ -117,6 +126,7 @@
         "commentsCount": 4
     },
     {
+        "authEmail": "michael.davis@example.com",
         "postImage": "https://images.unsplash.com/photo-1599577456698-e1e9ae4f4e5b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "Staying Motivated on Your Fitness Journey",
         "author": "MotivationMaven",
@@ -130,6 +140,7 @@
         "commentsCount": 7
     },
     {
+        "authEmail": "michael.davis@example.com",
         "postImage": "https://images.unsplash.com/photo-1599577456698-e1e9ae4f4e5b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "Pre-Workout Nutrition: What to Eat Before a Workout",
         "author": "FuelUp",
@@ -143,6 +154,7 @@
         "commentsCount": 5
     },
     {
+        "authEmail": "smd71430@gmail.com",
         "postImage": "https://images.unsplash.com/photo-1599577456698-e1e9ae4f4e5b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "Recovery Techniques for Faster Muscle Repair",
         "author": "RecoveryGuru",
@@ -156,6 +168,7 @@
         "commentsCount": 6
     },
     {
+        "authEmail": "michael.davis@example.com",
         "postImage": "https://images.unsplash.com/photo-1599577456698-e1e9ae4f4e5b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "Healthy Snacks to Fuel Your Workouts",
         "author": "SnackSmart",
@@ -169,6 +182,7 @@
         "commentsCount": 4
     },
     {
+        "authEmail": "smd71430@gmail.com",
         "postImage": "https://images.unsplash.com/photo-1599577456698-e1e9ae4f4e5b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "Building Stronger Legs: Leg Day Essentials",
         "author": "LegDayHero",
@@ -182,6 +196,7 @@
         "commentsCount": 8
     },
     {
+        "authEmail": "david.anderson@example.com",
         "postImage": "https://images.unsplash.com/photo-1599577456698-e1e9ae4f4e5b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "Finding the Right Fitness Community",
         "author": "CommunityFit",
@@ -195,6 +210,7 @@
         "commentsCount": 5
     },
     {
+        "authEmail": "michael.davis@example.com",
         "postImage": "https://images.unsplash.com/photo-1599577456698-e1e9ae4f4e5b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "Functional Training: Real-world Fitness for Real Results",
         "author": "FunctionalFit",
@@ -208,6 +224,7 @@
         "commentsCount": 6
     },
     {
+        "authEmail": "david.anderson@example.com",
         "postImage": "https://images.unsplash.com/photo-1599577456698-e1e9ae4f4e5b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "Mindful Eating: A Key to Sustainable Weight Management",
         "author": "MindfulEater",
@@ -221,6 +238,7 @@
         "commentsCount": 7
     },
     {
+        "authEmail": "david.anderson@example.com",
         "postImage": "https://images.unsplash.com/photo-1599577456698-e1e9ae4f4e5b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "Setting Realistic Fitness Goals: A Guide for Beginners",
         "author": "GoalGetter",
@@ -234,6 +252,7 @@
         "commentsCount": 5
     },
     {
+        "authEmail": "michael.davis@example.com",
         "postImage": "https://images.unsplash.com/photo-1599577456698-e1e9ae4f4e5b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "Circuit Training for Total Body Conditioning",
         "author": "CircuitChampion",
@@ -247,6 +266,7 @@
         "commentsCount": 8
     },
     {
+        "authEmail": "smd71430@gmail.com",
         "postImage": "https://images.unsplash.com/photo-1599577456698-e1e9ae4f4e5b?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
         "title": "Choosing the Right Fitness Gear: A Comprehensive Guide",
         "author": "GearGuru",

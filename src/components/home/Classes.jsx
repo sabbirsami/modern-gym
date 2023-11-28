@@ -6,8 +6,8 @@ import shape from "../../assets/icon/shape03.png";
 
 const Classes = () => {
     const axiosPublic = useAxiosPublic();
-    const { data: allClasses = [], isLoading } = useQuery({
-        queryKey: "AllClasses",
+    const { data: { result } = [], isLoading } = useQuery({
+        queryKey: "someClass",
         queryFn: async () => {
             const res = await axiosPublic.get("/classes-details");
             return res.data;
@@ -25,7 +25,7 @@ const Classes = () => {
 
                 <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
                     <div className="grid gap-6">
-                        {allClasses.slice(0, 3).map((classDetail, idx) => (
+                        {result?.slice(0, 3).map((classDetail, idx) => (
                             <Link
                                 to={`/classes-details/${classDetail._id}`}
                                 key={idx}
@@ -45,7 +45,7 @@ const Classes = () => {
                         ))}
                     </div>
                     <div className="grid gap-6">
-                        {allClasses.slice(3, 6).map((classDetail, idx) => (
+                        {result?.slice(3, 6).map((classDetail, idx) => (
                             <Link
                                 to={`/classes-details/${classDetail._id}`}
                                 key={idx}
@@ -66,7 +66,7 @@ const Classes = () => {
                         ))}
                     </div>
                     <div className="grid gap-6">
-                        {allClasses.slice(6, 9).map((classDetail, idx) => (
+                        {result?.slice(6, 9).map((classDetail, idx) => (
                             <Link
                                 to={`/classes-details/${classDetail._id}`}
                                 className="h-full"
@@ -87,7 +87,7 @@ const Classes = () => {
                         ))}
                     </div>
                     <div className="grid md:hidden xl:grid gap-6">
-                        {allClasses.slice(9, 12).map((classDetail, idx) => (
+                        {result?.slice(9, 12).map((classDetail, idx) => (
                             <Link
                                 to={`/classes-details/${classDetail._id}`}
                                 key={idx}
