@@ -4,10 +4,11 @@
         "image": "https://i.ibb.co/306Jc8L/trainer.png",
         "experience": 3,
         "role": "trainer",
-        "paymentStatus": "pending",
+        "paymentStatus": "paid",
         "available_time_slot": [
             "6am - 7am",
-            "8am - 9am",
+            "7am - 8am",
+            "7am - 8am",
             "8pm - 9pm",
             "9pm - 10pm"
         ],
@@ -30,9 +31,9 @@
         "paymentStatus": "pending",
         "available_time_slot": [
             "6am - 7am",
+            "7am - 8am",
+            "7am - 8am",
             "8am - 9am",
-            "6pm - 7pm",
-            "7pm - 8pm",
             "9pm - 10pm"
         ],
         "email": "michael.davis@example.com",
@@ -50,8 +51,7 @@
         "paymentStatus": "pending",
         "available_time_slot": [
             "6am - 7am",
-            "8am - 9am",
-            "6pm - 7pm",
+            "7am - 8am",
             "7pm - 8pm",
             "8pm - 9pm",
             "9pm - 10pm"
@@ -75,8 +75,7 @@
         "paymentStatus": "pending",
         "available_time_slot": [
             "6am - 7am",
-            "8am - 9am",
-            "6pm - 7pm",
+            "7am - 8am",
             "7pm - 8pm",
             "8pm - 9pm",
             "9pm - 10pm"
@@ -99,8 +98,8 @@
         "role": "trainer",
         "paymentStatus": "pending",
         "available_time_slot": [
-            "8am - 9am",
-            "6pm - 7pm",
+            "6am - 7am",
+            "7am - 8am",
             "7pm - 8pm",
             "8pm - 9pm",
             "9pm - 10pm"
@@ -120,8 +119,7 @@
         "paymentStatus": "pending",
         "available_time_slot": [
             "6am - 7am",
-            "8am - 9am",
-            "6pm - 7pm",
+            "7am - 8am",
             "7pm - 8pm",
             "8pm - 9pm",
             "9pm - 10pm"

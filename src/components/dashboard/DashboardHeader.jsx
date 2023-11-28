@@ -8,7 +8,7 @@ const DashboardHeader = () => {
 
     return (
         <div className=" bg-[#303644]">
-            <div className="flex justify-between items-center py-3  px-6">
+            <div className="flex justify-between items-center py-3  px-12">
                 {/* logo */}
                 <div className="">
                     <Link to={"/"}>

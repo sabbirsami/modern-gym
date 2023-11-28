@@ -1,8 +1,5 @@
 [
-  
-   
     {
-        "_id": "6564dbf276d28396d582f0d9",
         "packageName": "Gold Package",
         "packageId": "6562d2394d7f8f119fb900fc",
         "trainerId": "656448844d7f8f119f1a5448",
@@ -21,7 +18,6 @@
         "__v": 0
     },
     {
-        "_id": "6564e67d76d28396d582f120",
         "packageName": "Gold Package",
         "packageId": "6562d2394d7f8f119fb900fc",
         "trainerId": "656448844d7f8f119f1a5446",
@@ -40,7 +36,6 @@
         "__v": 0
     },
     {
-        "_id": "6564e67d76d28396d582f122",
         "packageName": "Gold Package",
         "packageId": "6562d2394d7f8f119fb900fc",
         "trainerId": "656448844d7f8f119f1a5446",
@@ -59,7 +54,6 @@
         "__v": 0
     },
     {
-        "_id": "6564ebbb76d28396d582f143",
         "packageName": "Diamond Package",
         "packageId": "6562d2394d7f8f119fb900fd",
         "trainerId": "6564ea3d76d28396d582f133",
@@ -79,7 +73,6 @@
         "__v": 0
     },
     {
-        "_id": "6564ebf476d28396d582f14e",
         "packageName": "Diamond Package",
         "packageId": "6562d2394d7f8f119fb900fd",
         "trainerId": "656448844d7f8f119f1a5446",
@@ -99,7 +92,6 @@
         "__v": 0
     },
     {
-        "_id": "6564ebfb76d28396d582f155",
         "packageName": "Gold Package",
         "packageId": "6562d2394d7f8f119fb900fc",
         "trainerId": "656448844d7f8f119f1a5446",
@@ -118,7 +110,6 @@
         "__v": 0
     },
     {
-        "_id": "6564ec0376d28396d582f15c",
         "packageName": "Silver Package",
         "packageId": "6562d2394d7f8f119fb900fb",
         "trainerId": "656448844d7f8f119f1a5446",

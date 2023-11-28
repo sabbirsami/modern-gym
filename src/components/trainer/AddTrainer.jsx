@@ -69,8 +69,8 @@ const AddTrainer = () => {
         },
     ];
     const available_time_slotOptions = [
-        { value: "8am - 9am", label: "8am - 9am" },
-        { value: "6pm - 7pm", label: "6pm - 7pm" },
+        { value: "6am - 7am", label: "6am - 7am" },
+        { value: "7am - 8am", label: "7am - 8am" },
         { value: "7pm - 8pm", label: "7pm - 8pm" },
         { value: "8pm - 9pm", label: "8pm - 9pm" },
         { value: "9pm - 10pm", label: "9pm - 10pm" },

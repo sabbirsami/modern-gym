@@ -46,14 +46,21 @@ const Navbar = () => {
             {user ? (
                 <span className="flex gap-2 items-center">
                     <NavLink
-                        className="px-4 py-2 border rounded-full bg-gradient-to-r hover:from-[#94f3b0] hover:to-[#7abf88] hover:text-black"
+                        className="ps-4 pe-1 py-1 border rounded-full bg-gradient-to-r hover:from-[#94f3b0] hover:to-[#7abf88] hover:text-black"
                         to={"/"}
                     >
-                        {user.displayName?.split(" ")[0]}
+                        <div className="flex justify-between items-center gap-3">
+                            <span>{user.displayName?.split(" ")[0]}</span>
+                            <img
+                                className="w-10 h-10 object-cover rounded-full"
+                                src={user?.photoURL}
+                                alt=""
+                            />
+                        </div>
                     </NavLink>
                     <button
                         onClick={handleSignOut}
-                        className="px-2 py-2 rounded-full text-2xl bg-gradient-to-r from-[#94f3b0] to-[#7abf88] text-black"
+                        className="px-3 py-3 rounded-full text-2xl bg-gradient-to-r from-[#94f3b0] to-[#7abf88] text-black"
                         to={"/sign-in"}
                     >
                         <IoIosLogOut />

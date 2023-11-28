@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { useQuery } from "react-query";
-import Loading from "../../shared/Loading";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
@@ -50,7 +49,7 @@ const BookedSlot = ({ trainerBookingSlot }) => {
                 console.error("Error sending email:", error);
             });
     };
-    console.log(userData);
+
     return (
         <div className="p-4 me-1.5 mb-1.5  rounded-lg text-xs cursor-pointer bg-[#94f3b0]/10 text-white">
             <h5 className="text-xl pb-1">{userData[0].name}</h5>
