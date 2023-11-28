@@ -55,7 +55,15 @@ const Register = () => {
                             uid: result?.user.uid,
                             photoUrl: result?.user.photoURL,
                             role: "user",
-                            trainerId: "656448844d7f8f119f1a5446",
+                            trainerId: "",
+                            country: "",
+                            phoneNumber: "",
+                            district: "",
+                            age: 0,
+                            gender: "",
+                            weight: 0,
+                            height: "",
+                            DateOfBirth: "",
                         };
                         axiosPublic
                             .post("/users", newUser)
@@ -115,6 +123,14 @@ const Register = () => {
                     photoUrl: result?.user.photoURL,
                     role: "user",
                     trainerId: "",
+                    country: "",
+                    phoneNumber: "",
+                    district: "",
+                    age: 0,
+                    gender: "",
+                    weight: 0,
+                    height: "",
+                    DateOfBirth: "",
                 };
                 axiosPublic
                     .post("/users", newUser)

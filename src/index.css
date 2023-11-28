@@ -3,12 +3,21 @@
 @tailwind utilities;
 
 body {
-    font-family: "Open Sans", sans-serif;
     font-family: "Bricolage Grotesque", sans-serif;
 }
 .font-highlight {
     font-family: "Bricolage Grotesque", sans-serif;
 }
-.font-primary {
-    font-family: "Open Sans", sans-serif;
+a.active {
+    color: orange;
+    position: relative;
+}
+a.active::after {
+    position: absolute;
+    content: url(/src/assets/dumbbell.png);
+    width: 10px !important;
+    height: auto;
+    right: 4px;
+    top: -11px;
+    transform: rotate(45deg);
 }

@@ -66,6 +66,14 @@ const SignIn = () => {
                     photoUrl: result?.user.photoURL,
                     role: "user",
                     trainerId: "",
+                    country: "",
+                    phoneNumber: "",
+                    district: "",
+                    age: 0,
+                    gender: "",
+                    weight: 0,
+                    height: "",
+                    DateOfBirth: "",
                 };
                 axiosPublic
                     .post("/users", newUser)

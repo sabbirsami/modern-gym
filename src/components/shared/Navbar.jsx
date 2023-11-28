@@ -45,10 +45,7 @@ const Navbar = () => {
         <li key={6}>
             {user ? (
                 <span className="flex gap-2 items-center">
-                    <NavLink
-                        className="ps-4 pe-1 py-1 border rounded-full bg-gradient-to-r hover:from-[#94f3b0] hover:to-[#7abf88] hover:text-black"
-                        to={"/"}
-                    >
+                    <span className="ps-4 pe-1 py-1 border rounded-full bg-gradient-to-r hover:from-[#94f3b0] hover:to-[#7abf88] hover:text-black">
                         <div className="flex justify-between items-center gap-3">
                             <span>{user.displayName?.split(" ")[0]}</span>
                             <img
@@ -57,7 +54,7 @@ const Navbar = () => {
                                 alt=""
                             />
                         </div>
-                    </NavLink>
+                    </span>
                     <button
                         onClick={handleSignOut}
                         className="px-3 py-3 rounded-full text-2xl bg-gradient-to-r from-[#94f3b0] to-[#7abf88] text-black"

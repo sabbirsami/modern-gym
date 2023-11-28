@@ -85,6 +85,14 @@ const DashboardNav = () => {
                     </li>
                     <li className="w-full ">
                         <NavLink
+                            to={"/dashboard/profile-setting"}
+                            className="w-full   block rounded-sm ps-5 "
+                        >
+                            Profile Setting
+                        </NavLink>
+                    </li>
+                    <li className="w-full ">
+                        <NavLink
                             to={"/dashboard/manage-users"}
                             className="w-full  block rounded-sm ps-5 "
                         >

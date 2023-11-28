@@ -24,6 +24,7 @@ import ManageSlot from "../components/dashboard/manageSlot/ManageSlot";
 import ManageMembers from "../components/dashboard/manageMembers/ManageMembers";
 import AddClass from "../components/dashboard/addClass/AddClass";
 import ActivityLog from "../components/dashboard/activityLog/ActivityLog";
+import UserProfileSetting from "../components/dashboard/userProfileSetting/UserProfileSetting";
 
 const router = createBrowserRouter([
     {
@@ -133,6 +134,10 @@ const router = createBrowserRouter([
             {
                 path: "/dashboard/add-class",
                 element: <AddClass />,
+            },
+            {
+                path: "/dashboard/profile-setting",
+                element: <UserProfileSetting />,
             },
             {
                 path: "/dashboard/all-trainer/:trainerId/payment",
