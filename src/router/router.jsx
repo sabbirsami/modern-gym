@@ -25,7 +25,6 @@ import ManageMembers from "../components/dashboard/manageMembers/ManageMembers";
 import AddClass from "../components/dashboard/addClass/AddClass";
 import ActivityLog from "../components/dashboard/activityLog/ActivityLog";
 import UserProfileSetting from "../components/dashboard/userProfileSetting/UserProfileSetting";
-import AdminRoute from "../components/shared/AdminRoute";
 import RecommendedClasses from "../components/dashboard/recommendedClasses/RecommendedClasses";
 import Balance from "../components/dashboard/balance/Balance";
 
@@ -108,47 +107,92 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/dashboard/manage-newsletter",
-                element: <ManageNewsletter />,
+                element: (
+                    <PrivateRoute>
+                        <ManageNewsletter />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "/dashboard/all-trainer",
-                element: <AllTrainers />,
+                element: (
+                    <PrivateRoute>
+                        <AllTrainers />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "/dashboard/all-appliances",
-                element: <AllAppliances />,
+                element: (
+                    <PrivateRoute>
+                        <AllAppliances />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "/dashboard/add-new-forum",
-                element: <AddNewForum />,
+                element: (
+                    <PrivateRoute>
+                        <AddNewForum />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "/dashboard/manage-slot",
-                element: <ManageSlot />,
+                element: (
+                    <PrivateRoute>
+                        <ManageSlot />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "/dashboard/manage-members",
-                element: <ManageMembers />,
+                element: (
+                    <PrivateRoute>
+                        {" "}
+                        <ManageMembers />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "/dashboard/activity-log",
-                element: <ActivityLog />,
+                element: (
+                    <PrivateRoute>
+                        <ActivityLog />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "/dashboard/add-class",
-                element: <AddClass />,
+                element: (
+                    <PrivateRoute>
+                        <AddClass />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "/dashboard/profile-setting",
-                element: <UserProfileSetting />,
+                element: (
+                    <PrivateRoute>
+                        <UserProfileSetting />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "/dashboard/recommended-classes",
-                element: <RecommendedClasses />,
+                element: (
+                    <PrivateRoute>
+                        <RecommendedClasses />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "/dashboard/balance",
-                element: <Balance />,
+                element: (
+                    <PrivateRoute>
+                        <Balance />
+                    </PrivateRoute>
+                ),
             },
             {
                 path: "/dashboard/all-trainer/:trainerId/payment",

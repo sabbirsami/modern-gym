@@ -21,12 +21,12 @@ const Classes = ({ recommended }) => {
     return (
         <section className=" overflow-hidden relative">
             <img className="absolute -right-36 -z-10" src={shape} alt="" />
-            <div className="pt-10 pb-32 container mx-auto ">
+            <div className="pt-10 pb-32 container mx-auto px-6">
                 <h2 className="text-7xl pb-16">
                     {recommended ? "Recommended Class" : "Some Classes."}
                 </h2>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                     <div className="grid gap-6">
                         {result?.slice(0, 3).map((classDetail, idx) => (
                             <Link

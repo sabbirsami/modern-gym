@@ -13,7 +13,7 @@ const AllAppliances = () => {
 
     const axiosPublic = useAxiosPublic();
     const {
-        data: trainers = [],
+        data: { trainers } = [],
         isLoading,
         refetch,
     } = useQuery({

@@ -1,18 +1,17 @@
 import { useQuery } from "react-query";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import Loading from "../../shared/Loading";
-import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const ManageNewsletter = () => {
-    const axiosSecure = useAxiosSecure();
+    const axiosPublic = useAxiosPublic();
     const {
-        data: newsletters = [],
+        data: { newsLetterSubscriber } = [],
         isLoading,
         // refetch,
     } = useQuery({
         queryKey: "newsletters",
         queryFn: async () => {
-            const res = await axiosSecure.get(`/newsletters`);
+            const res = await axiosPublic.get(`/newsletters`);
             console.log(res.data);
             return res.data;
         },
@@ -20,11 +19,11 @@ const ManageNewsletter = () => {
     if (isLoading) {
         return <Loading></Loading>;
     }
-    console.log(newsletters);
+    console.log(newsLetterSubscriber);
     return (
         <section className="">
             <div className=" ">
-                {newsletters.map((newsletter) => (
+                {newsLetterSubscriber.map((newsletter) => (
                     <div
                         key={newsletter._id}
                         className="grid grid-cols-3 mt-6 py-4 border px-6 rounded-md shadow-md"

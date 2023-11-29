@@ -2,6 +2,7 @@ import { Link, useParams } from "react-router-dom";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import { useQuery } from "react-query";
 import Loading from "../shared/Loading";
+import { Helmet } from "react-helmet-async";
 
 const ClassDetails = () => {
     const { id } = useParams();
@@ -33,6 +34,9 @@ const ClassDetails = () => {
     } = classDetails[0];
     return (
         <section className="container mx-auto px-6">
+            <Helmet>
+                <title>Modern Gym | Classes Details</title>
+            </Helmet>
             <div className="py-16">
                 <h2 className="text-7xl pb-10">{name} </h2>
                 <p className="">{short_description}</p>

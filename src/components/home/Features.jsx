@@ -55,7 +55,7 @@ const Features = () => {
                         {features.map((feature, idx) => (
                             <div
                                 key={idx}
-                                className="p-10 bg-[#303644] rounded-md"
+                                className="md:p-10 p-6 bg-[#303644] rounded-md"
                             >
                                 <div className="border-s-2 border-[#94f3b0]/80 border-dashed  ms-0.5  ps-6 h-full">
                                     <div className="md:h-16">

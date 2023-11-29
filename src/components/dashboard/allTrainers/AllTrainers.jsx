@@ -6,7 +6,7 @@ import MonthCounter from "./MonthCounter";
 
 const AllTrainers = () => {
     const axiosPublic = useAxiosPublic();
-    const { data: trainers = [], isLoading } = useQuery({
+    const { data: { trainers } = [], isLoading } = useQuery({
         queryKey: "trainer",
         queryFn: async () => {
             const res = await axiosPublic.get("/trainers");

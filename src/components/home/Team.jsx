@@ -3,7 +3,7 @@ import useAxiosPublic from "../hooks/useAxiosPublic";
 
 const Team = () => {
     const axiosPublic = useAxiosPublic();
-    const { data: trainers = [], isLoading } = useQuery({
+    const { data: { trainers } = [], isLoading } = useQuery({
         queryKey: "trainers",
         queryFn: async () => {
             const res = await axiosPublic.get("trainers");

@@ -177,7 +177,7 @@ const Register = () => {
     return (
         <div className="auth-section ">
             <Helmet>
-                <title>Modern Gym | Sign In</title>
+                <title>Modern Gym | Register</title>
             </Helmet>
             <div className="container mx-auto px-6">
                 <div className="grid md:grid-cols-2 justify-end grid-cols-1 gap-14">

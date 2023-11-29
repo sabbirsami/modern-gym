@@ -9,7 +9,7 @@ const Trainers = () => {
     const axiosPublic = useAxiosPublic();
     const location = useLocation();
     console.log(location);
-    const { data: trainers = [], isLoading } = useQuery({
+    const { data: { trainers } = [], isLoading } = useQuery({
         queryKey: "trainer",
         queryFn: async () => {
             const res = await axiosPublic.get("/trainers");
@@ -23,7 +23,7 @@ const Trainers = () => {
     return (
         <section className="container mx-auto px-6 py-32">
             <Helmet>
-                <title>Modern Gym | Classes</title>
+                <title>Modern Gym | Trainers</title>
             </Helmet>
             <h2 className="md:text-8xl text-6xl md:pb-16 pb-6">Our Trainers</h2>
             <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
