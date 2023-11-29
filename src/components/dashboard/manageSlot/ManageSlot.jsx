@@ -7,7 +7,7 @@ import BookedSlot from "./BookedSlot";
 
 const ManageSlot = () => {
     const axiosPublic = useAxiosPublic();
-    const { user } = useContext(AuthContext);
+    const { user, loading } = useContext(AuthContext);
 
     const { data: trainerBookingSlots = [], isLoading } = useQuery({
         queryKey: ["trainerBookingSlots", user.email],
@@ -29,7 +29,7 @@ const ManageSlot = () => {
         },
     });
 
-    if (isLoading || isTrainerLoading) {
+    if (loading || isLoading || isTrainerLoading) {
         return <Loading />;
     }
     console.log(trainerBookingSlots);

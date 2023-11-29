@@ -25,6 +25,8 @@ import ManageMembers from "../components/dashboard/manageMembers/ManageMembers";
 import AddClass from "../components/dashboard/addClass/AddClass";
 import ActivityLog from "../components/dashboard/activityLog/ActivityLog";
 import UserProfileSetting from "../components/dashboard/userProfileSetting/UserProfileSetting";
+import AdminRoute from "../components/shared/AdminRoute";
+import RecommendedClasses from "../components/dashboard/recommendedClasses/RecommendedClasses";
 
 const router = createBrowserRouter([
     {
@@ -138,6 +140,10 @@ const router = createBrowserRouter([
             {
                 path: "/dashboard/profile-setting",
                 element: <UserProfileSetting />,
+            },
+            {
+                path: "/dashboard/recommended-classes",
+                element: <RecommendedClasses />,
             },
             {
                 path: "/dashboard/all-trainer/:trainerId/payment",

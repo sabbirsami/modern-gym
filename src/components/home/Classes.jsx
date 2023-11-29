@@ -1,10 +1,11 @@
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import { useQuery } from "react-query";
 import Loading from "../shared/Loading";
 import shape from "../../assets/icon/shape03.png";
 
-const Classes = () => {
+const Classes = ({ recommended }) => {
     const axiosPublic = useAxiosPublic();
     const { data: { result } = [], isLoading } = useQuery({
         queryKey: "someClass",
@@ -21,7 +22,9 @@ const Classes = () => {
         <section className=" overflow-hidden relative">
             <img className="absolute -right-36 -z-10" src={shape} alt="" />
             <div className="pt-10 pb-32 container mx-auto ">
-                <h2 className="text-7xl pb-16">Some Classes.</h2>
+                <h2 className="text-7xl pb-16">
+                    {recommended ? "Recommended Class" : "Some Classes."}
+                </h2>
 
                 <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
                     <div className="grid gap-6">
@@ -113,3 +116,7 @@ const Classes = () => {
 };
 
 export default Classes;
+
+Classes.propTypes = {
+    recommended: PropTypes.object,
+};
