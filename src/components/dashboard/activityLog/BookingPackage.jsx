@@ -23,7 +23,7 @@ const BookingPackage = ({ slot }) => {
 
     return (
         <div>
-            <div className="p-10 rounded-lg bg-[#303644]">
+            <div className="p-10 rounded-lg bg-[#505ca6]/10">
                 {packageDetails.map((packageItem, idx) => (
                     <div key={idx} className="">
                         <h2 className="text-3xl font-semibold">
