@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import a1 from "../../assets/article/a1.jpg";
 import a2 from "../../assets/article/a2.jpg";
 import a3 from "../../assets/article/a3.jpg";
@@ -68,7 +69,9 @@ const Article = () => {
                         </div>
                     ))}
                 </div>
-                <p className="text-center">Read more</p>
+                <p className="text-center">
+                    <Link to={"/community"}>Read more</Link>
+                </p>
             </div>
         </section>
     );

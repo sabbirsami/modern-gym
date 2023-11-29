@@ -39,7 +39,7 @@ const ManageSlot = () => {
         <section>
             <h2 className="text-2xl">Booked Slot</h2>
             <div className="grid grid-cols-5 pt-6 gap-2">
-                {available_time_slot.map((time, idx) => (
+                {available_time_slot?.map((time, idx) => (
                     <p
                         key={idx}
                         className="py-2 px-4 me-1.5 mb-1.5 block rounded-lg text-xs cursor-pointer bg-[#94f3b0]/10 text-[#a3ffb5]"
@@ -50,9 +50,9 @@ const ManageSlot = () => {
             </div>
             <div className="grid grid-cols-5 pt-6 gap-2">
                 <div className="">
-                    {trainerBookingSlots.map((trainerBookingSlot, idx) => (
+                    {trainerBookingSlots?.map((trainerBookingSlot, idx) => (
                         <span key={idx}>
-                            {trainerBookingSlot.slotId == "0" ? (
+                            {trainerBookingSlot?.slotId == "0" ? (
                                 <BookedSlot
                                     trainerBookingSlot={trainerBookingSlot}
                                 ></BookedSlot>
@@ -63,9 +63,9 @@ const ManageSlot = () => {
                     ))}
                 </div>
                 <div className="">
-                    {trainerBookingSlots.map((trainerBookingSlot, idx) => (
+                    {trainerBookingSlots?.map((trainerBookingSlot, idx) => (
                         <span key={idx}>
-                            {trainerBookingSlot.slotId == "1" ? (
+                            {trainerBookingSlot?.slotId == "1" ? (
                                 <BookedSlot
                                     trainerBookingSlot={trainerBookingSlot}
                                 ></BookedSlot>
@@ -76,7 +76,7 @@ const ManageSlot = () => {
                     ))}
                 </div>
                 <div className="">
-                    {trainerBookingSlots.map((trainerBookingSlot, idx) => (
+                    {trainerBookingSlots?.map((trainerBookingSlot, idx) => (
                         <span key={idx}>
                             {trainerBookingSlot.slotId == "2" ? (
                                 <BookedSlot
@@ -89,7 +89,7 @@ const ManageSlot = () => {
                     ))}
                 </div>
                 <div className="">
-                    {trainerBookingSlots.map((trainerBookingSlot, idx) => (
+                    {trainerBookingSlots?.map((trainerBookingSlot, idx) => (
                         <span key={idx}>
                             {trainerBookingSlot.slotId == "3" ? (
                                 <BookedSlot
@@ -102,7 +102,7 @@ const ManageSlot = () => {
                     ))}
                 </div>
                 <div className="">
-                    {trainerBookingSlots.map((trainerBookingSlot, idx) => (
+                    {trainerBookingSlots?.map((trainerBookingSlot, idx) => (
                         <span key={idx}>
                             {trainerBookingSlot.slotId == "4" ? (
                                 <BookedSlot

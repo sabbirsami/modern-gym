@@ -32,6 +32,7 @@ const UserProfileSetting = () => {
             return res.data;
         },
     });
+  
     if (isUserLoading) {
         return <UserProfileLoading />;
     }

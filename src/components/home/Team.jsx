@@ -1,18 +1,19 @@
 import { useQuery } from "react-query";
+import useAxiosPublic from "../hooks/useAxiosPublic";
 
 const Team = () => {
+    const axiosPublic = useAxiosPublic();
     const { data: trainers = [], isLoading } = useQuery({
         queryKey: "trainers",
-        queryFn: () =>
-            fetch("trainer.json")
-                .then((res) => res.json())
-                .catch((err) => {
-                    console.log(err);
-                }),
+        queryFn: async () => {
+            const res = await axiosPublic.get("trainers");
+            return res.data;
+        },
     });
     if (isLoading) {
         return <p>Loading...</p>;
     }
+    console.log(trainers);
 
     return (
         <section className="container mx-auto px-6 lg:mt-32 md:mt-24 mt-16 lg:mb-32 md:mb-24 mb-16 ">
