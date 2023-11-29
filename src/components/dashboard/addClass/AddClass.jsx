@@ -1,9 +1,14 @@
-import { useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import toast from "react-hot-toast";
+import { AuthContext } from "../../auth/AuthProvider";
+import { useQuery } from "react-query";
+import Loading from "../../shared/Loading";
 
 const AddClass = () => {
+    const { user } = useContext(AuthContext);
+
     const [requiredError, setRequiredError] = useState("");
     const [buttonLoading, setButtonLoading] = useState(false);
     const descriptionRef = useRef();
@@ -14,6 +19,20 @@ const AddClass = () => {
         reset,
         formState: { errors },
     } = useForm();
+
+    const { data: trainerData = [], isLoading: isTrainerLoading } = useQuery({
+        queryKey: ["trainerData", user.email],
+        queryFn: async () => {
+            const res = await axiosPublic.get(
+                `/trainers/find-by-email/${user.email}`
+            );
+            return res.data;
+        },
+    });
+    if (isTrainerLoading) {
+        return <Loading />;
+    }
+
     const onSubmit = (data) => {
         const short_description = descriptionRef.current.value;
         if (!short_description) {
@@ -33,6 +52,8 @@ const AddClass = () => {
         const classData = {
             name: data.name,
             benefits,
+            trainerEmail: user.email,
+            trainerId: trainerData[0]._id,
             equipmentNeeded,
             duration: data.duration,
             intensityLevel: data.intensityLevel,

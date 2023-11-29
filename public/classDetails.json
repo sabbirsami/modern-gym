@@ -1,6 +1,8 @@
 [
     {
         "name": "Functional Fitness",
+        "trainerEmail": "daniel.miller@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfb",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -20,6 +22,8 @@
     },
     {
         "name": "Kickboxing",
+        "trainerEmail": "michael.davis@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadf9",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -39,6 +43,8 @@
     },
     {
         "name": "Stretch and Relax",
+        "trainerEmail": "david.anderson@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadf8",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -58,6 +64,8 @@
     },
     {
         "name": "Climbing Club",
+        "trainerEmail": "brian.johnson@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfd",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -77,6 +85,8 @@
     },
     {
         "name": "Group Run",
+        "trainerEmail": "christopher.carter@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfc",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -96,6 +106,8 @@
     },
     {
         "name": "Morning Flow Yoga",
+        "trainerEmail": "james.turner@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfa",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -115,6 +127,8 @@
     },
     {
         "name": "Full Body Sculpt",
+        "trainerEmail": "daniel.miller@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfb",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -134,6 +148,8 @@
     },
     {
         "name": "Tai Chi",
+        "trainerEmail": "michael.davis@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadf9",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -153,6 +169,8 @@
     },
     {
         "name": "CrossFit Challenge",
+        "trainerEmail": "david.anderson@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadf8",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -172,6 +190,8 @@
     },
     {
         "name": "Relaxation and Meditation",
+        "trainerEmail": "brian.johnson@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfd",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -187,6 +207,8 @@
     },
     {
         "name": "Cardio Blast",
+        "trainerEmail": "christopher.carter@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfc",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -206,6 +228,8 @@
     },
     {
         "name": "Strength Training",
+        "trainerEmail": "james.turner@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfa",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -225,6 +249,8 @@
     },
     {
         "name": "Yoga Flow",
+        "trainerEmail": "daniel.miller@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfb",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -240,6 +266,8 @@
     },
     {
         "name": "Spinning",
+        "trainerEmail": "michael.davis@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadf9",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -259,6 +287,8 @@
     },
     {
         "name": "Pilates",
+        "trainerEmail": "david.anderson@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadf8",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -274,6 +304,8 @@
     },
     {
         "name": "Functional Training",
+        "trainerEmail": "brian.johnson@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfd",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -293,6 +325,8 @@
     },
     {
         "name": "Boxing",
+        "trainerEmail": "christopher.carter@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfc",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -312,6 +346,8 @@
     },
     {
         "name": "Barre Workout",
+        "trainerEmail": "james.turner@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfa",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -327,6 +363,8 @@
     },
     {
         "name": "Circuit Training",
+        "trainerEmail": "daniel.miller@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfb",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -346,6 +384,8 @@
     },
     {
         "name": "Power Yoga",
+        "trainerEmail": "michael.davis@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadf9",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -365,6 +405,8 @@
     },
     {
         "name": "Tabata",
+        "trainerEmail": "david.anderson@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadf8",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -380,6 +422,8 @@
     },
     {
         "name": "Dance Fitness",
+        "trainerEmail": "brian.johnson@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfd",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -399,6 +443,8 @@
     },
     {
         "name": "Aqua Aerobics",
+        "trainerEmail": "christopher.carter@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfc",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -418,6 +464,8 @@
     },
     {
         "name": "Kettlebell Class",
+        "trainerEmail": "james.turner@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfa",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -437,6 +485,8 @@
     },
     {
         "name": "Core Strengthening",
+        "trainerEmail": "daniel.miller@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfb",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -452,6 +502,8 @@
     },
     {
         "name": "Cycling Challenge",
+        "trainerEmail": "michael.davis@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadf9",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -471,6 +523,8 @@
     },
     {
         "name": "Mindful Stretching",
+        "trainerEmail": "david.anderson@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadf8",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -486,6 +540,8 @@
     },
     {
         "name": "TRX Suspension",
+        "trainerEmail": "brian.johnson@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfd",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -505,6 +561,8 @@
     },
     {
         "name": "Plyometric Training",
+        "trainerEmail": "christopher.carter@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfc",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -524,6 +582,8 @@
     },
     {
         "name": "Meditation Session",
+        "trainerEmail": "james.turner@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfa",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -539,6 +599,8 @@
     },
     {
         "name": "Body Combat",
+        "trainerEmail": "daniel.miller@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadfb",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",
@@ -558,6 +620,8 @@
     },
     {
         "name": "Prenatal Yoga",
+        "trainerEmail": "michael.davis@example.com",
+        "trainerId": "656590ef4d7f8f119f1fadf9",
         "duration": 1,
         "equipmentNeeded": [
             "Comfortable workout clothes",

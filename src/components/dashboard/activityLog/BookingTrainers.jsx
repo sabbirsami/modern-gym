@@ -25,7 +25,7 @@ const BookingTrainers = ({ slot }) => {
             {trainerData.map((trainer, idx) => (
                 <div key={idx} className="">
                     <div className="col-span-2">
-                        <div className=" grid grid-cols-2 p-3  gap-3 md:mb-10 mb-20">
+                        <div className=" grid grid-cols-2 p-3  gap-3">
                             <div className="">
                                 <img
                                     src={trainer.image}
@@ -35,14 +35,6 @@ const BookingTrainers = ({ slot }) => {
                                 <h2 className="text-3xl pb-6 pt-3">
                                     {trainer.name}
                                 </h2>
-                                <p className="">
-                                    <span className="text-white/80 text-sm ">
-                                        Email:
-                                    </span>{" "}
-                                    <span className="text-xs">
-                                        {trainer.email}
-                                    </span>
-                                </p>
 
                                 <p className="mt-1">
                                     <span className="text-white/80 text-sm">
@@ -60,19 +52,31 @@ const BookingTrainers = ({ slot }) => {
                             </div>
                             <div className="">
                                 <p className="">
+                                    <span className="text-white/80 text-sm ">
+                                        Email:
+                                    </span>{" "}
+                                    <span className="text-xs">
+                                        {trainer.email}
+                                    </span>
+                                </p>
+                                <p className="">
                                     <span className="text-white/80 text-sm">
                                         Age:
                                     </span>{" "}
-                                    {trainer.age}
+                                    <span className="text-xs">
+                                        {trainer.age}
+                                    </span>
                                 </p>
-                                <p className="pt-2">
+                                <p className="">
                                     <span className="text-white/80 text-sm">
                                         Year of experience:
                                     </span>{" "}
-                                    0{trainer.experience}
+                                    <span className="text-xs">
+                                        0{trainer.experience} years
+                                    </span>
                                 </p>
                                 <div className="w-">
-                                    <p className="pt-6">
+                                    <p className="pt-4">
                                         <p className="text-white/80 text-sm mb-2">
                                             Available time slot:
                                         </p>{" "}

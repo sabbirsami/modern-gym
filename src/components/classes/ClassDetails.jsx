@@ -1,4 +1,4 @@
-import { Link,  useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import { useQuery } from "react-query";
 import Loading from "../shared/Loading";
@@ -29,6 +29,7 @@ const ClassDetails = () => {
         prerequisites,
         intensityLevel,
         cost,
+        trainerId,
     } = classDetails[0];
     return (
         <section className="container mx-auto px-6">
@@ -86,7 +87,7 @@ const ClassDetails = () => {
                 <div className="mx-auto text-start mt-16">
                     <Link
                         state={{ clickedClass: id }}
-                        to={"/trainers"}
+                        to={`/trainer/${trainerId}`}
                         className="px-6 py-4 bg-gradient-to-r from-[#94f3b0]  to-[#7abf88] text-black rounded-full font-semibold cursor-pointer"
                     >
                         Join Now
