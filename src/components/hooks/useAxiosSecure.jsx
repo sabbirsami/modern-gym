@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../auth/AuthProvider";
 
 const axiosSecure = axios.create({
-    baseURL: "http://localhost:5000/api",
+    baseURL: "https://fitness-tracker-server.vercel.app/api",
 });
 const useAxiosSecure = () => {
     const navigate = useNavigate();
@@ -13,7 +13,7 @@ const useAxiosSecure = () => {
     // request interceptor to add authorization header for every secure call to teh api
     axiosSecure.interceptors.request.use(
         function (config) {
-            const token = localStorage.getItem("access-token");
+            const token = localStorage.getItem("accessToken");
             // console.log('request stopped by interceptors', token)
             config.headers.authorization = `Bearer ${token}`;
             return config;

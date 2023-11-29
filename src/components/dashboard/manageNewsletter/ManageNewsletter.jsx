@@ -23,7 +23,7 @@ const ManageNewsletter = () => {
     return (
         <section className="">
             <div className=" ">
-                {newsLetterSubscriber.map((newsletter) => (
+                {newsLetterSubscriber?.map((newsletter) => (
                     <div
                         key={newsletter._id}
                         className="grid grid-cols-3 mt-6 py-4 border px-6 rounded-md shadow-md"
