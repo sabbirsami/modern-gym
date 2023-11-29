@@ -1,6 +1,7 @@
 import { useForm } from "react-hook-form";
 import newsLetterImage from "../../assets/person/man0.png";
 import useAxiosPublic from "../hooks/useAxiosPublic";
+import toast from "react-hot-toast";
 
 const Newsletter = () => {
     const {
@@ -21,6 +22,10 @@ const Newsletter = () => {
             .post("/newsletters", newsletterSubscriber)
             .then((res) => {
                 console.log(res.data);
+                toast.success("Successfully subscribed", {
+                    duration: 2000,
+                    className: "mt-32",
+                });
             })
             .catch((err) => {
                 console.log(err);

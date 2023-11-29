@@ -29,6 +29,13 @@ const SignIn = () => {
         setButtonLoading(true);
         signInUser(email, password)
             .then((result) => {
+                const userInfo = { email: result.user.email };
+                axiosPublic.post("/sign-token", userInfo).then((res) => {
+                    console.log(res.data);
+                    if (res.data.token) {
+                        localStorage.setItem("accessToken", res.data.token);
+                    }
+                });
                 console.log(result);
                 setSignInWithGoogleError("");
                 setLoading(false);
@@ -59,6 +66,14 @@ const SignIn = () => {
         signInWithGoogle()
             .then((result) => {
                 console.log(result);
+                // get token and store client
+                const userInfo = { email: result.user.email };
+                axiosPublic.post("/sign-token", userInfo).then((res) => {
+                    console.log(res.data);
+                    if (res.data.token) {
+                        localStorage.setItem("accessToken", res.data.token);
+                    }
+                });
                 const newUser = {
                     name: result?.user.displayName,
                     email: result?.user.email,

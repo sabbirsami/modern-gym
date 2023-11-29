@@ -33,6 +33,7 @@ const Post = ({ post, refetch }) => {
                 .put(`posts/${id}`, { likeCount: likeCount + 1 })
                 .then((res) => {
                     console.log(res.data);
+
                     refetch();
                 })
                 .catch((error) => {

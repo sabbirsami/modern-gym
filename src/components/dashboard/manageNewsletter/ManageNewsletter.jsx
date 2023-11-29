@@ -1,9 +1,10 @@
 import { useQuery } from "react-query";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import Loading from "../../shared/Loading";
+import useAxiosSecure from "../../hooks/useAxiosSecure";
 
 const ManageNewsletter = () => {
-    const axiosPublic = useAxiosPublic();
+    const axiosSecure = useAxiosSecure();
     const {
         data: newsletters = [],
         isLoading,
@@ -11,7 +12,7 @@ const ManageNewsletter = () => {
     } = useQuery({
         queryKey: "newsletters",
         queryFn: async () => {
-            const res = await axiosPublic.get(`/newsletters`);
+            const res = await axiosSecure.get(`/newsletters`);
             console.log(res.data);
             return res.data;
         },

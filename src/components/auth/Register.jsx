@@ -39,6 +39,13 @@ const Register = () => {
         createUser(email, password)
             .then((result) => {
                 console.log(result);
+                const userInfo = { email: result.user.email };
+                axiosPublic.post("/sign-token", userInfo).then((res) => {
+                    console.log(res.data);
+                    if (res.data.token) {
+                        localStorage.setItem("accessToken", res.data.token);
+                    }
+                });
                 setSignInWithGoogleError("");
                 updateProfile(auth.currentUser, {
                     displayName: name,
@@ -115,6 +122,13 @@ const Register = () => {
         setGoogleButtonLoading(true);
         signInWithGoogle()
             .then((result) => {
+                const userInfo = { email: result.user.email };
+                axiosPublic.post("/sign-token", userInfo).then((res) => {
+                    console.log(res.data);
+                    if (res.data.token) {
+                        localStorage.setItem("accessToken", res.data.token);
+                    }
+                });
                 console.log(result);
                 const newUser = {
                     name: result?.user.displayName,

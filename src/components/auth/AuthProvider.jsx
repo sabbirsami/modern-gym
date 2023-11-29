@@ -43,18 +43,11 @@ const AuthProvider = ({ children }) => {
             setUser(currentUser);
             setLoading(false);
             if (currentUser) {
-                // get token and store client
-                // const userInfo = { email: currentUser.email };
-                // axiosPublic.post('/', userInfo)
-                //     .then(res => {
-                //         if (res.data.token) {
-                //             localStorage.setItem('access-token', res.data.token);
-                //         }
-                //     })
+                console.log(currentUser);
             } else {
                 // TODO: remove token (if token stored in the client side: Local storage, caching, in memory)
-                localStorage.removeItem("access-token");
                 setLoading(false);
+                localStorage.removeItem("accessToken");
             }
         });
         return () => {

@@ -5,9 +5,9 @@ import Select from "react-select";
 import { BsFillImageFill } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
 import useAxiosPublic from "../hooks/useAxiosPublic";
-import Swal from "sweetalert2";
 import useAuth from "../hooks/useAuth";
 import { VscChromeClose } from "react-icons/vsc";
+import toast from "react-hot-toast";
 
 const AddTrainer = () => {
     const [err, setErr] = useState("");
@@ -155,10 +155,9 @@ const AddTrainer = () => {
                                         .post("/trainers", newTrainerData)
                                         .then((res) => {
                                             console.log(res.data);
-                                            Swal.fire({
-                                                title: "Add successfully",
-
-                                                icon: "success",
+                                            toast.success("Add Successfully", {
+                                                duration: 2000,
+                                                className: "mt-32",
                                             });
                                             setErr("");
                                             reset();

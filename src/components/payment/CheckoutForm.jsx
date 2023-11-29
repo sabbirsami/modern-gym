@@ -23,16 +23,8 @@ const CheckoutForm = ({ paymentInfo }) => {
     const paymentDate = `${mm}-${dd}-${yyyy}`;
 
     const { packageCost, packageId, trainerId, slotId } = paymentInfo;
-    const userPaymentInfo = {
-        packageId,
-        trainerId,
-        slotId,
-        packageCost,
-        paymentDate,
-        transitionId,
-        userEmail: user?.email,
-    };
-    console.log(typeof packageCost);
+
+    console.log(typeof slotId);
 
     const [clientSecret, setClientSecret] = useState("");
     console.log(clientSecret);
@@ -98,20 +90,34 @@ const CheckoutForm = ({ paymentInfo }) => {
             if (paymentIntent.status === "succeeded") {
                 setTransitionId(paymentIntent.id);
 
-                setLoadingButton(false);
-                axiosPublic
-                    .post("/create-payment-intent", userPaymentInfo)
-                    .then((res) => {
-                        console.log(res.data);
+                if (transitionId) {
+                    setLoadingButton(false);
+                    const userPaymentInfo = {
+                        packageId,
+                        trainerId,
+                        slotId,
+                        packageCost,
+                        paymentDate,
+                        transitionId,
+                        userEmail: user?.email,
+                    };
+                    axiosPublic
+                        .post(
+                            "/create-payment-intent/user-payment",
+                            userPaymentInfo
+                        )
+                        .then((res) => {
+                            console.log(res.data);
 
-                        toast.success("Payment Successful", {
-                            duration: 2000,
-                            className: "mt-32",
+                            toast.success("Payment Successful", {
+                                duration: 2000,
+                                className: "mt-32",
+                            });
+                        })
+                        .catch((err) => {
+                            console.log(err);
                         });
-                    })
-                    .catch((err) => {
-                        console.log(err);
-                    });
+                }
             }
         }
 

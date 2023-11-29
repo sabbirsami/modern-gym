@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../auth/AuthProvider";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+import toast from "react-hot-toast";
 
 const TrainerCheckoutForm = ({ paymentInfo }) => {
     const stripe = useStripe();
@@ -93,6 +94,10 @@ const TrainerCheckoutForm = ({ paymentInfo }) => {
                     .put(`/trainers/${_id}`)
                     .then((res) => {
                         console.log(res.data);
+                        toast.success("Payment Successful", {
+                            duration: 2000,
+                            className: "mt-32",
+                        });
                     })
                     .catch((err) => {
                         console.log(err);

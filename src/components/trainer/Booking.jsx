@@ -39,6 +39,7 @@ const Booking = ({ packageItem, trainerId, slotId }) => {
             features,
         };
         console.log(userJoinedPackage);
+        console.log(userJoinedPackage);
         axiosPublic
             .post("/user-booking-packages", userJoinedPackage)
             .then((res) => {
@@ -70,8 +71,8 @@ const Booking = ({ packageItem, trainerId, slotId }) => {
                 <span className="text-base font-normal">/ par month</span>
             </p>
             <div className="">
-                {features.map((feature) => (
-                    <div key={_id} className="">
+                {features.map((feature, idx1) => (
+                    <div key={idx1} className="">
                         <div className="grid grid-cols-12">
                             <div className="col-span-1">
                                 <BsCheckCircleFill className="inline me-1 " />

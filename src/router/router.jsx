@@ -27,6 +27,7 @@ import ActivityLog from "../components/dashboard/activityLog/ActivityLog";
 import UserProfileSetting from "../components/dashboard/userProfileSetting/UserProfileSetting";
 import AdminRoute from "../components/shared/AdminRoute";
 import RecommendedClasses from "../components/dashboard/recommendedClasses/RecommendedClasses";
+import Balance from "../components/dashboard/balance/Balance";
 
 const router = createBrowserRouter([
     {
@@ -144,6 +145,10 @@ const router = createBrowserRouter([
             {
                 path: "/dashboard/recommended-classes",
                 element: <RecommendedClasses />,
+            },
+            {
+                path: "/dashboard/balance",
+                element: <Balance />,
             },
             {
                 path: "/dashboard/all-trainer/:trainerId/payment",

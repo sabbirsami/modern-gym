@@ -1,10 +1,11 @@
 import { useQuery } from "react-query";
-import useAxiosPublic from "../hooks/useAxiosPublic";
 import Loading from "../shared/Loading";
 import { useParams } from "react-router-dom";
 import shapeImage from "../../assets/icon/shape03.png";
 import Booking from "./Booking";
 import { Helmet } from "react-helmet-async";
+import useAxiosPublic from "../hooks/useAxiosPublic";
+
 const TrainerBooking = () => {
     const { id, trainerId } = useParams();
     const axiosPublic = useAxiosPublic();
