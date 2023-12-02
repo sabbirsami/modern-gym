@@ -84,7 +84,9 @@ const Balance = () => {
     };
     return (
         <section className="">
-            <h2 className="text-2xl">Balance</h2>
+            <h3 className="text-xl p-4  rounded-md bg-gradient-to-r to-[#505ca6] from-[#473f84] mt-3 mb-6">
+                All Trainers
+            </h3>
             <div className="grid grid-cols-2 gap-6">
                 <div className="bg-[#505ca6]/10 p-6 rounded-xl flex justify-center items-center">
                     <div className="">

@@ -115,9 +115,11 @@ const AddNewForum = () => {
     };
     return (
         <section className="">
-            <h2 className="text-2xl">Add New Forum</h2>
-            <div className="p-6">
-                <div className="border rounded-lg p-6">
+            <h3 className="text-xl p-4  rounded-md bg-gradient-to-r to-[#505ca6] from-[#473f84] mt-3 mb-6">
+                Add New Forum
+            </h3>
+            <div className="">
+                <div className=" border-white/50 border-2 rounded-lg p-6">
                     <form className="" onSubmit={handleSubmit(onSubmit)}>
                         <div className="grid grid-cols-4">
                             <div className="col-span-1 pe-10">

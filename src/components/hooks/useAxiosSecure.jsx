@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../auth/AuthProvider";
 
 const axiosSecure = axios.create({
-    baseURL: "https://fitness-tracker-server.vercel.app/api",
+    baseURL: "http://localhost:5000/api",
 });
 const useAxiosSecure = () => {
     const navigate = useNavigate();

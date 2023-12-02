@@ -81,8 +81,10 @@ const AddClass = () => {
     };
     return (
         <section className="mt-3">
-            <h2 className="text-2xl">Add New Class</h2>
-            <div className="p-12 rounded-xl mt-6 shadow-md shadow-[#94f3b0]/20">
+            <h3 className="text-xl p-4  rounded-md bg-gradient-to-r to-[#505ca6] from-[#473f84] mt-3 mb-6">
+                Add New Class
+            </h3>
+            <div className="p-12 rounded-xl mt-6 border-2 border-white/50">
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="grid ">
                         <div className=" flex gap-6">

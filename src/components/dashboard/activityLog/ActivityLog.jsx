@@ -27,9 +27,12 @@ const ActivityLog = () => {
     console.log(userBookingSlots);
     return (
         <section className="">
-            <h2 className="text-2xl">Activity Log</h2>
+            <h3 className="text-xl p-4  rounded-md bg-gradient-to-r to-[#505ca6] from-[#473f84] mt-3 mb-6">
+                Activity Log
+            </h3>
+
             <div className="">
-                <h2 className="text-xl mt-16">Your booking trainers</h2>
+                <h2 className="text-xl ">Your booking trainers</h2>
                 <div className=" pt-6 grid grid-cols-3 gap-6">
                     {userBookingSlots.map((slot) => (
                         <BookingTrainers
@@ -39,8 +42,11 @@ const ActivityLog = () => {
                         ></BookingTrainers>
                     ))}
                 </div>
-                <h2 className="text-xl mt-6">Your booking packages</h2>
-                <div className=" pt-6 grid grid-cols-4 gap-6">
+                <h3 className="text-xl p-4  rounded-md bg-gradient-to-r to-[#505ca6] from-[#473f84] mt-10 mb-6">
+                    Your booking packages
+                </h3>
+
+                <div className=" pt-2 grid grid-cols-4 gap-6">
                     {userBookingSlots.map((slot) => (
                         <BookingPackage
                             key={slot._id}

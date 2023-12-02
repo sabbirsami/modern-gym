@@ -21,6 +21,9 @@ const AllTrainers = () => {
 
     return (
         <div>
+            <h3 className="text-xl p-4  rounded-md bg-gradient-to-r to-[#505ca6] from-[#473f84] mt-3">
+                All Trainers
+            </h3>
             {trainers.map((trainer) => (
                 <div
                     key={trainer._id}

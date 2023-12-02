@@ -24,7 +24,10 @@ const ManageMembers = () => {
     }
     return (
         <section className="">
-            <h2 className="text-2xl">Manage Members</h2>
+            <h3 className="text-xl p-4  rounded-md bg-gradient-to-r to-[#505ca6] from-[#473f84] mt-3 mb-6">
+                Manage Members
+            </h3>
+
             <div className="grid grid-cols-5 gap-6 mt-6">
                 {trainerBookingSlots.map((trainerBookingSlot, idx) => (
                     <Members key={idx} member={trainerBookingSlot}></Members>

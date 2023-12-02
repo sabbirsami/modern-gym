@@ -37,8 +37,11 @@ const ManageSlot = () => {
     // console.log(userData);
     return (
         <section>
-            <h2 className="text-2xl">Booked Slot</h2>
-            <div className="grid grid-cols-5 pt-6 gap-2">
+            <h3 className="text-xl p-4  rounded-md bg-gradient-to-r to-[#505ca6] from-[#473f84] mt-3 mb-6">
+                Booked Slot
+            </h3>
+
+            <div className="grid grid-cols-5  gap-2">
                 {available_time_slot?.map((time, idx) => (
                     <p
                         key={idx}

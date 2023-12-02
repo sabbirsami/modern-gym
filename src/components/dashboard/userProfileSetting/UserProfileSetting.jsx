@@ -138,6 +138,9 @@ const UserProfileSetting = () => {
     };
     return (
         <section className="">
+            <h3 className="text-xl p-4  rounded-md bg-gradient-to-r to-[#505ca6] from-[#473f84] mt-3 mb-6 mx-16">
+                Profile Setting
+            </h3>
             <div className="p-16">
                 <div>
                     {edit ? (

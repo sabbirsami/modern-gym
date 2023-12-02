@@ -7,6 +7,7 @@ const Newsletter = () => {
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm();
 
@@ -26,6 +27,7 @@ const Newsletter = () => {
                     duration: 2000,
                     className: "mt-32",
                 });
+                reset();
             })
             .catch((err) => {
                 console.log(err);
@@ -36,17 +38,17 @@ const Newsletter = () => {
             <div className=" bg-gradient-to-r  from-[#0C1117] to-[#303644] rounded-2xl p-1">
                 <div className="py-10 md:px-28 px-6 rounded-2xl grid lg:grid-cols-7 lg:gap-10 items-center justify-between bg-[#0C1117]">
                     <form
-                        className="lg:col-span-4"
+                        className="lg:col-span-4 text-black"
                         onSubmit={handleSubmit(onSubmit)}
                     >
-                        <h2 className="md:text-5xl text-3xl pb-6">
+                        <h2 className="md:text-5xl text-3xl pb-6 text-white">
                             Subscribe Our Newsletter
                         </h2>
                         <div className=" flex lg:flex-col xl:flex-row flex-col justify-between gap-6">
                             <div className="grow">
                                 <label
                                     htmlFor="firstName"
-                                    className="block md:w-64 w-full pb-2 font-semibold"
+                                    className="block md:w-64 w-full pb-2 font-semibold text-white"
                                 >
                                     First Name{" "}
                                     <span className="text-red-600">*</span>
@@ -61,7 +63,7 @@ const Newsletter = () => {
                                     placeholder="Enter first name here.."
                                 />
                                 {/* error message */}
-                                <label className="block md:w-64 w-full  text-sm text-[#d63031] pt-1">
+                                <label className="block md:w-64 w-full  text-sm text-[#d63031] pt-1 ">
                                     {errors.firstName && (
                                         <span>First Name is required *</span>
                                     )}
@@ -70,7 +72,7 @@ const Newsletter = () => {
                             <div className="">
                                 <label
                                     htmlFor="lastName"
-                                    className="block w-full pb-2 font-semibold"
+                                    className="block w-full pb-2 font-semibold text-white"
                                 >
                                     Last Name{" "}
                                     <span className="text-red-600">*</span>

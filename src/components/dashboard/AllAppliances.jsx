@@ -93,6 +93,9 @@ const AllAppliances = () => {
 
     return (
         <div>
+            <h3 className="text-xl p-4  rounded-md bg-gradient-to-r to-[#505ca6] from-[#473f84] mt-3">
+                All Appliances
+            </h3>
             {trainers.map((trainer) => (
                 <span key={trainer._id}>
                     {trainer.role === "user" && (
