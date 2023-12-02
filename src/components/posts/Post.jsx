@@ -49,9 +49,9 @@ const Post = ({ post, refetch }) => {
     };
 
     return (
-        <div className="p-6 bg-[#303644] rounded-xl">
-            <div className="flex gap-10">
-                <div className="">
+        <div className="md:p-6 p-1 xl:pb-6 md:pb-3 pb-6 bg-[#303644] rounded-xl">
+            <div className="md:flex xl:gap-10 ">
+                <div className="md:px-0 px-6 md:pt-0 pt-6">
                     <img
                         className="w-60 h-48 rounded-lg object-cover"
                         src={postImage}
@@ -60,11 +60,11 @@ const Post = ({ post, refetch }) => {
                 </div>
                 <div className="px-6  grow ">
                     <div className="flex justify-between gap-10">
-                        <div className="">
+                        <div className="md:pt-0 pt-3">
                             <h3 className="text-3xl">{title}</h3>
                             <p className="pt-1 text-sm">{content}</p>
                         </div>
-                        <div className="">
+                        <div className="md:block hidden">
                             {liked ? (
                                 <button
                                     onClick={() => handleDislike(_id)}
@@ -93,7 +93,7 @@ const Post = ({ post, refetch }) => {
                             Health
                         </p>
                     </div>
-                    <div className="flex justify-between items-center mt-3">
+                    <div className="md:flex justify-between items-center mt-3">
                         <div className="flex gap-6 items-center grow">
                             <img
                                 className="w-16 h-16 rounded-3xl p-0.5 bg-slate-600 object-cover"
@@ -113,9 +113,17 @@ const Post = ({ post, refetch }) => {
                                 </div>
                             </div>
                         </div>
-                        <p className="ps-10">{views + 1560} Views</p>
-                        <p className="ps-10">{commentsCount + 15} Comments</p>
-                        <p className="ps-10">{likeCount + 160} Likes</p>
+                        <div className="flex items-center py-2">
+                            <p className="ps-10 lg:text-base md:text-xs">
+                                {views + 1560} Views
+                            </p>
+                            <p className="ps-10 lg:text-base md:text-xs">
+                                {commentsCount + 15} Comments
+                            </p>
+                            <p className="ps-10 lg:text-base md:text-xs">
+                                {likeCount + 160} Likes
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

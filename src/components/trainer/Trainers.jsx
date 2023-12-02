@@ -26,7 +26,7 @@ const Trainers = () => {
                 <title>Modern Gym | Trainers</title>
             </Helmet>
             <h2 className="md:text-8xl text-6xl md:pb-16 pb-6">Our Trainers</h2>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10">
+            <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-10">
                 {trainers.map((trainer, idx) => (
                     <span key={idx}>
                         {trainer.role === "trainer" && (
