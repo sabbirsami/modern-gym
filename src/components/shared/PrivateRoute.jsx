@@ -7,6 +7,7 @@ const PrivateRoute = ({ children }) => {
     const { user, loading } = useAuth();
     console.log(user);
     const location = useLocation();
+
     if (loading) {
         return <Loading />;
     }
@@ -23,7 +24,9 @@ const PrivateRoute = ({ children }) => {
     }
     return (
         <Navigate
-            state={{ comeFrom: location.pathname }}
+            state={{
+                comeFrom: location.pathname,
+            }}
             to={"/sign-in"}
         ></Navigate>
     );

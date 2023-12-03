@@ -51,15 +51,36 @@ const Features = () => {
                     />
                 </div>
                 <div className="py-10">
-                    <div className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 gap-6">
+                    <div className="grid xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2">
                         {features.map((feature, idx) => (
                             <div
                                 key={idx}
-                                className="md:p-10 p-6 bg-[#303644] rounded-md"
+                                className={`md:px-10 md:py-16 p-6 ${
+                                    idx === 0 ? "lg:border-b-0" : "lg:border-x"
+                                } ${
+                                    idx === 2
+                                        ? "lg:border-b-0 lg:border-s-0 lg:border-e-0 "
+                                        : "border- "
+                                }
+                                ${
+                                    idx === 3
+                                        ? "lg:border-s-0 lg:border-t lg:border-e-0 "
+                                        : "border- "
+                                }                                
+                                ${
+                                    idx === 4 ? "lg:border-t" : "lg:border- "
+                                }                                
+                                ${
+                                    idx === 5
+                                        ? "lg:border-t lg:border-s-0 lg:border-e-0"
+                                        : "border- "
+                                }                                
+                                
+                                `}
                             >
-                                <div className="border-s-2 border-[#94f3b0]/80 border-dashed  ms-0.5  ps-6 h-full">
+                                <div className="border-s-2 border-[#94f3b0]/80 border-dashed  ms-0.5  ps-10 h-full">
                                     <div className="md:h-16">
-                                        <h4 className="text-3xl">
+                                        <h4 className="lg:text-4xl text-3xl">
                                             {feature.title}
                                         </h4>
                                     </div>
@@ -82,7 +103,7 @@ const Features = () => {
                                             )}
                                         </p>
                                         <img
-                                            className="absolute top-0 -left-10 w-6 rotate-45 drop-shadow-2xl bg-gradient-to-r  from-[#94f3b0] to-[#7abf88] rounded-full p-0.5"
+                                            className="absolute top-0 -left-14 w-6 rotate-45 drop-shadow-2xl bg-gradient-to-r  from-[#94f3b0] to-[#7abf88] rounded-full p-0.5"
                                             src={dumble}
                                             alt=""
                                         />
