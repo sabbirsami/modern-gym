@@ -90,34 +90,32 @@ const CheckoutForm = ({ paymentInfo }) => {
             if (paymentIntent.status === "succeeded") {
                 setTransitionId(paymentIntent.id);
 
-                if (transitionId) {
-                    setLoadingButton(false);
-                    const userPaymentInfo = {
-                        packageId,
-                        trainerId,
-                        slotId,
-                        packageCost,
-                        paymentDate,
-                        transitionId,
-                        userEmail: user?.email,
-                    };
-                    axiosPublic
-                        .post(
-                            "/create-payment-intent/user-payment",
-                            userPaymentInfo
-                        )
-                        .then((res) => {
-                            console.log(res.data);
+                const userPaymentInfo = {
+                    packageId,
+                    trainerId,
+                    slotId,
+                    packageCost,
+                    paymentDate,
+                    transitionId: paymentIntent.id,
+                    userEmail: user?.email,
+                };
+                axiosPublic
+                    .post(
+                        "/create-payment-intent/user-payment",
+                        userPaymentInfo
+                    )
+                    .then((res) => {
+                        console.log(res.data);
+                        setLoadingButton(false);
 
-                            toast.success("Payment Successful", {
-                                duration: 2000,
-                                className: "mt-32",
-                            });
-                        })
-                        .catch((err) => {
-                            console.log(err);
+                        toast.success("Payment Successful", {
+                            duration: 2000,
+                            className: "mt-32",
                         });
-                }
+                    })
+                    .catch((err) => {
+                        console.log(err);
+                    });
             }
         }
 

@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { BsCheckCircleFill } from "react-icons/bs";
-import Swal from "sweetalert2";
 import useAxiosPublic from "../hooks/useAxiosPublic";
 import { useState } from "react";
 import useAuth from "../hooks/useAuth";
@@ -45,11 +44,7 @@ const Booking = ({ packageItem, trainerId, slotId }) => {
             .then((res) => {
                 setButtonLoading(false);
                 console.log(res.data);
-                Swal.fire({
-                    title: "Add successfully",
-                    text: "Your file has been deleted.",
-                    icon: "success",
-                });
+
                 setErr("");
                 navigate(`/trainer/${trainerId}/${slotId}/${_id}/payment`);
             })
