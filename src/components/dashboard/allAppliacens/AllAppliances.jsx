@@ -1,7 +1,7 @@
 import { useQuery } from "react-query";
-import useAxiosPublic from "../hooks/useAxiosPublic";
-import Loading from "../shared/Loading";
-import MonthCounter from "./allTrainers/MonthCounter";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import Loading from "../../shared/Loading";
+import MonthCounter from "../allTrainers/MonthCounter";
 import { GoEye } from "react-icons/go";
 import { useState } from "react";
 import { VscChromeClose } from "react-icons/vsc";

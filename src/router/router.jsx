@@ -17,7 +17,7 @@ import Dashboard from "../components/dashboard/Dashboard";
 import ManageNewsletter from "../components/dashboard/manageNewsletter/ManageNewsletter";
 import AllTrainers from "../components/dashboard/allTrainers/AllTrainers";
 import TrainerPayment from "../components/dashboard/allTrainers/TrainerPayment";
-import AllAppliances from "../components/dashboard/AllAppliances";
+import AllAppliances from "../components/dashboard/allAppliacens/AllAppliances";
 import Community from "../components/posts/Community";
 import AddNewForum from "../components/dashboard/addNewForum/AddNewForum";
 import ManageSlot from "../components/dashboard/manageSlot/ManageSlot";

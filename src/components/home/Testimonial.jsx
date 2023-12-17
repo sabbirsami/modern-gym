@@ -2,6 +2,7 @@ import shapeBg from "../../assets/testimonial/t1.png";
 import shapeBg2 from "../../assets/testimonial/t2.png";
 import shapeBg3 from "../../assets/testimonial/t3.png";
 import { IoMdQuote } from "react-icons/io";
+import HighlightMarquee from "./HighlightMarquee";
 
 const Testimonial = () => {
     const gymTestimonials = [
@@ -26,8 +27,8 @@ const Testimonial = () => {
     ];
 
     return (
-        <section className="overflow-hidden">
-            <div className="container mx-auto px-6 pb-16 pt-16">
+        <section className="overflow-hidden  pb-16">
+            <div className="container mx-auto px-6 pt-16">
                 <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-6">
                     {gymTestimonials.map((testimonial, idx) => (
                         <div
@@ -58,24 +59,7 @@ const Testimonial = () => {
                     ))}
                 </div>
             </div>
-            <div className="w-full -rotate-2 overflow-hidden pb-16">
-                <div className="uppercase bg-gradient-to-r overflow-x-hidden  from-[#94f3b0] to-[#7abf88] py-6 text-black font-semibold ">
-                    <div className="flex lg:gap-40 md:gap-28 gap-16 overflow-x-hidden">
-                        <h4 className="">Transform</h4>
-                        <h4 className="">Your</h4>
-                        <h4 className="">body</h4>
-                        <h4 className="">Transform</h4>
-                        <h4 className="">your</h4>
-                        <h4 className="">Life</h4>
-                        <h4 className="">Transform</h4>
-                        <h4 className="">Your</h4>
-                        <h4 className="">body</h4>
-                        <h4 className="">Transform</h4>
-                        <h4 className="">your</h4>
-                        <h4 className="">Life</h4>
-                    </div>
-                </div>
-            </div>
+            <HighlightMarquee></HighlightMarquee>
         </section>
     );
 };
