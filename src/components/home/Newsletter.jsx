@@ -38,7 +38,7 @@ const Newsletter = () => {
             });
     };
     return (
-        <section className="container mx-auto px-6 md:mt-32  pt-16 pb-10">
+        <section className="container mx-auto px-6  pt-16 pb-10">
             <div className=" bg-gradient-to-r from-[#303644] via-[#0C1117] to-[#303644] rounded-2xl p-1">
                 <div className="py-10 md:px-28 px-6 rounded-2xl grid lg:grid-cols-7 lg:gap-10 items-center justify-between bg-[#0C1117]">
                     <form

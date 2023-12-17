@@ -33,7 +33,7 @@ const Article = () => {
         // Add more articles as needed
     ];
     return (
-        <section className="container mx-auto px-6 xl:my-32 my-20">
+        <section className="container mx-auto px-6 xl:my-32 mb-20">
             <div className="">
                 <h2 className="2xl:text-8xl xl:text-8xl md:text-7xl text-4xl text-center font-bold mb-6">
                     Latest News

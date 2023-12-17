@@ -27,7 +27,7 @@ const Testimonial = () => {
     ];
 
     return (
-        <section className="overflow-hidden  pb-16">
+        <section className="overflow-hidden ">
             <div className="container mx-auto px-6 pt-16">
                 <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-6">
                     {gymTestimonials.map((testimonial, idx) => (
